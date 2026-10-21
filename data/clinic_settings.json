@@ -1,19 +1,23 @@
 {
-  "clinicName": "KineticPulse Physiotherapy & Sports Rehabilitation",
-  "tagline": "Advanced Evidence-Based Pain Relief & Movement Restoration",
-  "phone": "+1 (555) 749-7460",
-  "email": "care@kineticpulsephysio.com",
-  "address": "420 HealthCare Blvd, Suite 100, Metro City, NY 10001",
-  "whatsappNumber": "+15557497460",
-  "googleMapsUrl": "https://maps.google.com/?q=KineticPulse+Physiotherapy",
+  "clinicName": "AuraSpine Physiotherapy & Sports Rehabilitation",
+  "tagline": "Evidence-Based Musculoskeletal Care, Manual Therapy & Pain Relief",
+  "phone": "+91 98450 12345",
+  "landline": "080 4123 4567",
+  "email": "care@auraspinephysio.com",
+  "address": "#42, 100 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560038 (Near Metro Station)",
+  "whatsappNumber": "+919845012345",
+  "googleMapsUrl": "https://maps.google.com/?q=100+Feet+Road+Indiranagar+Bengaluru",
+  "googleAppsScriptUrl": "",
+  "currency": "INR",
+  "currencySymbol": "₹",
   "operatingHours": {
-    "weekdays": "Monday - Friday: 7:30 AM - 7:30 PM",
-    "saturday": "Saturday: 8:30 AM - 3:00 PM",
-    "sunday": "Sunday: Emergency & On-Call Only"
+    "weekdays": "Monday - Saturday: 7:30 AM - 8:30 PM",
+    "saturday": "Saturday: 8:00 AM - 7:00 PM",
+    "sunday": "Sunday: 9:00 AM - 1:00 PM (Emergency & By Appointment)"
   },
   "geo": {
-    "latitude": 40.7589,
-    "longitude": -73.9851
+    "latitude": 12.9716,
+    "longitude": 77.6412
   },
   "adminUser": {
     "username": "admin",

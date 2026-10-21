@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Clinical Appointment | AuraSpine Physiotherapy Bengaluru</title>
+  <meta name="description" content="Reserve your 1-on-1 physiotherapy session at AuraSpine Clinic, Indiranagar, Bengaluru. Same-day appointments available for back pain, sports injuries, and joint rehab.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body style="background: #F8FAFC;">
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <div>AuraSpine</div>
+          <span class="brand-tag">Physiotherapy & Rehab</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/treatments">Treatments</a></li>
+          <li><a href="/about">About & Specialists</a></li>
+          <li><a href="/book" style="color:var(--primary); font-weight:800;">Book Appointment</a></li>
+          <li><a href="/contact">Contact & Location</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+919845012345" class="btn btn-outline btn-sm">📞 Call</a>
+        <a href="https://wa.me/919845012345" target="_blank" class="btn btn-success btn-sm">💬 WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 50px 0 80px;">
+    <div class="container" style="max-width: 680px;">
+      
+      <div style="text-align: center; margin-bottom: 30px;">
+        <span class="section-tag">Direct Scheduling</span>
+        <h1 style="font-size: clamp(28px, 4vw, 38px); font-weight: 800; color: var(--dark); margin: 10px 0 8px;">
+          Book Your 1-on-1 Clinical Session
+        </h1>
+        <p style="color: var(--muted); font-size: 15px;">
+          Zero waiting time • Direct care with Master's level physiotherapists • Free valet parking
+        </p>
+      </div>
+
+      <div style="background: white; border-radius: 20px; padding: 36px 32px; box-shadow: var(--shadow-md); border: 1px solid var(--card-border);">
+        <form id="dedicated-booking-form">
+          <input type="text" id="dedicated-hp" class="hp-field" tabindex="-1" autocomplete="off">
+
+          <div style="background: #F1F5F9; border-radius: 12px; padding: 14px 18px; margin-bottom: 24px; font-size: 13px; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <strong>📍 Location:</strong> Indiranagar 100ft Road, Bengaluru
+            </div>
+            <div style="color: var(--accent-teal); font-weight: 700;">
+              Same-Day Slots Active
+            </div>
+          </div>
+
+          <!-- Patient Information -->
+          <h3 style="font-size: 16px; font-weight: 800; margin-bottom: 14px; color: var(--dark); border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">
+            1. Patient Information
+          </h3>
+
+          <div class="form-group">
+            <label class="form-label">Full Name *</label>
+            <input type="text" class="form-input" id="ded-name" placeholder="e.g. Vikramaditya Rao" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Mobile Number (for SMS & WhatsApp Confirmation) *</label>
+              <input type="tel" class="form-input" id="ded-phone" placeholder="+91 98450 00000" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address (Optional)</label>
+              <input type="email" class="form-input" id="ded-email" placeholder="vikram@example.com">
+            </div>
+          </div>
+
+          <!-- Treatment & Doctor Selection -->
+          <h3 style="font-size: 16px; font-weight: 800; margin: 24px 0 14px; color: var(--dark); border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">
+            2. Treatment & Specialist Preference
+          </h3>
+
+          <div class="form-group">
+            <label class="form-label">Select Treatment / Service *</label>
+            <select class="form-select" id="ded-service" required>
+              <option value="Initial Diagnostic Assessment (₹799)">Initial Comprehensive Assessment & Day-1 Therapy (₹799)</option>
+              <option value="Spinal Decompression & Sciatica Care (₹899)">Spinal Decompression & Sciatica Protocol (₹899)</option>
+              <option value="Sports Injury & Athletic Rehab (₹699)">Sports Injury & Athletic Rehabilitation (₹699)</option>
+              <option value="Dry Needling & Myofascial Release (₹699)">Dry Needling & Trigger Point Therapy (₹699)</option>
+              <option value="Post-Surgical Joint Rehab (₹899)">Post-Surgical Joint Rehabilitation (₹899)</option>
+              <option value="Postural Ergonomics & Neck Care (₹599)">Postural Correction & Desk Worker Protocol (₹599)</option>
+              <option value="Home Visit Physiotherapy (₹1,299)">Home Visit Physiotherapy - Bengaluru (₹1,299)</option>
+              <option value="6-Session Recovery Package (₹3,499)">6-Session Recovery Package (₹3,499 - Save ₹700)</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Preferred Doctor (Optional)</label>
+              <select class="form-select" id="ded-doctor">
+                <option value="Any Available Senior Specialist">Any Available Senior Specialist (Fastest)</option>
+                <option value="Dr. Aakash Sharma (MPT Sports & Spine)">Dr. Aakash Sharma (MPT Musculoskeletal & Spine)</option>
+                <option value="Dr. Neha Menon (MPT Neuro & Post-Op)">Dr. Neha Menon (MPT Neuro & Joint Rehab)</option>
+                <option value="Dr. Rahul Verma (Certified Dry Needling)">Dr. Rahul Verma (Certified Manual Therapy & Needling)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Consultation Mode *</label>
+              <select class="form-select" id="ded-type" required>
+                <option value="In-Clinic">In-Clinic (Indiranagar, Bengaluru)</option>
+                <option value="Home Visit">Home Visit (Doctor visits your residence)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Primary Pain Area / Condition</label>
+            <select class="form-select" id="ded-pain-area">
+              <option value="Lower Back & Sciatica">Lower Back & Sciatica</option>
+              <option value="Neck & Cervical Spine">Neck & Cervical Spine</option>
+              <option value="Knee & ACL / Meniscus">Knee & ACL / Meniscus</option>
+              <option value="Shoulder & Rotator Cuff">Shoulder & Rotator Cuff</option>
+              <option value="Foot / Ankle / Plantar Fasciitis">Foot / Ankle / Plantar Fasciitis</option>
+              <option value="Hip Joint & Pelvis">Hip Joint & Pelvis</option>
+              <option value="Post-Surgery Rehabilitation">Post-Surgery Rehabilitation</option>
+              <option value="General Pain Assessment">General Pain Assessment</option>
+            </select>
+          </div>
+
+          <!-- Date & Time -->
+          <h3 style="font-size: 16px; font-weight: 800; margin: 24px 0 14px; color: var(--dark); border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">
+            3. Date & Time Slot
+          </h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Preferred Date *</label>
+              <input type="date" class="form-input" id="ded-date" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Preferred Time Slot *</label>
+              <select class="form-select" id="ded-time" required>
+                <option value="08:00 AM">08:00 AM (Early Morning)</option>
+                <option value="09:30 AM">09:30 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="02:30 PM">02:30 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="05:30 PM">05:30 PM (Evening)</option>
+                <option value="07:00 PM">07:00 PM (After-Office)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Additional Symptoms / Notes for Doctor (Optional)</label>
+            <textarea class="form-textarea" id="ded-notes" rows="2" placeholder="e.g. Sharp pain when bending forward, MRI reveals L4-L5 disc protrusion..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="ded-submit-btn" style="width: 100%; padding: 16px; font-size: 15px; margin-top: 10px;">
+            ⚡ Confirm & Reserve Clinical Slot →
+          </button>
+
+          <div id="ded-toast" class="toast-msg"></div>
+
+          <!-- Post-Booking Success Panel -->
+          <div id="booking-confirmed-card" style="display: none; background: #ECFDF5; border: 1.5px solid #6EE7B7; border-radius: 14px; padding: 24px; text-align: center; margin-top: 20px;">
+            <div style="font-size: 40px; margin-bottom: 10px;">✅</div>
+            <h3 style="color: #065F46; font-size: 20px; font-weight: 800; margin-bottom: 6px;">
+              Appointment Slot Reserved!
+            </h3>
+            <p style="color: #047857; font-size: 14px; margin-bottom: 16px;">
+              Your clinical booking has been submitted and synced directly to our clinic calendar and Google Sheet CRM.
+            </p>
+            <div style="background: white; border-radius: 10px; padding: 14px; text-align: left; font-size: 13px; margin-bottom: 18px; border: 1px solid #D1FAE5;">
+              <div><strong>Booking ID:</strong> <span id="confirmed-id" style="color: var(--primary); font-weight: 700;"></span></div>
+              <div><strong>Patient:</strong> <span id="confirmed-name"></span></div>
+              <div><strong>Slot:</strong> <span id="confirmed-slot"></span></div>
+              <div><strong>Clinic:</strong> AuraSpine, 100ft Road, Indiranagar, Bengaluru</div>
+            </div>
+            <a id="whatsapp-quick-confirm-btn" href="#" target="_blank" class="btn btn-success" style="width: 100%;">
+              💬 Open in WhatsApp for Directions & Intake Form →
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 AuraSpine Physiotherapy & Sports Rehabilitation. All rights reserved.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="/">Home</a>
+          <a href="/treatments">Treatments</a>
+          <a href="/contact">Location</a>
+          <a href="/admin">Staff CRM</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script>
+    // Set min date to today
+    const dateInput = document.getElementById('ded-date');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.min = today;
+      dateInput.value = today;
+    }
+
+    // Read URL query params to prefill service or doctor
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service') || urlParams.get('plan');
+    if (serviceParam) {
+      const select = document.getElementById('ded-service');
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value.toLowerCase().includes(serviceParam.toLowerCase().replace(/\+/g, ' '))) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    const doctorParam = urlParams.get('doctor');
+    if (doctorParam) {
+      const docSelect = document.getElementById('ded-doctor');
+      for (let i = 0; i < docSelect.options.length; i++) {
+        if (docSelect.options[i].value.toLowerCase().includes(doctorParam.toLowerCase().replace(/\+/g, ' '))) {
+          docSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    // Dedicated Booking Submit Handler
+    document.getElementById('dedicated-booking-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('ded-submit-btn');
+      const toast = document.getElementById('ded-toast');
+      const confirmedCard = document.getElementById('booking-confirmed-card');
+
+      submitBtn.textContent = "Reserving clinical slot...";
+      submitBtn.disabled = true;
+      toast.className = 'toast-msg';
+
+      const payload = {
+        patientName: document.getElementById('ded-name').value.trim(),
+        patientPhone: document.getElementById('ded-phone').value.trim(),
+        patientEmail: document.getElementById('ded-email').value.trim(),
+        serviceName: document.getElementById('ded-service').value,
+        painLocation: document.getElementById('ded-pain-area').value,
+        urgency: "Moderate",
+        consultationType: document.getElementById('ded-type').value,
+        date: document.getElementById('ded-date').value,
+        timeSlot: document.getElementById('ded-time').value,
+        patientNotes: document.getElementById('ded-notes').value.trim(),
+        hp_clinic_token: document.getElementById('ded-hp').value
+      };
+
+      try {
+        const res = await fetch('/api/bookings', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+
+        if (result.success) {
+          submitBtn.style.display = 'none';
+          confirmedCard.style.display = 'block';
+          document.getElementById('confirmed-id').textContent = result.data.id;
+          document.getElementById('confirmed-name').textContent = result.data.patientName;
+          document.getElementById('confirmed-slot').textContent = `${result.data.date} at ${result.data.timeSlot} (${result.data.serviceName})`;
+
+          const cleanPhone = result.data.patientPhone.replace(/[^0-9]/g, '');
+          const waMsg = encodeURIComponent(
+            `Hello AuraSpine Clinic, I just booked an appointment online (ID: ${result.data.id}) for ${result.data.date} at ${result.data.timeSlot} (${result.data.serviceName}). Please confirm my slot!`
+          );
+          document.getElementById('whatsapp-quick-confirm-btn').href = `https://wa.me/919845012345?text=${waMsg}`;
+        } else {
+          toast.className = 'toast-msg error';
+          toast.textContent = result.error || "Unable to reserve slot. Please call +91 98450 12345 directly.";
+          submitBtn.textContent = "⚡ Confirm & Reserve Clinical Slot →";
+          submitBtn.disabled = false;
+        }
+      } catch (err) {
+        toast.className = 'toast-msg error';
+        toast.textContent = "Connection error. Please call +91 98450 12345 directly.";
+        submitBtn.textContent = "⚡ Confirm & Reserve Clinical Slot →";
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

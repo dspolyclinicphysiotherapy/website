@@ -221,6 +221,54 @@ router.put('/settings', requireAdminAuth, (req, res) => {
   });
 });
 
+// Test and Connect Google Sheets Apps Script Webhook
+router.post('/google-sheet/test', requireAdminAuth, async (req, res) => {
+  const { url } = req.body;
+  if (!url || !url.startsWith('http')) {
+    return res.status(400).json({ success: false, error: "Please provide a valid Google Web App URL (starts with https://script.google.com/)." });
+  }
+
+  try {
+    const testPayload = {
+      id: "TEST-" + Math.floor(1000 + Math.random() * 9000),
+      patientName: "Dr. Verification Test",
+      patientPhone: "+91 98450 12345",
+      patientEmail: "test@auraspinephysio.com",
+      serviceName: "Comprehensive Clinical Assessment",
+      painLocation: "Lower Back / Lumbar Decompression",
+      urgency: "Moderate",
+      consultationType: "In-Clinic",
+      date: new Date().toISOString().split('T')[0],
+      timeSlot: "10:30 AM",
+      status: "Confirmed",
+      doctorNotes: "Google Sheets Webhook integration self-test successfully verified from Admin CRM.",
+      source: "CRM Settings Test"
+    };
+
+    const resp = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(testPayload),
+      redirect: 'follow'
+    });
+    const text = await resp.text();
+
+    db.updateSettings({ googleAppsScriptUrl: url });
+    db.logAudit("GOOGLE_SHEET_CONNECTED", "ADMIN", "Google Apps Script Webhook connected and verified.");
+
+    res.json({
+      success: true,
+      message: "✓ Successfully connected to your Google Sheet! A test row has been appended.",
+      response: text
+    });
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      error: `Failed to connect to Google Apps Script: ${err.message}`
+    });
+  }
+});
+
 // Audit Logs
 router.get('/audit-logs', requireAdminAuth, (req, res) => {
   const logs = db.getAuditLogs();

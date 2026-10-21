@@ -1,0 +1,68 @@
+[
+  {
+    "id": "sports-rehab",
+    "name": "Sports Injury & Performance Rehab",
+    "icon": "running",
+    "shortDesc": "Rapid recovery protocols for athletes, runners, gym enthusiasts, and badminton players.",
+    "duration": "45-60 min",
+    "price": "₹699",
+    "suitableFor": ["Sprains & Strains", "Rotator Cuff Tears", "ACL / Meniscus", "Tennis Elbow"],
+    "recoveryRate": "96%",
+    "badge": "Most Popular"
+  },
+  {
+    "id": "spine-sciatica",
+    "name": "Spinal Decompression & Sciatica Care",
+    "icon": "spine",
+    "shortDesc": "Non-surgical, targeted traction and spinal mobilization for chronic back pain and nerve compression.",
+    "duration": "50 min",
+    "price": "₹899",
+    "suitableFor": ["Herniated Discs", "Sciatica", "Lower Back Spasms", "Degenerative Disc Disease"],
+    "recoveryRate": "94%",
+    "badge": "High Relief"
+  },
+  {
+    "id": "dry-needling",
+    "name": "Dry Needling & Myofascial Release",
+    "icon": "target",
+    "shortDesc": "Precision filiform needle stimulation targeting deep muscle knots and stubborn tension.",
+    "duration": "30-45 min",
+    "price": "₹699",
+    "suitableFor": ["Neck Stiffness", "Tension Headaches", "Muscle Spasms", "Trapezius Trigger Points"],
+    "recoveryRate": "98%",
+    "badge": "Instant Release"
+  },
+  {
+    "id": "post-op-rehab",
+    "name": "Post-Surgical Joint Rehabilitation",
+    "icon": "shield",
+    "shortDesc": "Structured milestone-based protocols following knee/hip replacements or ligament repairs.",
+    "duration": "60 min",
+    "price": "₹899",
+    "suitableFor": ["Total Knee / Hip Replacement", "Shoulder Arthroscopy", "Fracture Recovery"],
+    "recoveryRate": "97%",
+    "badge": "Clinical Standard"
+  },
+  {
+    "id": "posture-ergonomics",
+    "name": "Postural Correction & Desk Worker Care",
+    "icon": "user-check",
+    "shortDesc": "Biomechanics evaluation, spinal realignment, and corrective exercises for IT professionals.",
+    "duration": "45 min",
+    "price": "₹599",
+    "suitableFor": ["Text Neck", "Thoracic Kyphosis", "Repetitive Strain (RSI)", "Shoulder Slump"],
+    "recoveryRate": "95%",
+    "badge": "Preventative"
+  },
+  {
+    "id": "home-visit",
+    "name": "Home Visit Physiotherapy",
+    "icon": "home",
+    "shortDesc": "Hospital-grade one-on-one physiotherapy delivered in the comfort and privacy of your home.",
+    "duration": "60 min",
+    "price": "₹1,299",
+    "suitableFor": ["Elderly Mobility", "Acute Post-Op Patients", "Severe Pain Limited Mobility"],
+    "recoveryRate": "98%",
+    "badge": "Convenient Care"
+  }
+]

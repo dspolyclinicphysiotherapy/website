@@ -1,5 +1,12 @@
 [
   {
+    "id": "LOG-1792575434440",
+    "timestamp": "2026-10-21T09:37:14.440Z",
+    "action": "APPOINTMENT_CREATED",
+    "actor": "PATIENT",
+    "details": "New appointment for Vikram Sen (Lower Back & Sciatica)"
+  },
+  {
     "id": "LOG-1792572308238",
     "timestamp": "2026-10-21T08:45:08.238Z",
     "action": "APPOINTMENT_UPDATED",

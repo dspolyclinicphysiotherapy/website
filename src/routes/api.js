@@ -62,6 +62,9 @@ router.post('/bookings', publicBookingLimiter, verifyHoneypot, (req, res) => {
 
     const saved = db.createAppointment(appointmentRecord);
 
+    // Forward to Google Sheets Webhook in background if configured
+    forwardToGoogleSheet(saved);
+
     res.status(201).json({
       success: true,
       message: "Your appointment request has been reserved! Our clinical coordinator will confirm via SMS / WhatsApp shortly.",
@@ -75,6 +78,25 @@ router.post('/bookings', publicBookingLimiter, verifyHoneypot, (req, res) => {
     });
   }
 });
+
+// Helper to asynchronously forward data to Google Apps Script Webhook
+async function forwardToGoogleSheet(payload) {
+  try {
+    const settings = db.getSettings();
+    if (settings && settings.googleAppsScriptUrl && settings.googleAppsScriptUrl.startsWith('http')) {
+      console.log(`[GoogleSheet] Syncing to Webhook: ${settings.googleAppsScriptUrl}`);
+      await fetch(settings.googleAppsScriptUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        redirect: 'follow'
+      });
+      db.logAudit("GOOGLE_SHEET_SYNC_SUCCESS", "SYSTEM", `Synced record ${payload.id || payload.name} to Google Sheet`);
+    }
+  } catch (err) {
+    console.warn("[GoogleSheet] Sync warning (booking saved locally):", err.message);
+  }
+}
 
 // Public Lead Capture (from Visual Pain Navigator or 60-Second Recovery Quiz)
 router.post('/leads', publicBookingLimiter, verifyHoneypot, (req, res) => {
@@ -101,6 +123,9 @@ router.post('/leads', publicBookingLimiter, verifyHoneypot, (req, res) => {
     };
 
     const saved = db.createLead(leadRecord);
+
+    // Forward to Google Sheets Webhook in background
+    forwardToGoogleSheet(saved);
 
     res.status(201).json({
       success: true,

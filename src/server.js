@@ -101,6 +101,27 @@ Sitemap: ${protocol}://${host}/sitemap.xml
 app.use('/api', apiRoutes);
 app.use('/api/admin', adminApiRoutes);
 
+// Dedicated Page Routes
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
+
+app.get('/treatments', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'treatments.html'));
+});
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'about.html'));
+});
+
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'contact.html'));
+});
+
+app.get('/book', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'book.html'));
+});
+
 // Admin Web Route (Serves admin.html for /admin and any subpath)
 app.use('/admin', (req, res, next) => {
   if (req.method === 'GET') {
@@ -114,7 +135,7 @@ app.get('/docs/architecture', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'docs', 'archify-system-architecture.html'));
 });
 
-// Fallback to index.html for root and SPA
+// Fallback to index.html for unrecognized routes
 app.use((req, res, next) => {
   if (req.method === 'GET' && !req.path.startsWith('/api')) {
     return res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
@@ -134,7 +155,7 @@ app.use((err, req, res, next) => {
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`\n======================================================`);
-    console.log(`  KineticPulse Physiotherapy & Sports Rehabilitation`);
+    console.log(`  AuraSpine Physiotherapy & Sports Rehabilitation`);
     console.log(`  Website & CRM Platform is Running Live`);
     console.log(`======================================================`);
     console.log(`  Patient Portal:  http://localhost:${PORT}`);

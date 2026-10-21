@@ -141,7 +141,7 @@ async function loadDashboardMetrics() {
     document.getElementById('kpi-pending-appointments').textContent = metrics.pendingAppointments;
     document.getElementById('kpi-urgent-cases').textContent = metrics.urgentCases;
     document.getElementById('kpi-total-leads').textContent = metrics.totalLeads;
-    document.getElementById('kpi-revenue').textContent = `$${metrics.estimatedRevenue.toLocaleString()}`;
+    document.getElementById('kpi-revenue').textContent = `₹${(metrics.estimatedRevenue || 0).toLocaleString('en-IN')}`;
 
     // Render today's list
     const todayList = document.getElementById('today-schedule-list');
@@ -307,7 +307,7 @@ window.addDoctorNotesPrompt = async function(id, existingNotes) {
 window.sendWhatsAppConfirmation = function(phone, name, date, time, service) {
   const cleanPhone = phone.replace(/[^0-9]/g, '');
   const msg = encodeURIComponent(
-    `Hello ${name},\n\nYour physiotherapy appointment at KineticPulse Clinic has been confirmed for ${date} at ${time} (${service}).\n\nClinic Address: 420 HealthCare Blvd, Suite 100, Metro City.\n\nPlease arrive 5 minutes early in comfortable athletic wear. Reply to this message if you have any questions!`
+    `Namaste ${name},\n\nYour physiotherapy appointment at AuraSpine Physiotherapy & Sports Rehabilitation has been confirmed for ${date} at ${time} (${service}).\n\nClinic Address: #42, 100 Feet Road, Indiranagar, Bengaluru, Karnataka.\n\nPlease arrive 5 minutes early in comfortable clothing. Feel free to reply here if you have any questions!`
   );
   window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
 };
@@ -399,7 +399,7 @@ window.updateLeadStatus = async function(id, status) {
 window.sendWhatsAppLeadMessage = function(phone, name, painArea) {
   const cleanPhone = phone.replace(/[^0-9]/g, '');
   const msg = encodeURIComponent(
-    `Hi ${name}, this is Dr. Sarah from KineticPulse Physiotherapy. I received your triage submission regarding your ${painArea} discomfort. Do you have 5 minutes for a quick consultation so we can get you out of pain?`
+    `Namaste ${name}, this is Dr. Aakash from AuraSpine Physiotherapy, Bengaluru. I received your triage inquiry regarding your ${painArea} pain. Do you have 5 minutes for a quick consultation so we can understand your symptoms and help you recover?`
   );
   window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
 };
@@ -422,9 +422,88 @@ async function loadSettings() {
     document.getElementById('setting-address').value = data.address || '';
     document.getElementById('setting-weekdays').value = data.operatingHours?.weekdays || '';
     document.getElementById('setting-saturday').value = data.operatingHours?.saturday || '';
+    if (document.getElementById('setting-google-sheet-url')) {
+      document.getElementById('setting-google-sheet-url').value = data.googleAppsScriptUrl || '';
+    }
   } catch (err) {
     console.error("Failed to load settings:", err);
   }
+
+  const sheetForm = document.getElementById('google-sheet-form');
+  if (sheetForm) {
+    sheetForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const saveBtn = document.getElementById('save-sheet-btn');
+      const statusDiv = document.getElementById('sheet-sync-status');
+      saveBtn.textContent = "Connecting...";
+      const url = document.getElementById('setting-google-sheet-url').value.trim();
+
+      try {
+        const res = await fetch('/api/admin/settings', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${currentToken}`
+          },
+          body: JSON.stringify({ googleAppsScriptUrl: url })
+        });
+        const data = await res.json();
+        if (data.success) {
+          statusDiv.style.display = 'block';
+          statusDiv.style.color = '#34D399';
+          statusDiv.textContent = "✓ Google Apps Script Webhook URL saved successfully!";
+        }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        saveBtn.textContent = "Save & Connect Google Sheet";
+      }
+    });
+  }
+
+  window.testGoogleSheetSync = async function() {
+    const urlInput = document.getElementById('setting-google-sheet-url');
+    const statusDiv = document.getElementById('sheet-sync-status');
+    const testBtn = document.getElementById('test-sheet-btn');
+
+    const url = urlInput ? urlInput.value.trim() : '';
+    if (!url || !url.startsWith('http')) {
+      alert("Please enter a valid Google Apps Script Web App URL first (starts with https://script.google.com/).");
+      return;
+    }
+
+    testBtn.textContent = "Testing...";
+    testBtn.disabled = true;
+    statusDiv.style.display = 'block';
+    statusDiv.style.color = '#F59E0B';
+    statusDiv.textContent = "Sending test payload to Google Apps Script...";
+
+    try {
+      const res = await fetch('/api/admin/google-sheet/test', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${currentToken}`
+        },
+        body: JSON.stringify({ url })
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        statusDiv.style.color = '#34D399';
+        statusDiv.innerHTML = `✓ <strong>Connected!</strong> ${data.message} Check your Google Sheet to see the new row!`;
+      } else {
+        statusDiv.style.color = '#F87171';
+        statusDiv.textContent = `Error: ${data.error}`;
+      }
+    } catch (err) {
+      statusDiv.style.color = '#F87171';
+      statusDiv.textContent = `Network error: ${err.message}`;
+    } finally {
+      testBtn.textContent = "🧪 Test Sync with Sample Booking";
+      testBtn.disabled = false;
+    }
+  };
 
   const form = document.getElementById('settings-form');
   if (form) {

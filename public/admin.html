@@ -572,6 +572,7 @@ button, input, select, textarea {
         <button class="crm-tab-btn active" data-tab="tab-appointments">Appointments Pipeline</button>
         <button class="crm-tab-btn" data-tab="tab-leads">Patient Inquiries & Leads</button>
         <button class="crm-tab-btn" data-tab="tab-dashboard">Today's Overview</button>
+        <button class="crm-tab-btn" data-tab="tab-sheets">📊 Google Sheets Sync</button>
         <button class="crm-tab-btn" data-tab="tab-settings">Clinic & SEO Settings</button>
         <button class="crm-tab-btn" data-tab="tab-export">Data Export (CSV)</button>
         <button class="crm-tab-btn" data-tab="tab-logs">Security & Audit Logs</button>
@@ -737,6 +738,53 @@ button, input, select, textarea {
               Save Clinic Settings
             </button>
           </form>
+        </div>
+      </div>
+
+      <!-- ==============================================
+           TAB 4: GOOGLE SHEETS & APPS SCRIPT SYNC
+           ============================================== -->
+      <div class="tab-pane" id="tab-sheets">
+        <div class="admin-card-section" style="max-width:850px;">
+          <h3 class="admin-card-title">📊 Google Sheets &amp; Apps Script Real-Time Automation</h3>
+          <p style="font-size:13px; color:var(--admin-muted); margin-bottom:20px; line-height:1.6;">
+            Every patient booking and consultation inquiry submitted on the website automatically appends a real-time row to your clinic's Google Sheet and triggers instant email notifications via Google Apps Script.
+          </p>
+
+          <form id="google-sheet-form" style="margin-bottom:24px;">
+            <div class="admin-form-group">
+              <label class="admin-form-label" style="font-size:13px; font-weight:700;">Google Apps Script Web App Deployment URL</label>
+              <input type="url" class="admin-input" id="setting-google-sheet-url" placeholder="https://script.google.com/macros/s/AKfycbx.../exec" style="font-family:monospace; font-size:13px;">
+              <div style="font-size:11px; color:var(--admin-muted); margin-top:6px;">
+                Enter the Web App URL generated when you deploy your Google Apps Script as a Web App (Access: "Anyone").
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;">
+              <button type="submit" class="act-btn" id="save-sheet-btn" style="background:var(--primary); color:#0F172A; font-weight:800; padding:12px 22px;">
+                Save &amp; Connect Google Sheet
+              </button>
+              <button type="button" class="act-btn" id="test-sheet-btn" onclick="testGoogleSheetSync()" style="background:#0F172A; border:1px solid var(--border-color); color:#fff; font-weight:700; padding:12px 22px;">
+                🧪 Test Sync with Sample Booking
+              </button>
+            </div>
+            <div id="sheet-sync-status" style="margin-top:14px; font-size:13px; font-weight:600; display:none; padding:10px 14px; border-radius:6px; background:#111C2D; border:1px solid var(--border-color);"></div>
+          </form>
+
+          <div style="background:#0b1320; border:1px solid var(--border-color); border-radius:8px; padding:20px; margin-top:20px;">
+            <h4 style="color:#38BDF8; font-size:14px; margin-bottom:12px; font-weight:700;">⚡ 3-Minute Google Sheets Setup Instructions:</h4>
+            <ol style="font-size:13px; color:var(--admin-muted); line-height:1.8; margin-left:18px;">
+              <li>Open a new or existing Google Sheet at <a href="https://sheets.new" target="_blank" rel="noopener" style="color:var(--primary);">sheets.new</a>.</li>
+              <li>Go to <strong>Extensions &gt; Apps Script</strong>.</li>
+              <li>Delete any sample code and copy &amp; paste the entire code from <code style="color:#FBBF24;">google-sheets-apps-script/Code.gs</code> (provided in this project).</li>
+              <li>Click <strong>Deploy &gt; New deployment</strong>, select type <strong>Web app</strong>.</li>
+              <li>Set <em>Execute as:</em> <strong>Me</strong> and <em>Who has access:</em> <strong>Anyone</strong>.</li>
+              <li>Click <strong>Deploy</strong>, copy the resulting Web App URL, paste it above, and click <strong>Save &amp; Connect</strong>!</li>
+            </ol>
+            <div style="margin-top:12px; font-size:12px; color:var(--admin-muted);">
+              📄 Detailed guide with screenshots and field references available in <code style="color:#A78BFA;">google-sheets-apps-script/SETUP_GUIDE.md</code>.
+            </div>
+          </div>
         </div>
       </div>
 
@@ -931,7 +979,7 @@ async function loadDashboardMetrics() {
     document.getElementById('kpi-pending-appointments').textContent = metrics.pendingAppointments;
     document.getElementById('kpi-urgent-cases').textContent = metrics.urgentCases;
     document.getElementById('kpi-total-leads').textContent = metrics.totalLeads;
-    document.getElementById('kpi-revenue').textContent = `${metrics.estimatedRevenue.toLocaleString()}`;
+    document.getElementById('kpi-revenue').textContent = `₹${(metrics.estimatedRevenue || 0).toLocaleString('en-IN')}`;
 
     // Render today's list
     const todayList = document.getElementById('today-schedule-list');
@@ -1097,7 +1145,7 @@ window.addDoctorNotesPrompt = async function(id, existingNotes) {
 window.sendWhatsAppConfirmation = function(phone, name, date, time, service) {
   const cleanPhone = phone.replace(/[^0-9]/g, '');
   const msg = encodeURIComponent(
-    `Hello ${name},\n\nYour physiotherapy appointment at KineticPulse Clinic has been confirmed for ${date} at ${time} (${service}).\n\nClinic Address: 420 HealthCare Blvd, Suite 100, Metro City.\n\nPlease arrive 5 minutes early in comfortable athletic wear. Reply to this message if you have any questions!`
+    `Namaste ${name},\n\nYour physiotherapy appointment at AuraSpine Physiotherapy & Sports Rehabilitation has been confirmed for ${date} at ${time} (${service}).\n\nClinic Address: #42, 100 Feet Road, Indiranagar, Bengaluru, Karnataka.\n\nPlease arrive 5 minutes early in comfortable clothing. Feel free to reply here if you have any questions!`
   );
   window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
 };
@@ -1189,7 +1237,7 @@ window.updateLeadStatus = async function(id, status) {
 window.sendWhatsAppLeadMessage = function(phone, name, painArea) {
   const cleanPhone = phone.replace(/[^0-9]/g, '');
   const msg = encodeURIComponent(
-    `Hi ${name}, this is Dr. Sarah from KineticPulse Physiotherapy. I received your triage submission regarding your ${painArea} discomfort. Do you have 5 minutes for a quick consultation so we can get you out of pain?`
+    `Namaste ${name}, this is Dr. Aakash from AuraSpine Physiotherapy, Bengaluru. I received your triage inquiry regarding your ${painArea} pain. Do you have 5 minutes for a quick consultation so we can understand your symptoms and help you recover?`
   );
   window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
 };
@@ -1212,9 +1260,88 @@ async function loadSettings() {
     document.getElementById('setting-address').value = data.address || '';
     document.getElementById('setting-weekdays').value = data.operatingHours?.weekdays || '';
     document.getElementById('setting-saturday').value = data.operatingHours?.saturday || '';
+    if (document.getElementById('setting-google-sheet-url')) {
+      document.getElementById('setting-google-sheet-url').value = data.googleAppsScriptUrl || '';
+    }
   } catch (err) {
     console.error("Failed to load settings:", err);
   }
+
+  const sheetForm = document.getElementById('google-sheet-form');
+  if (sheetForm) {
+    sheetForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const saveBtn = document.getElementById('save-sheet-btn');
+      const statusDiv = document.getElementById('sheet-sync-status');
+      saveBtn.textContent = "Connecting...";
+      const url = document.getElementById('setting-google-sheet-url').value.trim();
+
+      try {
+        const res = await fetch('/api/admin/settings', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${currentToken}`
+          },
+          body: JSON.stringify({ googleAppsScriptUrl: url })
+        });
+        const data = await res.json();
+        if (data.success) {
+          statusDiv.style.display = 'block';
+          statusDiv.style.color = '#34D399';
+          statusDiv.textContent = "✓ Google Apps Script Webhook URL saved successfully!";
+        }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        saveBtn.textContent = "Save & Connect Google Sheet";
+      }
+    });
+  }
+
+  window.testGoogleSheetSync = async function() {
+    const urlInput = document.getElementById('setting-google-sheet-url');
+    const statusDiv = document.getElementById('sheet-sync-status');
+    const testBtn = document.getElementById('test-sheet-btn');
+
+    const url = urlInput ? urlInput.value.trim() : '';
+    if (!url || !url.startsWith('http')) {
+      alert("Please enter a valid Google Apps Script Web App URL first (starts with https://script.google.com/).");
+      return;
+    }
+
+    testBtn.textContent = "Testing...";
+    testBtn.disabled = true;
+    statusDiv.style.display = 'block';
+    statusDiv.style.color = '#F59E0B';
+    statusDiv.textContent = "Sending test payload to Google Apps Script...";
+
+    try {
+      const res = await fetch('/api/admin/google-sheet/test', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${currentToken}`
+        },
+        body: JSON.stringify({ url })
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        statusDiv.style.color = '#34D399';
+        statusDiv.innerHTML = `✓ <strong>Connected!</strong> ${data.message} Check your Google Sheet to see the new row!`;
+      } else {
+        statusDiv.style.color = '#F87171';
+        statusDiv.textContent = `Error: ${data.error}`;
+      }
+    } catch (err) {
+      statusDiv.style.color = '#F87171';
+      statusDiv.textContent = `Network error: ${err.message}`;
+    } finally {
+      testBtn.textContent = "🧪 Test Sync with Sample Booking";
+      testBtn.disabled = false;
+    }
+  };
 
   const form = document.getElementById('settings-form');
   if (form) {

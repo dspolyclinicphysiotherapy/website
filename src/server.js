@@ -8,7 +8,7 @@ const apiRoutes = require('./routes/api');
 const adminApiRoutes = require('./routes/adminApi');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3050;
 
 // Security Middleware: Helmet CSP, HSTS, X-Frame-Options
 app.use(configureHelmet());

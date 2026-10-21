@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "KineticPulse Physiotherapy & CRM Platform Architecture",
+    "output": "docs/archify-system-architecture.html",
+    "quality_profile": "standard"
+  },
+  "components": [
+    { "id": "patients", "type": "external", "label": "Patients & Visitors", "sublabel": "Mobile / Tablet / Desktop", "pos": [40, 180], "size": [150, 64] },
+    { "id": "google_bot", "type": "external", "label": "Googlebot / SEO Crawlers", "sublabel": "Rich Snippets & Local Search", "pos": [40, 360], "size": [170, 64] },
+    { "id": "frontend_portal", "type": "frontend", "label": "Patient Web Portal", "sublabel": "Visual Triage & Body Map", "pos": [260, 180], "size": [150, 64], "tag": "Zero-Lag UI" },
+    { "id": "seo_layer", "type": "frontend", "label": "SEO Schema Engine", "sublabel": "JSON-LD & OpenGraph", "pos": [260, 360], "size": [150, 64], "tag": "Physiotherapy Schema" },
+    { "id": "sec_gateway", "type": "security", "label": "Security Shield", "sublabel": "Helmet CSP + Rate Limiter + Honeypot", "pos": [480, 180], "size": [160, 64], "tag": "OWASP Compliant" },
+    { "id": "api_controller", "type": "backend", "label": "Express API Controller", "sublabel": "REST Services :3000", "pos": [710, 180], "size": [150, 64] },
+    { "id": "auth_service", "type": "security", "label": "Auth & JWT Engine", "sublabel": "Bcrypt Hash + HTTP-Only Cookie", "pos": [710, 40], "size": [150, 64] },
+    { "id": "crm_pipeline", "type": "backend", "label": "CRM & Booking Core", "sublabel": "Triage & Appointment Pipeline", "pos": [960, 180], "size": [160, 64] },
+    { "id": "admin_portal", "type": "frontend", "label": "Admin CRM Dashboard", "sublabel": "Lead Kanban & Metrics", "pos": [960, 40], "size": [160, 64], "tag": "Authenticated" },
+    { "id": "database_store", "type": "database", "label": "Persistent Data Store", "sublabel": "Atomic JSON Records & Audit Log", "pos": [960, 360], "size": [160, 64], "tag": "Thread Safe" }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Client Edge & Search Ecosystem", "wraps": ["patients", "google_bot", "frontend_portal", "seo_layer"] },
+    { "kind": "security-group", "label": "Protected Clinic Core & CRM Environment", "wraps": ["sec_gateway", "api_controller", "auth_service", "crm_pipeline", "admin_portal", "database_store"] }
+  ],
+  "connections": [
+    { "id": "c1", "from": "patients", "to": "frontend_portal", "label": "Engage & Triage", "variant": "emphasis" },
+    { "id": "c2", "from": "google_bot", "to": "seo_layer", "label": "Index Schemas", "variant": "dashed" },
+    { "id": "c3", "from": "frontend_portal", "to": "sec_gateway", "label": "Bookings & Leads", "variant": "emphasis" },
+    { "id": "c4", "from": "sec_gateway", "to": "api_controller", "label": "Sanitized Traffic", "variant": "security" },
+    { "id": "c5", "from": "api_controller", "to": "auth_service", "label": "Verify Token", "variant": "security" },
+    { "id": "c6", "from": "admin_portal", "to": "auth_service", "label": "Login (Bcrypt)", "variant": "security", "labelDy": -30 },
+    { "id": "c7", "from": "admin_portal", "to": "crm_pipeline", "label": "Manage Pipeline", "labelDy": 24 },
+    { "id": "c8", "from": "api_controller", "to": "crm_pipeline", "label": "Route Request" },
+    { "id": "c9", "from": "crm_pipeline", "to": "database_store", "label": "Atomic Commit", "variant": "emphasis", "labelDy": 24 }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Lead Generation & SEO", "items": ["Interactive Anatomical Body Navigator converts pain queries into instant bookings", "Automated JSON-LD schemas boost Google Maps and local 3-pack ranking", "Fast mobile-responsive UI delivers 98+ Core Web Vitals score"] },
+    { "dot": "emerald", "title": "CRM & Appointment Pipeline", "items": ["Real-time appointment statuses (Pending, Confirmed, Completed, Cancelled)", "Automated patient triage scoring (Mild, Moderate, Acute/Severe)", "WhatsApp 1-click patient reminder generator & CSV export"] },
+    { "dot": "rose", "title": "Clinic Grade Security", "items": ["Helmet CSP, X-Frame-Options, and HSTS headers against web exploits", "Bcrypt password hashing and JWT HTTP-only cookies prevent session hijacking", "Honeypot protection and IP rate limiters block spam bots and brute-force"] }
+  ]
+}

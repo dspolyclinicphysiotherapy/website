@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KineticPulse Physiotherapy | Clinical CRM & Admin Portal</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+  <!-- ==============================================
+       1. SECURE LOGIN SCREEN
+       ============================================== -->
+  <div class="login-screen" id="login-screen">
+    <div class="login-card">
+      <div class="login-brand">
+        <span style="font-size:26px;">⚡</span>
+        <span>KineticPulse CRM</span>
+      </div>
+
+      <div class="login-tag">
+        🔐 Protected Clinical Gateway (Encrypted Session)
+      </div>
+
+      <div id="login-alert" style="display:none; background:#7F1D1D; color:#FCA5A5; padding:10px; border-radius:8px; font-size:13px; margin-bottom:16px;"></div>
+
+      <form id="login-form">
+        <div class="admin-form-group">
+          <label class="admin-form-label">Username</label>
+          <input type="text" class="admin-input" id="login-username" value="admin" required autocomplete="username">
+        </div>
+
+        <div class="admin-form-group">
+          <label class="admin-form-label">Password</label>
+          <input type="password" class="admin-input" id="login-password" value="PhysioAdmin2026!" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="act-btn" id="login-submit-btn" style="width:100%; padding:12px; background:var(--primary); color:#0F172A; font-weight:800; font-size:14px; border-radius:8px;">
+          Sign In to Clinic CRM →
+        </button>
+      </form>
+
+      <div style="margin-top:20px; font-size:11px; color:var(--admin-muted); text-align:center; border-top:1px solid var(--admin-card-border); padding-top:14px;">
+        Demo Credentials pre-filled: <code>admin</code> / <code>PhysioAdmin2026!</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       2. AUTHENTICATED CRM DASHBOARD
+       ============================================== -->
+  <div class="admin-layout" id="admin-layout">
+    <header class="admin-header">
+      <div class="admin-brand-header">
+        <span style="color:var(--primary); font-size:22px;">⚡</span>
+        <div>
+          <div>KineticPulse Physiotherapy CRM</div>
+          <div style="font-size:11px; color:var(--admin-muted); font-weight:500;">Clinical Operations & Patient Pipeline</div>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:16px;">
+        <a href="/" target="_blank" class="act-btn" style="color:var(--primary);">
+          👁️ View Public Site ↗
+        </a>
+        <a href="/docs/architecture" target="_blank" class="act-btn" style="color:#A78BFA;">
+          📊 Archify System Diagram ↗
+        </a>
+        <div class="admin-user-pill">
+          <span style="color:#34D399;">●</span>
+          <span id="admin-username-display">Staff: admin</span>
+        </div>
+        <button class="act-btn" style="color:var(--danger);" onclick="logoutAdmin()">Logout</button>
+      </div>
+    </header>
+
+    <div class="admin-container">
+      <!-- KPI Metric Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">Total Bookings</div>
+          <div class="kpi-value" id="kpi-total-appointments">0</div>
+          <div class="kpi-sub">Lifetime appointments scheduled</div>
+          <div class="kpi-icon-watermark">📅</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-title">Today's Schedule</div>
+          <div class="kpi-value" style="color:var(--primary);" id="kpi-today-appointments">0</div>
+          <div class="kpi-sub">Active slots for today</div>
+          <div class="kpi-icon-watermark">⏰</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-title">Pending Confirmation</div>
+          <div class="kpi-value" style="color:var(--warning);" id="kpi-pending-appointments">0</div>
+          <div class="kpi-sub">Requires staff verification</div>
+          <div class="kpi-icon-watermark">⏳</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-title">Acute / Urgent Cases</div>
+          <div class="kpi-value" style="color:var(--danger);" id="kpi-urgent-cases">0</div>
+          <div class="kpi-sub">High-severity pain triage</div>
+          <div class="kpi-icon-watermark">🚨</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-title">Patient Leads</div>
+          <div class="kpi-value" id="kpi-total-leads">0</div>
+          <div class="kpi-sub">From Body Map & 60s Quiz</div>
+          <div class="kpi-icon-watermark">🎯</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-title">Pipeline Revenue</div>
+          <div class="kpi-value" style="color:var(--success);" id="kpi-revenue">$0</div>
+          <div class="kpi-sub">Confirmed & completed care</div>
+          <div class="kpi-icon-watermark">💰</div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="crm-nav-tabs">
+        <button class="crm-tab-btn active" data-tab="tab-appointments">Appointments Pipeline</button>
+        <button class="crm-tab-btn" data-tab="tab-leads">Patient Inquiries & Leads</button>
+        <button class="crm-tab-btn" data-tab="tab-dashboard">Today's Overview</button>
+        <button class="crm-tab-btn" data-tab="tab-settings">Clinic & SEO Settings</button>
+        <button class="crm-tab-btn" data-tab="tab-export">Data Export (CSV)</button>
+        <button class="crm-tab-btn" data-tab="tab-logs">Security & Audit Logs</button>
+      </div>
+
+      <!-- ==============================================
+           TAB 1: APPOINTMENTS PIPELINE
+           ============================================== -->
+      <div class="tab-pane active" id="tab-appointments">
+        <div class="crm-toolbar">
+          <div class="status-filter-pills" id="apt-filter-pills">
+            <button class="filter-pill active" data-status="all">All Appointments</button>
+            <button class="filter-pill" data-status="pending">Pending</button>
+            <button class="filter-pill" data-status="confirmed">Confirmed</button>
+            <button class="filter-pill" data-status="completed">Completed</button>
+            <button class="filter-pill" data-status="cancelled">Cancelled</button>
+          </div>
+
+          <div style="display:flex; gap:10px;">
+            <input type="text" class="search-input" id="apt-search-input" placeholder="🔍 Search patient, phone, symptom...">
+            <button class="act-btn" onclick="loadAppointments()">↻ Refresh</button>
+          </div>
+        </div>
+
+        <div class="crm-table-card">
+          <div class="table-responsive">
+            <table class="crm-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Patient Details</th>
+                  <th>Pain / Condition</th>
+                  <th>Slot & Date</th>
+                  <th>Mode</th>
+                  <th>Status</th>
+                  <th>Doctor Notes</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="appointments-table-body">
+                <tr><td colspan="8" style="text-align:center; padding:20px;">Loading appointments...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==============================================
+           TAB 2: LEADS & TRIAGE PIPELINE
+           ============================================== -->
+      <div class="tab-pane" id="tab-leads">
+        <div class="crm-toolbar">
+          <div style="font-weight:700; font-size:15px; color:#fff;">
+            Patient Inquiries Generated from Interactive Tools
+          </div>
+          <button class="act-btn" onclick="loadLeads()">↻ Refresh Leads</button>
+        </div>
+
+        <div class="crm-table-card">
+          <div class="table-responsive">
+            <table class="crm-table">
+              <thead>
+                <tr>
+                  <th>Lead ID</th>
+                  <th>Contact Info</th>
+                  <th>Target Area & Severity</th>
+                  <th>Duration</th>
+                  <th>Origin Source</th>
+                  <th>Triage Status</th>
+                  <th>Quick Contact</th>
+                </tr>
+              </thead>
+              <tbody id="leads-table-body">
+                <tr><td colspan="7" style="text-align:center; padding:20px;">Loading leads...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==============================================
+           TAB 3: TODAY'S OVERVIEW
+           ============================================== -->
+      <div class="tab-pane" id="tab-dashboard">
+        <div class="admin-grid-2">
+          <div class="admin-card-section">
+            <h3 class="admin-card-title">📅 Appointments Scheduled for Today</h3>
+            <div id="today-schedule-list">
+              <p style="color:var(--admin-muted);">Loading today's schedule...</p>
+            </div>
+          </div>
+
+          <div class="admin-card-section">
+            <h3 class="admin-card-title">⚡ Quick Clinical Actions</h3>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="background:rgba(255,255,255,0.03); padding:16px; border-radius:8px;">
+                <strong>Local SEO Ranking Status:</strong>
+                <p style="font-size:12px; color:var(--admin-muted); margin-top:4px;">
+                  JSON-LD schemas for <code>Physiotherapy</code> and <code>FAQPage</code> are actively injected into the homepage HTML. Google bot sitemap is available at <code>/sitemap.xml</code>.
+                </p>
+              </div>
+
+              <div style="background:rgba(255,255,255,0.03); padding:16px; border-radius:8px;">
+                <strong>Security Protection:</strong>
+                <p style="font-size:12px; color:var(--admin-muted); margin-top:4px;">
+                  OWASP Helmet CSP, strict login rate-limiting (10/15min), honeypot anti-spam, and Bcrypt password hashing active.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==============================================
+           TAB 4: CLINIC & SEO SETTINGS
+           ============================================== -->
+      <div class="tab-pane" id="tab-settings">
+        <div class="admin-card-section" style="max-width:800px;">
+          <h3 class="admin-card-title">⚙️ Clinic Details & Contact Configuration</h3>
+          <p style="font-size:12px; color:var(--admin-muted); margin-bottom:20px;">
+            Changes here immediately update the patient-facing website and Google Local SEO schema markup.
+          </p>
+
+          <form id="settings-form">
+            <div class="admin-form-group">
+              <label class="admin-form-label">Clinic Official Name</label>
+              <input type="text" class="admin-input" id="setting-clinic-name">
+            </div>
+
+            <div class="admin-grid-2">
+              <div class="admin-form-group">
+                <label class="admin-form-label">Public Phone Number</label>
+                <input type="text" class="admin-input" id="setting-phone">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">WhatsApp Number (with country code)</label>
+                <input type="text" class="admin-input" id="setting-whatsapp">
+              </div>
+            </div>
+
+            <div class="admin-form-group">
+              <label class="admin-form-label">Email Address</label>
+              <input type="email" class="admin-input" id="setting-email">
+            </div>
+
+            <div class="admin-form-group">
+              <label class="admin-form-label">Clinic Physical Address (Street, Suite, City, Zip)</label>
+              <input type="text" class="admin-input" id="setting-address">
+            </div>
+
+            <div class="admin-grid-2">
+              <div class="admin-form-group">
+                <label class="admin-form-label">Weekday Operating Hours</label>
+                <input type="text" class="admin-input" id="setting-weekdays">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">Saturday Operating Hours</label>
+                <input type="text" class="admin-input" id="setting-saturday">
+              </div>
+            </div>
+
+            <button type="submit" class="act-btn" id="save-settings-btn" style="background:var(--primary); color:#0F172A; font-weight:800; padding:12px 24px; border-radius:8px;">
+              Save Clinic Settings
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ==============================================
+           TAB 5: CSV EXPORT
+           ============================================== -->
+      <div class="tab-pane" id="tab-export">
+        <div class="admin-grid-2">
+          <div class="admin-card-section">
+            <h3 class="admin-card-title">📥 Export Appointments</h3>
+            <p style="font-size:13px; color:var(--admin-muted); margin-bottom:18px;">
+              Download a complete spreadsheet of patient reservations, clinical notes, and payment statuses for your medical accounting.
+            </p>
+            <a href="/api/admin/export/appointments.csv" class="act-btn" style="background:var(--success); color:#0F172A; font-weight:800; display:inline-block; padding:10px 18px;">
+              ⬇ Download Appointments CSV
+            </a>
+          </div>
+
+          <div class="admin-card-section">
+            <h3 class="admin-card-title">📥 Export Patient Inquiries</h3>
+            <p style="font-size:13px; color:var(--admin-muted); margin-bottom:18px;">
+              Download leads generated from the visual body navigator and 60-second recovery quiz to sync with your external phone outreach system.
+            </p>
+            <a href="/api/admin/export/leads.csv" class="act-btn" style="background:var(--primary); color:#0F172A; font-weight:800; display:inline-block; padding:10px 18px;">
+              ⬇ Download Leads CSV
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==============================================
+           TAB 6: SECURITY AUDIT LOGS
+           ============================================== -->
+      <div class="tab-pane" id="tab-logs">
+        <div class="crm-toolbar">
+          <div style="font-weight:700; font-size:15px; color:#fff;">
+            🛡️ Security Audit & Operations Log
+          </div>
+          <button class="act-btn" onclick="loadAuditLogs()">↻ Refresh Logs</button>
+        </div>
+
+        <div class="crm-table-card">
+          <div id="audit-logs-container">
+            <p style="color:var(--admin-muted); padding:20px;">Loading security logs...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

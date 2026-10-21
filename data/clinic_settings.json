@@ -1,0 +1,22 @@
+{
+  "clinicName": "KineticPulse Physiotherapy & Sports Rehabilitation",
+  "tagline": "Advanced Evidence-Based Pain Relief & Movement Restoration",
+  "phone": "+1 (555) 749-7460",
+  "email": "care@kineticpulsephysio.com",
+  "address": "420 HealthCare Blvd, Suite 100, Metro City, NY 10001",
+  "whatsappNumber": "+15557497460",
+  "googleMapsUrl": "https://maps.google.com/?q=KineticPulse+Physiotherapy",
+  "operatingHours": {
+    "weekdays": "Monday - Friday: 7:30 AM - 7:30 PM",
+    "saturday": "Saturday: 8:30 AM - 3:00 PM",
+    "sunday": "Sunday: Emergency & On-Call Only"
+  },
+  "geo": {
+    "latitude": 40.7589,
+    "longitude": -73.9851
+  },
+  "adminUser": {
+    "username": "admin",
+    "passwordHash": "$2b$10$sZD3is6tSVZhs6Agy21b8eqf2BabFrPSRrFvGT4vVQkQCxzRxC.1u"
+  }
+}

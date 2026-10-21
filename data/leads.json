@@ -1,0 +1,41 @@
+[
+  {
+    "id": "LEAD-2001",
+    "name": "Michael Sterling",
+    "email": "m.sterling@example.com",
+    "phone": "+1 (555) 876-5432",
+    "painArea": "Shoulder (Rotator Cuff)",
+    "painSeverity": "7 / 10",
+    "duration": "2-4 Weeks",
+    "source": "Visual Body Navigator",
+    "status": "Contacted",
+    "notes": "Patient contacted via WhatsApp; interested in morning slot next Tuesday.",
+    "createdAt": "2026-10-21T09:45:00Z"
+  },
+  {
+    "id": "LEAD-2002",
+    "name": "Jessica Patel",
+    "email": "j.patel@example.com",
+    "phone": "+1 (555) 987-6543",
+    "painArea": "Lower Back (Desk Worker)",
+    "painSeverity": "8 / 10",
+    "duration": "More than 2 Months",
+    "source": "60-Second Recovery Quiz",
+    "status": "New",
+    "notes": "Suffering from sitting pain. Recommended Spinal Decompression & Ergonomic review.",
+    "createdAt": "2026-10-21T12:10:00Z"
+  },
+  {
+    "id": "LEAD-2003",
+    "name": "Arthur Pendelton",
+    "email": "arthur.p@example.com",
+    "phone": "+1 (555) 432-1098",
+    "painArea": "Ankle Sprain (Sports)",
+    "painSeverity": "6 / 10",
+    "duration": "3 Days ago",
+    "source": "Emergency Pain Relief Triage",
+    "status": "Booked",
+    "notes": "Converted to APT-1001 follow-up.",
+    "createdAt": "2026-10-20T16:30:00Z"
+  }
+]

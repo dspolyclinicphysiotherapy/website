@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "61fb6fc1-02e3-45fc-9931-22477c61a08a",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/physio-platform.architecture.json",
+  "output": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
+  "specification": {
+    "sha256": "bdf798fac80023e1f338447626c10de36b90bf7e2fc3c7e5cc25e53f0852e1b3",
+    "bytes": 4302
+  },
+  "artifact": {
+    "sha256": "dbd3af17802f92afe3e6ca779782d91be1407d504324cea652d7ac525937d5e5",
+    "bytes": 831205
+  }
+}

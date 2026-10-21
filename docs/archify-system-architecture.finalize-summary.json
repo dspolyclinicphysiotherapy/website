@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "standard",
+  "specification": {
+    "path": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/physio-platform.architecture.json",
+    "sha256": "bdf798fac80023e1f338447626c10de36b90bf7e2fc3c7e5cc25e53f0852e1b3",
+    "bytes": 4302
+  },
+  "artifact": {
+    "path": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
+    "sha256": "dbd3af17802f92afe3e6ca779782d91be1407d504324cea652d7ac525937d5e5",
+    "bytes": 831205
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.finalize.json",
+    "summaryReceipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.finalize-summary.json",
+    "browserCheckReceipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-21T08:35:50.970Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1663,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 3
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "c2",
+            "from": "google_bot",
+            "to": "seo_layer",
+            "label": "Index Schemas",
+            "collectionIndex": 1,
+            "artifactIndex": 2
+          },
+          "bends": 3,
+          "stretch": 1.306
+        },
+        {
+          "relationship": {
+            "id": "c3",
+            "from": "frontend_portal",
+            "to": "sec_gateway",
+            "label": "Bookings &amp; Leads",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "bends": 3,
+          "stretch": 1.298
+        },
+        {
+          "relationship": {
+            "id": "c4",
+            "from": "sec_gateway",
+            "to": "api_controller",
+            "label": "Sanitized Traffic",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "bends": 3,
+          "stretch": 1.294
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "google_bot → seo_layer needs 3 bends: move node google_bot or seo_layer so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "frontend_portal → sec_gateway needs 3 bends: move node frontend_portal or sec_gateway so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "sec_gateway → api_controller needs 3 bends: move node sec_gateway or api_controller so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

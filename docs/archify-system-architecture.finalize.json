@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "ok": true,
+  "ok": false,
   "command": "finalize",
-  "status": "pass",
+  "status": "fail",
   "type": "architecture",
-  "quality": "standard",
-  "startedAt": "2026-10-21T08:37:07.913Z",
+  "quality": "showcase",
+  "startedAt": "2026-10-21T09:58:57.165Z",
   "specification": {
     "path": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/physio-platform.architecture.json",
-    "sha256": "bdf798fac80023e1f338447626c10de36b90bf7e2fc3c7e5cc25e53f0852e1b3",
-    "bytes": 4302
+    "sha256": "c6f3c28ef47a3ed8b5ccae8f1464ca7dc59decb51cea4a8e7f70fb371c8466fe",
+    "bytes": 4303
   },
   "artifact": {
     "path": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
@@ -18,10 +18,9 @@
   },
   "stages": {
     "validate": {
-      "status": "pass",
-      "exitCode": 0,
+      "status": "fail",
+      "exitCode": 1,
       "durationMs": null,
-      "execution": "embedded-in-deliver",
       "command": [
         "/Users/milanjyotiray/.nvm/versions/node/v24.15.0/bin/node",
         "/Users/milanjyotiray/physiotherapy-clinic-platform/.agents/skills/archify/bin/archify.mjs",
@@ -30,137 +29,62 @@
         "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/physio-platform.architecture.json",
         "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
         "--quality",
-        "standard",
+        "showcase",
         "--json"
       ],
       "receipt": {
         "schemaVersion": 1,
-        "ok": true,
-        "command": "validate",
-        "specification": {
-          "sha256": "bdf798fac80023e1f338447626c10de36b90bf7e2fc3c7e5cc25e53f0852e1b3",
-          "bytes": 4302
-        },
-        "validation": {
-          "checksPassed": 9,
-          "checkCount": 9,
-          "compositionProfile": "standard",
-          "compositionStatus": "pass",
-          "errors": 0,
-          "warnings": 1,
-          "compositionIssues": [
-            {
-              "severity": "warning",
-              "code": "composition/label-route-clearance",
-              "label": "Verify Token",
-              "labelRelationship": {
-                "id": "c5",
-                "from": "api_controller",
-                "to": "auth_service",
-                "label": "Verify Token",
-                "collectionIndex": 4,
-                "artifactIndex": 5
-              },
-              "otherRelationship": {
-                "id": "c4",
-                "from": "sec_gateway",
-                "to": "api_controller",
-                "label": "Sanitized Traffic",
-                "collectionIndex": 3,
-                "artifactIndex": 4
-              },
-              "segmentIndex": 3,
-              "labelRect": {
-                "x": 751.2,
-                "y": 160,
-                "width": 67.6,
-                "height": 14
-              },
-              "clearance": 0,
-              "intersectionLength": 14,
-              "threshold": 2,
-              "from": [
-                771,
-                156
-              ],
-              "to": [
-                771,
-                180
-              ]
-            }
-          ]
-        }
-      }
-    },
-    "deliver": {
-      "status": "pass",
-      "exitCode": 0,
-      "durationMs": 174,
-      "command": [
-        "/Users/milanjyotiray/.nvm/versions/node/v24.15.0/bin/node",
-        "/Users/milanjyotiray/physiotherapy-clinic-platform/.agents/skills/archify/bin/archify.mjs",
-        "deliver",
-        "architecture",
-        "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/physio-platform.architecture.json",
-        "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
-        "--quality",
-        "standard",
-        "--json"
-      ],
-      "receipt": {
-        "schemaVersion": 1,
-        "receiptId": "61fb6fc1-02e3-45fc-9931-22477c61a08a",
-        "ok": true,
+        "ok": false,
         "command": "deliver",
+        "receiptId": "37074665-2cbf-4eff-a751-152ae691e2b2",
+        "stage": "render",
         "type": "architecture",
         "input": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/physio-platform.architecture.json",
         "output": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
-        "specification": {
-          "sha256": "bdf798fac80023e1f338447626c10de36b90bf7e2fc3c7e5cc25e53f0852e1b3",
-          "bytes": 4302
-        },
-        "artifact": {
-          "sha256": "dbd3af17802f92afe3e6ca779782d91be1407d504324cea652d7ac525937d5e5",
-          "bytes": 831205
-        },
-        "validation": {
-          "checksPassed": 9,
-          "checkCount": 9,
-          "compositionProfile": "standard",
-          "compositionStatus": "pass",
-          "errors": 0,
-          "warnings": 1,
-          "compositionIssues": [
-            {
-              "severity": "warning",
-              "code": "composition/label-route-clearance",
+        "error": "Architecture layout validation failed:\n- [composition/label-route-clearance] showcase architecture label \"Verify Token\" on connections[4] id \"c5\" \"api_controller\" -> \"auth_service\" label \"Verify Token\" is 0px from connections[3] id \"c4\" \"sec_gateway\" -> \"api_controller\" label \"Sanitized Traffic\" segment 3 [771, 156] -> [771, 180] (label rect [751, 160, 68, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+        "diagnostics": [
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"Verify Token\" on connections[4] id \"c5\" \"api_controller\" -> \"auth_service\" label \"Verify Token\" is 0px from connections[3] id \"c4\" \"sec_gateway\" -> \"api_controller\" label \"Sanitized Traffic\" segment 3 [771, 156] -> [771, 180] (label rect [751, 160, 68, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 4,
+              "id": "c5",
+              "from": "api_controller",
+              "to": "auth_service"
+            },
+            "evidence": {
               "label": "Verify Token",
-              "labelRelationship": {
-                "id": "c5",
-                "from": "api_controller",
-                "to": "auth_service",
-                "label": "Verify Token",
-                "collectionIndex": 4,
-                "artifactIndex": 5
-              },
               "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 3,
                 "id": "c4",
                 "from": "sec_gateway",
-                "to": "api_controller",
-                "label": "Sanitized Traffic",
-                "collectionIndex": 3,
-                "artifactIndex": 4
+                "to": "api_controller"
               },
               "segmentIndex": 3,
+              "clearancePx": 0,
+              "minimumPx": 4,
               "labelRect": {
+                "relation": {
+                  "id": "c5",
+                  "from": "api_controller",
+                  "to": "auth_service",
+                  "label": "Verify Token",
+                  "variant": "security"
+                },
+                "relationIndex": 4,
+                "label": "Verify Token",
                 "x": 751.2,
                 "y": 160,
                 "width": 67.6,
-                "height": 14
+                "height": 14,
+                "lx": 785,
+                "ly": 170
               },
-              "clearance": 0,
-              "intersectionLength": 14,
-              "threshold": 2,
               "from": [
                 771,
                 156
@@ -169,9 +93,13 @@
                 771,
                 180
               ]
-            }
-          ]
-        },
+            },
+            "supportedFixes": [
+              "adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          }
+        ],
+        "provenance": "failed",
         "update": {
           "status": "unavailable",
           "installedVersion": null,
@@ -183,957 +111,83 @@
           "noticeText": null,
           "reason": "disabled"
         }
-      }
+      },
+      "execution": "embedded-in-deliver"
     },
-    "check": {
-      "status": "pass",
-      "exitCode": 0,
-      "durationMs": 81,
-      "command": [
-        "/Users/milanjyotiray/.nvm/versions/node/v24.15.0/bin/node",
-        "/Users/milanjyotiray/physiotherapy-clinic-platform/.agents/skills/archify/bin/archify.mjs",
-        "check",
-        "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
-        "--require-provenance"
-      ],
-      "receipt": {
-        "ok": true,
-        "file": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
-        "artifact": {
-          "sha256": "dbd3af17802f92afe3e6ca779782d91be1407d504324cea652d7ac525937d5e5",
-          "bytes": 831205
-        },
-        "checks": [
-          {
-            "name": "single_svg",
-            "ok": true,
-            "details": [
-              "found 1 <svg> block(s)"
-            ]
-          },
-          {
-            "name": "finite_svg",
-            "ok": true,
-            "details": []
-          },
-          {
-            "name": "orthogonal_arrows",
-            "ok": true,
-            "details": []
-          },
-          {
-            "name": "label_route_clearance",
-            "ok": true,
-            "details": [
-              "[composition/label-route-clearance] standard label \"Verify Token\" on relationship id \"c5\" (\"api_controller\" -> \"auth_service\") is 0px from relationship id \"c4\" (\"sec_gateway\" -> \"api_controller\") segment 3 [771, 156] -> [771, 180] with 14px hidden by the mask (minimum 2px) — use renderer-supported label controls (message y for sequence; otherwise labelAt, labelDx, labelDy, or labelSegment), or adjust the other relationship route/via/channel."
-            ]
-          },
-          {
-            "name": "relationship_crossings",
-            "ok": true,
-            "details": []
-          },
-          {
-            "name": "relationship_corridors",
-            "ok": true,
-            "details": []
-          },
-          {
-            "name": "container_border_runs",
-            "ok": true,
-            "details": []
-          },
-          {
-            "name": "route_rhythm",
-            "ok": true,
-            "details": []
-          },
-          {
-            "name": "legend_clearance",
-            "ok": true,
-            "details": []
-          }
-        ],
-        "composition": {
-          "schemaVersion": 1,
-          "profile": "standard",
-          "status": "pass",
-          "summary": {
-            "errors": 0,
-            "warnings": 1
-          },
-          "metrics": {
-            "properCrossings": 0,
-            "resolvedCrossovers": 0,
-            "ambiguousCorridors": 0,
-            "arrowheadCollisions": 0,
-            "containerBorderRuns": 0,
-            "labelRouteClearanceIssues": 1,
-            "labelCanvasOverflowIssues": 0,
-            "minLabelRouteClearance": 0,
-            "desktopReadabilityIssues": 0,
-            "viewportHeightIssues": 0,
-            "minProjectedNodeTextPx": 7,
-            "maxBends": 3,
-            "routesOverSuggestedBends": 3,
-            "maxStretch": 1.306,
-            "routesOverSuggestedStretch": 0,
-            "minSegmentPx": 24,
-            "minInteriorSegmentPx": 56,
-            "shortSegmentCount": 0,
-            "shortEndpointSegmentCount": 0,
-            "shortInteriorSegmentCount": 0,
-            "microSegmentCount": 0
-          },
-          "suggestedLimits": {
-            "bendsPerRelationship": 2,
-            "stretch": 1.35,
-            "segmentPx": 16,
-            "microSegmentPx": 8
-          },
-          "routeReview": {
-            "crossings": [],
-            "detours": [
-              {
-                "relationship": {
-                  "id": "c2",
-                  "from": "google_bot",
-                  "to": "seo_layer",
-                  "label": "Index Schemas",
-                  "collectionIndex": 1,
-                  "artifactIndex": 2
-                },
-                "bends": 3,
-                "stretch": 1.306
-              },
-              {
-                "relationship": {
-                  "id": "c3",
-                  "from": "frontend_portal",
-                  "to": "sec_gateway",
-                  "label": "Bookings &amp; Leads",
-                  "collectionIndex": 2,
-                  "artifactIndex": 3
-                },
-                "bends": 3,
-                "stretch": 1.298
-              },
-              {
-                "relationship": {
-                  "id": "c4",
-                  "from": "sec_gateway",
-                  "to": "api_controller",
-                  "label": "Sanitized Traffic",
-                  "collectionIndex": 3,
-                  "artifactIndex": 4
-                },
-                "bends": 3,
-                "stretch": 1.294
-              }
-            ]
-          },
-          "leadingSpace": {
-            "measured": true,
-            "emptyTopPx": 10,
-            "emptyTopRatio": 0.02,
-            "occupiedTop": 10,
-            "viewBoxTop": 0,
-            "canvasHeight": 512,
-            "typicalNodeHeight": 64,
-            "reviewSuggested": false
-          },
-          "desktopReadability": {
-            "budgetBasis": "recognized-declared-wide",
-            "readerContract": "declared-wide-v1",
-            "availableDiagramWidth": 1190,
-            "actualBudgetPx": 1190,
-            "actualReaderWidth": 1220,
-            "desiredReaderWidth": 1220,
-            "viewportCap": 1376,
-            "limit": "source-size",
-            "requestedTargetPx": 7.5,
-            "requestedTargetMet": false,
-            "hardFloorPx": 6,
-            "hardFloorMet": true,
-            "minimumOwner": {
-              "kind": "node",
-              "id": "sec_gateway"
-            },
-            "minimumSourceTextPx": 7,
-            "minimumProjectedTextPx": 7,
-            "semanticTextCount": 31
-          },
-          "issues": [
-            {
-              "severity": "warning",
-              "code": "composition/label-route-clearance",
-              "label": "Verify Token",
-              "labelRelationship": {
-                "id": "c5",
-                "from": "api_controller",
-                "to": "auth_service",
-                "label": "Verify Token",
-                "collectionIndex": 4,
-                "artifactIndex": 5
-              },
-              "otherRelationship": {
-                "id": "c4",
-                "from": "sec_gateway",
-                "to": "api_controller",
-                "label": "Sanitized Traffic",
-                "collectionIndex": 3,
-                "artifactIndex": 4
-              },
-              "segmentIndex": 3,
-              "labelRect": {
-                "x": 751.2,
-                "y": 160,
-                "width": 67.6,
-                "height": 14
-              },
-              "clearance": 0,
-              "intersectionLength": 14,
-              "threshold": 2,
-              "from": [
-                771,
-                156
-              ],
-              "to": [
-                771,
-                180
-              ]
-            }
-          ]
-        },
-        "provenance": "current",
-        "deliveryReceiptId": "61fb6fc1-02e3-45fc-9931-22477c61a08a"
-      }
-    },
-    "browser-check": {
-      "status": "pass",
-      "exitCode": 0,
-      "durationMs": 1303,
-      "command": [
-        "/Users/milanjyotiray/.nvm/versions/node/v24.15.0/bin/node",
-        "/Users/milanjyotiray/physiotherapy-clinic-platform/.agents/skills/archify/bin/archify.mjs",
-        "browser-check",
-        "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
-        "--json",
-        "--require-provenance"
-      ],
-      "execution": "in-process",
-      "receipt": {
-        "schemaVersion": 1,
-        "ok": true,
-        "command": "browser-check",
-        "evidenceKind": "automated-browser",
-        "status": "pass",
-        "visualReview": "not-requested",
-        "provenance": "current",
-        "deliveryReceiptId": "61fb6fc1-02e3-45fc-9931-22477c61a08a",
-        "artifact": {
-          "path": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
-          "sha256": "dbd3af17802f92afe3e6ca779782d91be1407d504324cea652d7ac525937d5e5",
-          "bytes": 831205
-        },
-        "state": {
-          "detail": "read",
-          "motion": "still"
-        },
-        "chrome": {
-          "status": "available",
-          "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-        },
-        "diagnostics": [],
-        "containment": {
-          "status": "pass",
-          "policy": "fit-or-reader-declared-readable-vertical-scroll",
-          "viewports": [
-            {
-              "width": 1440,
-              "height": 900,
-              "theme": "light",
-              "innerWidth": 1440,
-              "innerHeight": 900,
-              "scrollWidth": 1440,
-              "scrollHeight": 900,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1376,
-              "diagramWidth": 1346,
-              "pageComposition": {
-                "bodyPaddingPx": 12,
-                "headerPx": 52,
-                "diagramChromePx": 78,
-                "svgPx": 579,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 10,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 54,
-              "viewerChromeActive": true,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            },
-            {
-              "width": 1600,
-              "height": 1000,
-              "theme": "light",
-              "innerWidth": 1600,
-              "innerHeight": 1000,
-              "scrollWidth": 1600,
-              "scrollHeight": 1000,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1536,
-              "diagramWidth": 1506,
-              "pageComposition": {
-                "bodyPaddingPx": 64,
-                "headerPx": 60,
-                "diagramChromePx": 84,
-                "svgPx": 648,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 10,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 54,
-              "viewerChromeActive": true,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            },
-            {
-              "width": 1920,
-              "height": 1080,
-              "theme": "light",
-              "innerWidth": 1920,
-              "innerHeight": 1080,
-              "scrollWidth": 1920,
-              "scrollHeight": 1080,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1856,
-              "diagramWidth": 1785,
-              "pageComposition": {
-                "bodyPaddingPx": 64,
-                "headerPx": 60,
-                "diagramChromePx": 176,
-                "svgPx": 768,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 29,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            },
-            {
-              "width": 2048,
-              "height": 1320,
-              "theme": "light",
-              "innerWidth": 2048,
-              "innerHeight": 1320,
-              "scrollWidth": 2048,
-              "scrollHeight": 1320,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1920,
-              "diagramWidth": 1785,
-              "pageComposition": {
-                "bodyPaddingPx": 64,
-                "headerPx": 68,
-                "diagramChromePx": 408,
-                "svgPx": 768,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 145,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            }
-          ]
-        },
-        "themeStates": {
-          "status": "pass",
-          "viewports": [
-            {
-              "width": 1440,
-              "height": 900,
-              "requestedTheme": "light",
-              "resolvedTheme": "light",
-              "ok": true
-            },
-            {
-              "width": 1600,
-              "height": 1000,
-              "requestedTheme": "light",
-              "resolvedTheme": "light",
-              "ok": true
-            },
-            {
-              "width": 1920,
-              "height": 1080,
-              "requestedTheme": "light",
-              "resolvedTheme": "light",
-              "ok": true
-            },
-            {
-              "width": 2048,
-              "height": 1320,
-              "requestedTheme": "light",
-              "resolvedTheme": "light",
-              "ok": true
-            },
-            {
-              "width": 1440,
-              "height": 900,
-              "requestedTheme": "dark",
-              "resolvedTheme": "dark",
-              "ok": true
-            },
-            {
-              "width": 2048,
-              "height": 1320,
-              "requestedTheme": "dark",
-              "resolvedTheme": "dark",
-              "ok": true
-            }
-          ]
-        },
-        "readability": {
-          "status": "pass",
-          "minimumProjectedNodeTextPx": 6,
-          "viewports": [
-            {
-              "width": 1440,
-              "height": 900,
-              "theme": "light",
-              "innerWidth": 1440,
-              "innerHeight": 900,
-              "scrollWidth": 1440,
-              "scrollHeight": 900,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1376,
-              "diagramWidth": 1346,
-              "pageComposition": {
-                "bodyPaddingPx": 12,
-                "headerPx": 52,
-                "diagramChromePx": 78,
-                "svgPx": 579,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 10,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 54,
-              "viewerChromeActive": true,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            },
-            {
-              "width": 1600,
-              "height": 1000,
-              "theme": "light",
-              "innerWidth": 1600,
-              "innerHeight": 1000,
-              "scrollWidth": 1600,
-              "scrollHeight": 1000,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1536,
-              "diagramWidth": 1506,
-              "pageComposition": {
-                "bodyPaddingPx": 64,
-                "headerPx": 60,
-                "diagramChromePx": 84,
-                "svgPx": 648,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 10,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 54,
-              "viewerChromeActive": true,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            },
-            {
-              "width": 1920,
-              "height": 1080,
-              "theme": "light",
-              "innerWidth": 1920,
-              "innerHeight": 1080,
-              "scrollWidth": 1920,
-              "scrollHeight": 1080,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1856,
-              "diagramWidth": 1785,
-              "pageComposition": {
-                "bodyPaddingPx": 64,
-                "headerPx": 60,
-                "diagramChromePx": 176,
-                "svgPx": 768,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 29,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            },
-            {
-              "width": 2048,
-              "height": 1320,
-              "theme": "light",
-              "innerWidth": 2048,
-              "innerHeight": 1320,
-              "scrollWidth": 2048,
-              "scrollHeight": 1320,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1920,
-              "diagramWidth": 1785,
-              "pageComposition": {
-                "bodyPaddingPx": 64,
-                "headerPx": 68,
-                "diagramChromePx": 408,
-                "svgPx": 768,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 145,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            }
-          ]
-        },
-        "viewerChrome": {
-          "status": "pass",
-          "viewports": [
-            {
-              "width": 1440,
-              "height": 900,
-              "theme": "light",
-              "innerWidth": 1440,
-              "innerHeight": 900,
-              "scrollWidth": 1440,
-              "scrollHeight": 900,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1376,
-              "diagramWidth": 1346,
-              "pageComposition": {
-                "bodyPaddingPx": 12,
-                "headerPx": 52,
-                "diagramChromePx": 78,
-                "svgPx": 579,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 10,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 54,
-              "viewerChromeActive": true,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            },
-            {
-              "width": 1600,
-              "height": 1000,
-              "theme": "light",
-              "innerWidth": 1600,
-              "innerHeight": 1000,
-              "scrollWidth": 1600,
-              "scrollHeight": 1000,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1536,
-              "diagramWidth": 1506,
-              "pageComposition": {
-                "bodyPaddingPx": 64,
-                "headerPx": 60,
-                "diagramChromePx": 84,
-                "svgPx": 648,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 10,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 54,
-              "viewerChromeActive": true,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            },
-            {
-              "width": 1920,
-              "height": 1080,
-              "theme": "light",
-              "innerWidth": 1920,
-              "innerHeight": 1080,
-              "scrollWidth": 1920,
-              "scrollHeight": 1080,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1856,
-              "diagramWidth": 1785,
-              "pageComposition": {
-                "bodyPaddingPx": 64,
-                "headerPx": 60,
-                "diagramChromePx": 176,
-                "svgPx": 768,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 29,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            },
-            {
-              "width": 2048,
-              "height": 1320,
-              "theme": "light",
-              "innerWidth": 2048,
-              "innerHeight": 1320,
-              "scrollWidth": 2048,
-              "scrollHeight": 1320,
-              "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
-              "readerLayout": "adaptive",
-              "readerOverflow": null,
-              "readerFit": "intrinsic-height",
-              "ok": true,
-              "readerWidth": 1920,
-              "diagramWidth": 1785,
-              "pageComposition": {
-                "bodyPaddingPx": 64,
-                "headerPx": 68,
-                "diagramChromePx": 408,
-                "svgPx": 768,
-                "cardsPx": 0,
-                "viewBoxHeight": 512
-              },
-              "viewBoxWidth": 1190,
-              "minimumProjectedNodeTextPx": 7,
-              "minimumProjectedNonEdgeTextPx": 7,
-              "minimumProjectedEdgeTextPx": 8,
-              "minimumProjectedNodeText": "Helmet CSP + Rate Limiter + Honeypot",
-              "minimumProjectedNodeTextDetail": "context",
-              "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "sec_gateway"
-              },
-              "minimumRequiredNodeTextPx": 6,
-              "readabilityOk": true,
-              "hasLegend": true,
-              "hasNavigationDock": true,
-              "legendDockIntersectionArea": 0,
-              "dockStageIntersectionArea": 0,
-              "dockStageGap": 145,
-              "requiredDockStageGap": 10,
-              "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
-              "viewerChromeOk": true,
-              "resolvedTheme": "light"
-            }
-          ]
-        },
-        "captures": {
-          "status": "not-requested",
-          "screenshots": [],
-          "contactSheet": null
-        },
-        "sidecars": {
-          "receipt": "archify-system-architecture.browser-check.json",
-          "files": []
-        }
-      }
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
     }
   },
   "browserCheck": {
     "requested": true,
-    "ran": true
+    "ran": false
   },
-  "diagnostics": [],
+  "diagnostics": [
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"Verify Token\" on connections[4] id \"c5\" \"api_controller\" -> \"auth_service\" label \"Verify Token\" is 0px from connections[3] id \"c4\" \"sec_gateway\" -> \"api_controller\" label \"Sanitized Traffic\" segment 3 [771, 156] -> [771, 180] (label rect [751, 160, 68, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 4,
+        "id": "c5",
+        "from": "api_controller",
+        "to": "auth_service"
+      },
+      "evidence": {
+        "label": "Verify Token",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 3,
+          "id": "c4",
+          "from": "sec_gateway",
+          "to": "api_controller"
+        },
+        "segmentIndex": 3,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "c5",
+            "from": "api_controller",
+            "to": "auth_service",
+            "label": "Verify Token",
+            "variant": "security"
+          },
+          "relationIndex": 4,
+          "label": "Verify Token",
+          "x": 751.2,
+          "y": 160,
+          "width": 67.6,
+          "height": 14,
+          "lx": 785,
+          "ly": 170
+        },
+        "from": [
+          771,
+          156
+        ],
+        "to": [
+          771,
+          180
+        ]
+      },
+      "supportedFixes": [
+        "adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    }
+  ],
   "evidence": {
     "receipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.finalize.json",
-    "summaryReceipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.finalize-summary.json",
-    "browserCheckReceipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.browser-check.json"
+    "summaryReceipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.finalize-summary.json"
   },
   "visualReview": "not-requested",
-  "finishedAt": "2026-10-21T08:37:09.576Z",
-  "durationMs": 1663,
+  "failedStage": "validate",
+  "finishedAt": "2026-10-21T09:58:57.330Z",
+  "durationMs": 164,
   "update": {
     "status": "current",
     "installedVersion": "3.2.0",

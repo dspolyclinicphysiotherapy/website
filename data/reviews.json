@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Ankit Kashyap",
+    "rating": 5,
+    "tag": "Severe Lower Back & Sciatica",
+    "timeAgo": "2 weeks ago",
+    "text": "I visited Dr. Devansh Sharma at DS Polyclinic after suffering from severe back spasms and shooting pain down my leg. He took 30 minutes just to test my posture and joint movement before touching anything. The manual therapy and structured home exercises gave me relief in just 3 sessions.",
+    "verified": true,
+    "source": "Google Review"
+  },
+  {
+    "id": 2,
+    "name": "Smt. Sharda Devi & Family",
+    "rating": 5,
+    "tag": "Home Physiotherapy — Knee Replacement",
+    "timeAgo": "3 weeks ago",
+    "text": "Booked home visits for my elderly mother in Gaur City 2 after her knee surgery. Dr. Devansh is extremely respectful, patient, and punctual. He guided her through every step of balance and gait training without rushing. True doctor-led care.",
+    "verified": true,
+    "source": "Google Review"
+  },
+  {
+    "id": 3,
+    "name": "Vipin Tyagi",
+    "rating": 5,
+    "tag": "Cervical Spondylosis & Cupping Therapy",
+    "timeAgo": "1 month ago",
+    "text": "Working 12 hours on screens caused chronic neck stiffness and migraines. Dr. Devansh applied dry cupping and thoracic mobilisation. The knots released almost instantly. The clinic in SS Plaza is quiet, private, and exceptionally clean.",
+    "verified": true,
+    "source": "Google Review"
+  },
+  {
+    "id": 4,
+    "name": "Priyanka Saxena",
+    "rating": 5,
+    "tag": "Frozen Shoulder (Adhesive Capsulitis)",
+    "timeAgo": "1 month ago",
+    "text": "Could not lift my arm above shoulder height for nearly 5 months. Dr. Devansh never passed me to an assistant; every single minute was consultant-delivered. I have restored 95% of my natural range.",
+    "verified": true,
+    "source": "Google Review"
+  }
+]

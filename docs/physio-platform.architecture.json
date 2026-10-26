@@ -2,7 +2,7 @@
   "schema_version": 1,
   "diagram_type": "architecture",
   "meta": {
-    "title": "KineticPulse Physiotherapy & CRM Platform Architecture",
+    "title": "DS Polyclinic Physiotherapy & CRM Platform Architecture",
     "output": "docs/archify-system-architecture.html",
     "quality_profile": "standard"
   },

@@ -155,8 +155,8 @@ app.use((err, req, res, next) => {
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`\n======================================================`);
-    console.log(`  AuraSpine Physiotherapy & Sports Rehabilitation`);
-    console.log(`  Website & CRM Platform is Running Live`);
+    console.log(`  DS Polyclinic — Dr. Devansh Sharma`);
+    console.log(`  Consultant Physiotherapy & CRM Platform Live`);
     console.log(`======================================================`);
     console.log(`  Patient Portal:  http://localhost:${PORT}`);
     console.log(`  Admin CRM Panel: http://localhost:${PORT}/admin`);

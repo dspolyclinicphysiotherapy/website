@@ -1,4 +1,4 @@
-// KineticPulse Physiotherapy & Sports Rehabilitation
+// DS Polyclinic — Dr. Devansh Sharma
 // Interactive Frontend Controller
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +21,7 @@ const PAIN_REGIONS_DATA = {
     recoveryWeeks: "2 - 4 Weeks (Average 4 Sessions)",
     recoveryPercent: 96,
     recommendedTreatments: ["Dry Needling", "Joint Mobilization", "Postural Realignment", "Ergonomic Setup"],
-    specialist: "Dr. Sarah Jenkins (Spine Specialist)",
+    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
     reliefSpeed: "75% pain reduction within 48 hours of initial session"
   },
   shoulder: {
@@ -31,7 +31,7 @@ const PAIN_REGIONS_DATA = {
     recoveryWeeks: "4 - 6 Weeks (Average 5 Sessions)",
     recoveryPercent: 94,
     recommendedTreatments: ["Shockwave Therapy", "Manual Therapy", "Scapular Stabilisation", "Strengthening"],
-    specialist: "Dr. Marcus Vance (Sports & Upper Limb)",
+    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
     reliefSpeed: "Restores overhead arm mobility without cortisone injections"
   },
   lumbar: {
@@ -41,7 +41,7 @@ const PAIN_REGIONS_DATA = {
     recoveryWeeks: "3 - 5 Weeks (Average 4.5 Sessions)",
     recoveryPercent: 97,
     recommendedTreatments: ["Spinal Decompression", "Neural Flossing", "Core Stabilization", "Myofascial Release"],
-    specialist: "Dr. Sarah Jenkins (Orthopedic Spine Lead)",
+    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
     reliefSpeed: "91% avoid invasive surgical intervention"
   },
   knee: {
@@ -51,7 +51,7 @@ const PAIN_REGIONS_DATA = {
     recoveryWeeks: "4 - 8 Weeks (Post-Op or Conservative)",
     recoveryPercent: 98,
     recommendedTreatments: ["Biomechanical Gait Analysis", "Targeted Quad/Hamstring Loading", "Knee Taping", "Laser Therapy"],
-    specialist: "Dr. Elena Rostova (Joint & Post-Op Specialist)",
+    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
     reliefSpeed: "Restores full weight-bearing comfort and squat depth"
   },
   ankle: {
@@ -61,7 +61,7 @@ const PAIN_REGIONS_DATA = {
     recoveryWeeks: "3 - 5 Weeks (Average 4 Sessions)",
     recoveryPercent: 95,
     recommendedTreatments: ["Deep Friction Massage", "Custom Orthotic Triage", "Eccentric Loading", "Ultrasound"],
-    specialist: "Dr. Marcus Vance (Sports Rehabilitation)",
+    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
     reliefSpeed: "Walk without morning heel stabbing pain within 10 days"
   },
   hip: {
@@ -71,7 +71,7 @@ const PAIN_REGIONS_DATA = {
     recoveryWeeks: "4 - 6 Weeks (Average 5 Sessions)",
     recoveryPercent: 93,
     recommendedTreatments: ["Pelvic Realignment", "Deep Gluteal Mobilization", "Hip Flexor Release", "Pilates Rehab"],
-    specialist: "Dr. Elena Rostova (Mobility Specialist)",
+    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
     reliefSpeed: "Eradicates deep groin and buttock discomfort when sitting or walking"
   }
 };
@@ -233,7 +233,7 @@ function initQuiz() {
       }
     } catch (err) {
       console.error(err);
-      alert("Network error. Please call the clinic directly at +1 (555) 749-7460.");
+      alert("Network error. Please call the clinic directly at +91 98910 18300.");
     }
   }
 }
@@ -322,7 +322,7 @@ function initBookingModal() {
       } catch (err) {
         console.error(err);
         toast.className = 'toast-msg error';
-        toast.textContent = "Connection error. Please call +1 (555) 749-7460 for urgent bookings.";
+        toast.textContent = "Connection error. Please call +91 98910 18300 for urgent bookings.";
         submitBtn.textContent = "Confirm & Reserve Slot →";
         submitBtn.disabled = false;
       }

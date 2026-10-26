@@ -1,41 +1,41 @@
 [
   {
     "id": "LEAD-2001",
-    "name": "Michael Sterling",
-    "email": "m.sterling@example.com",
-    "phone": "+1 (555) 876-5432",
-    "painArea": "Shoulder (Rotator Cuff)",
-    "painSeverity": "7 / 10",
-    "duration": "2-4 Weeks",
+    "name": "Manish Tyagi",
+    "email": "manish.tyagi@example.com",
+    "phone": "+91 98112 33445",
+    "painArea": "Lower Back & Sciatica",
+    "painSeverity": "8 / 10",
+    "duration": "More than 1 Month",
     "source": "Visual Body Navigator",
     "status": "Contacted",
-    "notes": "Patient contacted via WhatsApp; interested in morning slot next Tuesday.",
-    "createdAt": "2026-10-21T09:45:00Z"
+    "notes": "Spoke on phone; lives in Gaur City 1. Booking an in-clinic slot for spine assessment.",
+    "createdAt": "2026-10-21T08:15:00Z"
   },
   {
     "id": "LEAD-2002",
-    "name": "Jessica Patel",
-    "email": "j.patel@example.com",
-    "phone": "+1 (555) 987-6543",
-    "painArea": "Lower Back (Desk Worker)",
-    "painSeverity": "8 / 10",
-    "duration": "More than 2 Months",
+    "name": "Shweta Rastogi",
+    "email": "shweta.r@example.com",
+    "phone": "+91 99100 88776",
+    "painArea": "Cervical & Trapezius Stiffness",
+    "painSeverity": "7 / 10",
+    "duration": "2-3 Weeks",
     "source": "60-Second Recovery Quiz",
     "status": "New",
-    "notes": "Suffering from sitting pain. Recommended Spinal Decompression & Ergonomic review.",
-    "createdAt": "2026-10-21T12:10:00Z"
+    "notes": "Work from home tech professional; experiencing severe neck spasms. Interested in Dry Cupping.",
+    "createdAt": "2026-10-21T09:30:00Z"
   },
   {
     "id": "LEAD-2003",
-    "name": "Arthur Pendelton",
-    "email": "arthur.p@example.com",
-    "phone": "+1 (555) 432-1098",
-    "painArea": "Ankle Sprain (Sports)",
+    "name": "Col. R.K. Bhatnagar",
+    "email": "rk.bhatnagar@example.com",
+    "phone": "+91 98991 22334",
+    "painArea": "Bilateral Knee Osteoarthritis",
     "painSeverity": "6 / 10",
-    "duration": "3 Days ago",
-    "source": "Emergency Pain Relief Triage",
+    "duration": "Over 6 Months",
+    "source": "Home Visits Triage",
     "status": "Booked",
-    "notes": "Converted to APT-1001 follow-up.",
-    "createdAt": "2026-10-20T16:30:00Z"
+    "notes": "Converted to home visit in Chipiyana Buzurg for geriatric mobility.",
+    "createdAt": "2026-10-20T17:00:00Z"
   }
 ]

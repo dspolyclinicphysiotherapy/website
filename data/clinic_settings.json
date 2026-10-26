@@ -1,23 +1,31 @@
 {
-  "clinicName": "AuraSpine Physiotherapy & Sports Rehabilitation",
-  "tagline": "Evidence-Based Musculoskeletal Care, Manual Therapy & Pain Relief",
-  "phone": "+91 98450 12345",
-  "landline": "080 4123 4567",
-  "email": "care@auraspinephysio.com",
-  "address": "#42, 100 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560038 (Near Metro Station)",
-  "whatsappNumber": "+919845012345",
-  "googleMapsUrl": "https://maps.google.com/?q=100+Feet+Road+Indiranagar+Bengaluru",
+  "clinicName": "DS Polyclinic",
+  "tagline": "Consultant-Led Physiotherapy & Rehabilitation — One-to-One Care",
+  "doctorName": "Dr. Devansh Sharma",
+  "doctorCredential": "Consultant Physiotherapist",
+  "phone": "+91 98910 18300",
+  "phoneDisplay": "098910 18300",
+  "email": "care@dspolyclinicphysiotherapy.com",
+  "address": "S-NO 9, SS PLAZA 1, Maharaja Suraj Mal Marg, Near Harsh Vihar Colony, Sector-16B Extension, Chipiyana Buzurg, Noida Extension, Greater Noida, Uttar Pradesh 201009",
+  "area": "Noida Extension",
+  "region": "Greater Noida & Ghaziabad, Uttar Pradesh",
+  "whatsappNumber": "+919891018300",
+  "googleMapsUrl": "https://maps.google.com/maps?q=S-NO%209%2C%20SS%20PLAZA%201%2C%20Maharaja%20Suraj%20Mal%20Marg%2C%20Chipiyana%20Buzurg%2C%20Sector%2016B%20Extension%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201009&z=17&ie=UTF8&iwloc=&output=embed",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=DS+Polyclinic+SS+Plaza+1+Chipiyana+Buzurg+Sector+16B+Noida+Extension+Greater+Noida+201009",
+  "reviewsUrl": "https://share.google/rizgICnnFiTidpl9W",
   "googleAppsScriptUrl": "",
   "currency": "INR",
   "currencySymbol": "₹",
+  "rating": "5.0",
   "operatingHours": {
-    "weekdays": "Monday - Saturday: 7:30 AM - 8:30 PM",
-    "saturday": "Saturday: 8:00 AM - 7:00 PM",
-    "sunday": "Sunday: 9:00 AM - 1:00 PM (Emergency & By Appointment)"
+    "weekdays": "Monday - Sunday: 9:00 AM - 9:30 PM",
+    "saturday": "Saturday: 9:00 AM - 9:30 PM",
+    "sunday": "Sunday: 9:00 AM - 9:30 PM (All 7 Days Open)"
   },
+  "homeVisits": "Available across Noida Extension, Gaur City, Greater Noida & Ghaziabad",
   "geo": {
-    "latitude": 12.9716,
-    "longitude": 77.6412
+    "latitude": 28.6089,
+    "longitude": 77.4475
   },
   "adminUser": {
     "username": "admin",

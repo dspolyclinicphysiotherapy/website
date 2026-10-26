@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "ok": true,
+  "ok": false,
   "command": "finalize",
-  "status": "pass",
+  "status": "fail",
   "type": "architecture",
-  "quality": "standard",
+  "quality": "showcase",
   "specification": {
     "path": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/physio-platform.architecture.json",
-    "sha256": "bdf798fac80023e1f338447626c10de36b90bf7e2fc3c7e5cc25e53f0852e1b3",
-    "bytes": 4302
+    "sha256": "c6f3c28ef47a3ed8b5ccae8f1464ca7dc59decb51cea4a8e7f70fb371c8466fe",
+    "bytes": 4303
   },
   "artifact": {
     "path": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html",
@@ -16,21 +16,77 @@
     "bytes": 831205
   },
   "gates": {
-    "validate": "pass",
-    "deliver": "pass",
-    "check": "pass",
-    "browser-check": "pass"
+    "validate": "fail",
+    "deliver": "not-run",
+    "check": "not-run",
+    "browser-check": "not-run"
   },
-  "diagnostics": [],
+  "failedStage": "validate",
+  "diagnostics": [
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"Verify Token\" on connections[4] id \"c5\" \"api_controller\" -> \"auth_service\" label \"Verify Token\" is 0px from connections[3] id \"c4\" \"sec_gateway\" -> \"api_controller\" label \"Sanitized Traffic\" segment 3 [771, 156] -> [771, 180] (label rect [751, 160, 68, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 4,
+        "id": "c5",
+        "from": "api_controller",
+        "to": "auth_service"
+      },
+      "evidence": {
+        "label": "Verify Token",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 3,
+          "id": "c4",
+          "from": "sec_gateway",
+          "to": "api_controller"
+        },
+        "segmentIndex": 3,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "c5",
+            "from": "api_controller",
+            "to": "auth_service",
+            "label": "Verify Token",
+            "variant": "security"
+          },
+          "relationIndex": 4,
+          "label": "Verify Token",
+          "x": 751.2,
+          "y": 160,
+          "width": 67.6,
+          "height": 14,
+          "lx": 785,
+          "ly": 170
+        },
+        "from": [
+          771,
+          156
+        ],
+        "to": [
+          771,
+          180
+        ]
+      },
+      "supportedFixes": [
+        "adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    }
+  ],
   "diagnosticSummary": {
-    "total": 0,
-    "shown": 0,
+    "total": 1,
+    "shown": 1,
     "truncated": false
   },
   "evidence": {
     "receipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.finalize.json",
-    "summaryReceipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.finalize-summary.json",
-    "browserCheckReceipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.browser-check.json"
+    "summaryReceipt": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.finalize-summary.json"
   },
   "update": {
     "status": "current",
@@ -43,64 +99,15 @@
     "noticeText": null
   },
   "visualReview": "not-requested",
-  "durationMs": 1663,
+  "durationMs": 164,
   "browserCheck": {
     "requested": true,
-    "ran": true
+    "ran": false
   },
-  "visualReviewRecommendation": {
-    "action": "inspect-route-readability",
-    "signals": {
-      "routesOverSuggestedBends": 3
-    },
-    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
-    "affectedRoutes": {
-      "crossings": [],
-      "detours": [
-        {
-          "relationship": {
-            "id": "c2",
-            "from": "google_bot",
-            "to": "seo_layer",
-            "label": "Index Schemas",
-            "collectionIndex": 1,
-            "artifactIndex": 2
-          },
-          "bends": 3,
-          "stretch": 1.306
-        },
-        {
-          "relationship": {
-            "id": "c3",
-            "from": "frontend_portal",
-            "to": "sec_gateway",
-            "label": "Bookings &amp; Leads",
-            "collectionIndex": 2,
-            "artifactIndex": 3
-          },
-          "bends": 3,
-          "stretch": 1.298
-        },
-        {
-          "relationship": {
-            "id": "c4",
-            "from": "sec_gateway",
-            "to": "api_controller",
-            "label": "Sanitized Traffic",
-            "collectionIndex": 3,
-            "artifactIndex": 4
-          },
-          "bends": 3,
-          "stretch": 1.294
-        }
-      ],
-      "truncated": false
-    },
-    "hints": [
-      "google_bot → seo_layer needs 3 bends: move node google_bot or seo_layer so they share a row or column with matching centers, or sit diagonally with a clear corner.",
-      "frontend_portal → sec_gateway needs 3 bends: move node frontend_portal or sec_gateway so they share a row or column with matching centers, or sit diagonally with a clear corner.",
-      "sec_gateway → api_controller needs 3 bends: move node sec_gateway or api_controller so they share a row or column with matching centers, or sit diagonally with a clear corner."
-    ],
-    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  "nextAction": {
+    "action": "edit-in-place",
+    "candidate": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/physio-platform.architecture.json",
+    "constraint": "Preserve unaffected semantics and geometry; apply each diagnostic's supportedFixes, or the fix its message names, and do not replace the whole candidate.",
+    "then": "finalize-once"
   }
 }

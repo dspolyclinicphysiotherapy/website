@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KineticPulse Physiotherapy | Clinical CRM & Admin Portal</title>
+  <title>DS Polyclinic | Clinical CRM &amp; Admin Portal</title>
   <meta name="robots" content="noindex, nofollow">
-  <style id="kineticpulse-admin-inline-styles">
+  <style id="dspolyclinic-admin-inline-styles">
 :root {
-  --admin-bg: #0F172A;
-  --admin-card: #1E293B;
-  --admin-card-border: #334155;
+  --admin-bg: #0d1711;
+  --admin-card: #15241b;
+  --admin-card-border: #23382c;
   --admin-text: #F8FAFC;
-  --admin-muted: #94A3B8;
-  --primary: #38BDF8;
-  --primary-dark: #0284C7;
+  --admin-muted: #8aa393;
+  --primary: #5fae41;
+  --primary-dark: #447e2d;
   --success: #34D399;
   --warning: #FBBF24;
   --danger: #F87171;
@@ -462,7 +462,7 @@ button, input, select, textarea {
     <div class="login-card">
       <div class="login-brand">
         <span style="font-size:26px;">⚡</span>
-        <span>KineticPulse CRM</span>
+        <span>DS Polyclinic CRM</span>
       </div>
 
       <div class="login-tag">
@@ -499,10 +499,10 @@ button, input, select, textarea {
   <div class="admin-layout" id="admin-layout">
     <header class="admin-header">
       <div class="admin-brand-header">
-        <span style="color:var(--primary); font-size:22px;">⚡</span>
+        <span style="color:var(--primary); font-size:22px;">🌿</span>
         <div>
-          <div>KineticPulse Physiotherapy CRM</div>
-          <div style="font-size:11px; color:var(--admin-muted); font-weight:500;">Clinical Operations & Patient Pipeline</div>
+          <div>DS Polyclinic CRM</div>
+          <div style="font-size:11px; color:var(--admin-muted); font-weight:500;">Dr. Devansh Sharma · Operations &amp; Patient Pipeline</div>
         </div>
       </div>
 
@@ -561,7 +561,7 @@ button, input, select, textarea {
 
         <div class="kpi-card">
           <div class="kpi-title">Pipeline Revenue</div>
-          <div class="kpi-value" style="color:var(--success);" id="kpi-revenue">$0</div>
+          <div class="kpi-value" style="color:var(--success);" id="kpi-revenue">₹0</div>
           <div class="kpi-sub">Confirmed & completed care</div>
           <div class="kpi-icon-watermark">💰</div>
         </div>
@@ -835,8 +835,8 @@ button, input, select, textarea {
     </div>
   </div>
 
-  <script id="kineticpulse-admin-inline-script">
-// KineticPulse Physiotherapy & Sports Rehabilitation
+  <script id="dspolyclinic-admin-inline-script">
+// DS Polyclinic — Dr. Devansh Sharma
 // Admin CRM & Pipeline Controller
 
 let currentToken = localStorage.getItem('physio_admin_token') || null;
@@ -1145,7 +1145,7 @@ window.addDoctorNotesPrompt = async function(id, existingNotes) {
 window.sendWhatsAppConfirmation = function(phone, name, date, time, service) {
   const cleanPhone = phone.replace(/[^0-9]/g, '');
   const msg = encodeURIComponent(
-    `Namaste ${name},\n\nYour physiotherapy appointment at AuraSpine Physiotherapy & Sports Rehabilitation has been confirmed for ${date} at ${time} (${service}).\n\nClinic Address: #42, 100 Feet Road, Indiranagar, Bengaluru, Karnataka.\n\nPlease arrive 5 minutes early in comfortable clothing. Feel free to reply here if you have any questions!`
+    `Namaste ${name},\n\nYour physiotherapy appointment at DS Polyclinic (Dr. Devansh Sharma) has been confirmed for ${date} at ${time} (${service}).\n\nClinic Address: S-NO 9, SS PLAZA 1, Sector-16B Extension, Chipiyana Buzurg, Noida Extension.\n\nPlease arrive 5 minutes early in comfortable clothing. Feel free to reply here if you have any questions!`
   );
   window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
 };
@@ -1237,7 +1237,7 @@ window.updateLeadStatus = async function(id, status) {
 window.sendWhatsAppLeadMessage = function(phone, name, painArea) {
   const cleanPhone = phone.replace(/[^0-9]/g, '');
   const msg = encodeURIComponent(
-    `Namaste ${name}, this is Dr. Aakash from AuraSpine Physiotherapy, Bengaluru. I received your triage inquiry regarding your ${painArea} pain. Do you have 5 minutes for a quick consultation so we can understand your symptoms and help you recover?`
+    `Namaste ${name}, this is Dr. Devansh Sharma from DS Polyclinic, Noida Extension. I received your triage inquiry regarding your ${painArea} discomfort. Do you have 5 minutes for a quick consultation so we can understand your symptoms and help you recover?`
   );
   window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
 };

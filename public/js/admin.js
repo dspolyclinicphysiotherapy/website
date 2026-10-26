@@ -1,4 +1,4 @@
-// KineticPulse Physiotherapy & Sports Rehabilitation
+// DS Polyclinic — Dr. Devansh Sharma
 // Admin CRM & Pipeline Controller
 
 let currentToken = localStorage.getItem('physio_admin_token') || null;
@@ -307,7 +307,7 @@ window.addDoctorNotesPrompt = async function(id, existingNotes) {
 window.sendWhatsAppConfirmation = function(phone, name, date, time, service) {
   const cleanPhone = phone.replace(/[^0-9]/g, '');
   const msg = encodeURIComponent(
-    `Namaste ${name},\n\nYour physiotherapy appointment at AuraSpine Physiotherapy & Sports Rehabilitation has been confirmed for ${date} at ${time} (${service}).\n\nClinic Address: #42, 100 Feet Road, Indiranagar, Bengaluru, Karnataka.\n\nPlease arrive 5 minutes early in comfortable clothing. Feel free to reply here if you have any questions!`
+    `Namaste ${name},\n\nYour physiotherapy appointment at DS Polyclinic (Dr. Devansh Sharma) has been confirmed for ${date} at ${time} (${service}).\n\nClinic Address: S-NO 9, SS PLAZA 1, Sector-16B Extension, Chipiyana Buzurg, Noida Extension.\n\nPlease arrive 5 minutes early in comfortable clothing. Feel free to reply here if you have any questions!`
   );
   window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
 };
@@ -399,7 +399,7 @@ window.updateLeadStatus = async function(id, status) {
 window.sendWhatsAppLeadMessage = function(phone, name, painArea) {
   const cleanPhone = phone.replace(/[^0-9]/g, '');
   const msg = encodeURIComponent(
-    `Namaste ${name}, this is Dr. Aakash from AuraSpine Physiotherapy, Bengaluru. I received your triage inquiry regarding your ${painArea} pain. Do you have 5 minutes for a quick consultation so we can understand your symptoms and help you recover?`
+    `Namaste ${name}, this is Dr. Devansh Sharma from DS Polyclinic, Noida Extension. I received your triage inquiry regarding your ${painArea} discomfort. Do you have 5 minutes for a quick consultation so we can understand your symptoms and help you recover?`
   );
   window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
 };

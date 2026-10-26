@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "command": "deliver",
+  "status": "pending",
+  "receiptId": "37074665-2cbf-4eff-a751-152ae691e2b2",
+  "input": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/physio-platform.architecture.json",
+  "output": "/Users/milanjyotiray/physiotherapy-clinic-platform/docs/archify-system-architecture.html"
+}

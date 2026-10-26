@@ -1,26 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
+
 :root {
-  --primary: #0F4C81;
-  --primary-dark: #0A3258;
-  --primary-light: #EBF4FC;
-  --accent: #00B4D8;
-  --accent-teal: #009688;
-  --accent-gold: #F59E0B;
-  --success: #10B981;
-  --danger: #EF4444;
-  --dark: #1E293B;
-  --dark-light: #334155;
-  --muted: #64748B;
-  --light-bg: #F8FAFC;
-  --white: #FFFFFF;
-  --card-border: #E2E8F0;
-  --shadow-sm: 0 2px 4px rgba(15, 76, 129, 0.04);
-  --shadow-md: 0 8px 24px rgba(15, 76, 129, 0.08);
-  --shadow-lg: 0 16px 40px rgba(15, 76, 129, 0.12);
+  --primary: #447e2d;
+  --primary-dark: #33601f;
+  --primary-light: #eef6ea;
+  --primary-mint: #f6faf4;
+  --accent: #5fae41;
+  --accent-teal: #0aa6ae;
+  --accent-gold: #c59b27;
+  --success: #447e2d;
+  --danger: #dc2626;
+  --dark: #14231a;
+  --dark-light: #46584c;
+  --muted: #7e9686;
+  --light-bg: #f6faf4;
+  --white: #ffffff;
+  --card-border: #d8e7d0;
+  --shadow-sm: 0 2px 12px rgba(20, 35, 26, 0.06);
+  --shadow-md: 0 14px 36px -16px rgba(20, 35, 26, 0.16);
+  --shadow-lg: 0 20px 48px -12px rgba(20, 35, 26, 0.22);
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 22px;
   --radius-full: 9999px;
-  --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-main: "Jost", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-ui: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {

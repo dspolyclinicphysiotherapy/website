@@ -9,21 +9,21 @@ if (!fs.existsSync(DATA_DIR)) {
 
 // Initial seed data
 const DEFAULT_SETTINGS = {
-  clinicName: "KineticPulse Physiotherapy & Sports Rehabilitation",
+  clinicName: "DS Polyclinic — Physiotherapy & Rehabilitation",
   tagline: "Advanced Evidence-Based Pain Relief & Movement Restoration",
-  phone: "+1 (555) 749-7460",
-  email: "care@kineticpulsephysio.com",
-  address: "420 HealthCare Blvd, Suite 100, Metro City, NY 10001",
-  whatsappNumber: "+15557497460",
-  googleMapsUrl: "https://maps.google.com/?q=KineticPulse+Physiotherapy",
+  phone: "+91 98910 18300",
+  email: "dspolyclinicphysiotherapy@gmail.com",
+  address: "SS Plaza 1, Sector-16B Extension, Greater Noida, UP 201009",
+  whatsappNumber: "+919891018300",
+  googleMapsUrl: "https://maps.google.com/?q=DS+Polyclinic+Physiotherapy+Greater+Noida",
   operatingHours: {
-    weekdays: "Monday - Friday: 7:30 AM - 7:30 PM",
-    saturday: "Saturday: 8:30 AM - 3:00 PM",
-    sunday: "Sunday: Emergency & On-Call Only"
+    weekdays: "Monday - Sunday: 9:00 AM - 9:30 PM",
+    saturday: "Saturday: 9:00 AM - 9:30 PM",
+    sunday: "Sunday: 9:00 AM - 9:30 PM"
   },
   geo: {
-    latitude: 40.7589,
-    longitude: -73.9851
+    latitude: 28.6089,
+    longitude: 77.4475
   },
   adminUser: {
     username: "admin",
@@ -38,7 +38,7 @@ const DEFAULT_SERVICES = [
     icon: "running",
     shortDesc: "Rapid recovery protocols for athletes, runners, and active individuals.",
     duration: "45-60 min",
-    price: "$95",
+    price: "₹800",
     suitableFor: ["Sprains & Strains", "Rotator Cuff Tears", "ACL / Meniscus", "Tennis Elbow"],
     recoveryRate: "96%",
     badge: "Most Popular"
@@ -49,7 +49,7 @@ const DEFAULT_SERVICES = [
     icon: "spine",
     shortDesc: "Non-surgical, targeted traction and spinal mobilization for chronic back pain.",
     duration: "50 min",
-    price: "$110",
+    price: "₹900",
     suitableFor: ["Herniated Discs", "Sciatica", "Lower Back Spasms", "Degenerative Disc"],
     recoveryRate: "94%",
     badge: "High Relief"
@@ -60,7 +60,7 @@ const DEFAULT_SERVICES = [
     icon: "target",
     shortDesc: "Precision micro-needle stimulation targeting deep trigger points and muscle knots.",
     duration: "30-45 min",
-    price: "$85",
+    price: "₹700",
     suitableFor: ["Neck Stiffness", "Tension Headaches", "Muscle Spasms", "Fibromyalgia"],
     recoveryRate: "98%",
     badge: "Instant Release"
@@ -71,7 +71,7 @@ const DEFAULT_SERVICES = [
     icon: "shield",
     shortDesc: "Structured milestone-based protocols following joint replacements or ligament repairs.",
     duration: "60 min",
-    price: "$120",
+    price: "₹1,000",
     suitableFor: ["Hip / Knee Replacement", "Shoulder Reconstruction", "Fracture Recovery"],
     recoveryRate: "97%",
     badge: "Clinical Standard"
@@ -82,7 +82,7 @@ const DEFAULT_SERVICES = [
     icon: "user-check",
     shortDesc: "Biomechanics evaluation, spinal realignment, and corrective exercises for desk workers.",
     duration: "45 min",
-    price: "$80",
+    price: "₹600",
     suitableFor: ["Text Neck", "Thoracic Kyphosis", "Repetitive Strain (RSI)", "Shoulder Slump"],
     recoveryRate: "95%",
     badge: "Preventative"
@@ -93,7 +93,7 @@ const DEFAULT_SERVICES = [
     icon: "home",
     shortDesc: "Hospital-grade one-on-one physiotherapy in the comfort and privacy of your home.",
     duration: "60 min",
-    price: "$150",
+    price: "₹1,000",
     suitableFor: ["Elderly Mobility", "Acute Post-Op Patients", "Severe Pain Limited Mobility"],
     recoveryRate: "98%",
     badge: "Premium Care"
@@ -103,9 +103,9 @@ const DEFAULT_SERVICES = [
 const DEFAULT_APPOINTMENTS = [
   {
     id: "APT-1001",
-    patientName: "David Henderson",
-    patientEmail: "david.h@example.com",
-    patientPhone: "+1 (555) 234-5678",
+    patientName: "Amit Verma",
+    patientEmail: "amit.v@example.com",
+    patientPhone: "+91 99110 23456",
     serviceId: "sports-rehab",
     serviceName: "Sports Injury & Performance Rehab",
     painLocation: "Knee (ACL Post-Op)",
@@ -119,9 +119,9 @@ const DEFAULT_APPOINTMENTS = [
   },
   {
     id: "APT-1002",
-    patientName: "Elena Martinez",
-    patientEmail: "elena.m@example.com",
-    patientPhone: "+1 (555) 345-6789",
+    patientName: "Priya Sharma",
+    patientEmail: "priya.s@example.com",
+    patientPhone: "+91 98765 43210",
     serviceId: "spine-sciatica",
     serviceName: "Spinal Decompression & Sciatica Care",
     painLocation: "Lower Back & Leg Numbness",
@@ -135,9 +135,9 @@ const DEFAULT_APPOINTMENTS = [
   },
   {
     id: "APT-1003",
-    patientName: "Robert Chang",
-    patientEmail: "robert.c@example.com",
-    patientPhone: "+1 (555) 456-7890",
+    patientName: "Rohit Chauhan",
+    patientEmail: "rohit.c@example.com",
+    patientPhone: "+91 98765 45678",
     serviceId: "dry-needling",
     serviceName: "Dry Needling & Myofascial Release",
     painLocation: "Neck & Upper Trapezius",
@@ -151,9 +151,9 @@ const DEFAULT_APPOINTMENTS = [
   },
   {
     id: "APT-1004",
-    patientName: "Sophia Williams",
-    patientEmail: "sophia.w@example.com",
-    patientPhone: "+1 (555) 567-8901",
+    patientName: "Sunita Yadav",
+    patientEmail: "sunita.y@example.com",
+    patientPhone: "+91 88765 67890",
     serviceId: "home-visit",
     serviceName: "Home Visit & Concierge Physiotherapy",
     painLocation: "Hip Mobility & Post-Op",
@@ -170,9 +170,9 @@ const DEFAULT_APPOINTMENTS = [
 const DEFAULT_LEADS = [
   {
     id: "LEAD-2001",
-    name: "Michael Sterling",
-    email: "m.sterling@example.com",
-    phone: "+1 (555) 876-5432",
+    name: "Manish Kumar",
+    email: "manish.k@example.com",
+    phone: "+91 97654 87654",
     painArea: "Shoulder (Rotator Cuff)",
     painSeverity: "7 / 10",
     duration: "2-4 Weeks",
@@ -183,9 +183,9 @@ const DEFAULT_LEADS = [
   },
   {
     id: "LEAD-2002",
-    name: "Jessica Patel",
-    email: "j.patel@example.com",
-    phone: "+1 (555) 987-6543",
+    name: "Jyoti Patel",
+    email: "jyoti.p@example.com",
+    phone: "+91 98765 98765",
     painArea: "Lower Back (Desk Worker)",
     painSeverity: "8 / 10",
     duration: "More than 2 Months",
@@ -196,9 +196,9 @@ const DEFAULT_LEADS = [
   },
   {
     id: "LEAD-2003",
-    name: "Arthur Pendelton",
-    email: "arthur.p@example.com",
-    phone: "+1 (555) 432-1098",
+    name: "Arjun Pandey",
+    email: "arjun.p@example.com",
+    phone: "+91 88765 43210",
     painArea: "Ankle Sprain (Sports)",
     painSeverity: "6 / 10",
     duration: "3 Days ago",
@@ -212,25 +212,25 @@ const DEFAULT_LEADS = [
 const DEFAULT_REVIEWS = [
   {
     id: 1,
-    name: "Rachel Goldman",
+    name: "Rajesh Gupta",
     rating: 5,
     tag: "Sciatica & Herniated Disc",
     timeAgo: "2 weeks ago",
-    text: "I was scheduled for back surgery, but Dr. Jenkins' spinal decompression and rehabilitation plan completely got me out of pain within 4 sessions. I can pick up my daughter again without fear!",
+    text: "I was scheduled for back surgery, but Dr. Devansh's spinal decompression and rehabilitation plan completely got me out of pain within 4 sessions. I can pick up my daughter again without fear!",
     verified: true
   },
   {
     id: 2,
-    name: "Marcus Thorne",
+    name: "Manoj Tiwari",
     rating: 5,
     tag: "Marathon Runner - Achilles Rehab",
     timeAgo: "1 month ago",
-    text: "Tore my calf/Achilles right before the Chicago Marathon. The sports rehab team here uses real biomechanical video analysis and targeted dry needling. Finished my race with a personal best!",
+    text: "Tore my calf/Achilles right before the Delhi Marathon. The sports rehab team here uses real biomechanical video analysis and targeted dry needling. Finished my race with a personal best!",
     verified: true
   },
   {
     id: 3,
-    name: "Beatrice Montgomery",
+    name: "Bharti Mishra",
     rating: 5,
     tag: "Frozen Shoulder (Adhesive Capsulitis)",
     timeAgo: "3 weeks ago",
@@ -239,11 +239,11 @@ const DEFAULT_REVIEWS = [
   },
   {
     id: 4,
-    name: "Kevin Vance",
+    name: "Karan Verma",
     rating: 5,
     tag: "Post-Op ACL Reconstruction",
     timeAgo: "Just recently",
-    text: "The clinic atmosphere is state-of-the-art and motivating. They track every angle of your knee extension with precision. Best physio clinic in the state without question.",
+    text: "The clinic atmosphere is state-of-the-art and motivating. They track every angle of your knee extension with precision. Best physio clinic in Noida without question.",
     verified: true
   }
 ];
@@ -254,7 +254,7 @@ const DEFAULT_AUDIT_LOGS = [
     timestamp: "2026-10-21T08:00:00Z",
     action: "SYSTEM_INITIALIZED",
     actor: "SYSTEM",
-    details: "KineticPulse Physiotherapy Platform & Security Gateway online."
+    details: "DS Polyclinic Physiotherapy Platform & Security Gateway online."
   }
 ];
 

@@ -85,7 +85,7 @@ router.get('/dashboard', requireAdminAuth, (req, res) => {
     painAreaCounts[area] = (painAreaCounts[area] || 0) + 1;
   });
 
-  // Calculate estimated pipeline value ($95 average per session)
+  // Calculate estimated pipeline value (₹800 average per session)
   const estimatedRevenue = (confirmedAppointments + completedAppointments) * 95;
 
   res.json({
@@ -232,8 +232,8 @@ router.post('/google-sheet/test', requireAdminAuth, async (req, res) => {
     const testPayload = {
       id: "TEST-" + Math.floor(1000 + Math.random() * 9000),
       patientName: "Dr. Verification Test",
-      patientPhone: "+91 98450 12345",
-      patientEmail: "test@auraspinephysio.com",
+      patientPhone: "+91 98910 18300",
+      patientEmail: "test@dspolyclinic.com",
       serviceName: "Comprehensive Clinical Assessment",
       painLocation: "Lower Back / Lumbar Decompression",
       urgency: "Moderate",

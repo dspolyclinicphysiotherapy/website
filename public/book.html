@@ -3,269 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Visit | DS Polyclinic — Dr. Devansh Sharma, Noida Extension</title>
-  <meta name="description" content="Book an in-clinic physiotherapy session or bedside home visit with Dr. Devansh Sharma at DS Polyclinic, Noida Extension. Zero wait times, one-to-one consultant care. Call 098910 18300.">
-  <meta name="theme-color" content="#447e2d">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
-  <style>
-    :root {
-      --primary: #447e2d;
-      --primary-dark: #33601f;
-      --primary-light: #eef6ea;
-      --primary-mint: #f6faf4;
-      --accent: #5fae41;
-      --dark: #14231a;
-      --dark-light: #46584c;
-      --muted: #7e9686;
-      --card-border: #d8e7d0;
-      --font-serif: "Cormorant Garamond", Georgia, serif;
-      --font-main: "Jost", -apple-system, sans-serif;
-    }
-    body { font-family: var(--font-main); color: var(--dark); background: #f6faf4; line-height: 1.6; }
-    h1, h2, h3, .serif-font { font-family: var(--font-serif); }
-  </style>
+  <title>Book a Visit | DS Polyclinic — Dr. Devansh Sharma</title>
+  <meta name="description" content="Book an in-clinic or home visit physiotherapy session with Dr. Devansh Sharma at DS Polyclinic, Noida Extension. Call 098910 18300.">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="navbar" style="background:#fff; border-bottom:1px solid var(--card-border); position:sticky; top:0; z-index:100;">
-    <div class="container nav-container" style="display:flex; justify-content:space-between; align-items:center; height:74px;">
-      <a href="/" class="brand-logo" style="text-decoration:none; display:flex; align-items:center; gap:10px;">
-        <div class="brand-icon" style="background:var(--primary); color:#fff; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:10px; font-family:var(--font-serif); font-size:19px; font-weight:700;">DS</div>
-        <div>
-          <div style="font-weight:800; font-size:20px; color:var(--dark);">DS Polyclinic</div>
-          <span class="brand-tag" style="font-size:11px; text-transform:uppercase; color:var(--primary); font-weight:600;">Dr. Devansh Sharma · Consultant</span>
-        </div>
-      </a>
-
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links" style="display:flex; gap:24px; list-style:none;">
-          <li><a href="/" style="text-decoration:none; color:var(--dark-light); font-weight:600;">Home</a></li>
-          <li><a href="/treatments" style="text-decoration:none; color:var(--dark-light); font-weight:600;">Treatments</a></li>
-          <li><a href="/about" style="text-decoration:none; color:var(--dark-light); font-weight:600;">The Doctor</a></li>
-          <li><a href="/book" style="text-decoration:none; color:var(--primary); font-weight:800;">Book Visit</a></li>
-          <li><a href="/contact" style="text-decoration:none; color:var(--dark-light); font-weight:600;">Visit &amp; Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions" style="display:flex; gap:12px; align-items:center;">
-        <a href="tel:+919891018300" class="btn btn-outline btn-sm">📞 098910 18300</a>
-        <a href="https://wa.me/919891018300" target="_blank" class="btn btn-outline btn-sm" style="color:#16a34a; border-color:#16a34a;">💬 WhatsApp</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">DS Polyclinic <small>Dr. Devansh Sharma</small></a>
+      <nav><ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/treatments">Treatments</a></li><li><a href="/about">The Doctor</a></li><li><a href="/book">Book</a></li><li><a href="/contact">Contact</a></li></ul></nav>
+      <div class="nav-right">
+        <a href="tel:+919891018300" class="nav-phone">098910 18300</a>
+        <button class="nav-hamburger" onclick="document.getElementById('mob-menu').style.display='flex'" aria-label="Menu"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg></button>
       </div>
     </div>
   </header>
 
-  <main style="padding: 50px 0 80px;">
-    <div class="container" style="max-width: 720px;">
-      
-      <div style="text-align: center; margin-bottom: 30px;">
-        <span style="background: var(--primary-light); color: var(--primary-dark); padding: 5px 16px; border-radius: 999px; font-size: 12px; font-weight: 700; text-transform: uppercase;">
-          1-on-1 Consultant Scheduling
-        </span>
-        <h1 class="serif-font" style="font-size: clamp(32px, 4.5vw, 44px); font-weight: 600; color: var(--dark); margin: 12px 0 8px;">
-          Book Your Physiotherapy Visit
-        </h1>
-        <p style="color: var(--dark-light); font-size: 15px;">
-          One-to-one movement screen and treatment with Dr. Devansh Sharma • In-Clinic or Bedside Home Visit
-        </p>
-      </div>
-
-      <div style="background: white; border-radius: 20px; padding: 36px 32px; box-shadow: 0 14px 36px -16px rgba(20, 35, 26, 0.12); border: 1px solid var(--card-border);">
-        <form id="dedicated-booking-form">
-          <input type="text" id="dedicated-hp" class="hp-field" tabindex="-1" autocomplete="off" style="display:none;">
-
-          <div style="background: var(--primary-mint); border: 1px solid var(--card-border); border-radius: 12px; padding: 14px 18px; margin-bottom: 24px; font-size: 13px; display: flex; align-items: center; justify-content: space-between;">
-            <div>
-              <strong style="color: var(--primary);">🏥 Clinic Location:</strong> S-NO 9, SS PLAZA 1, Sector-16B Extension, Chipiyana Buzurg
-            </div>
-            <div style="color: var(--muted); font-size: 12px;">Daily 9:00 AM – 9:30 PM</div>
-          </div>
-
-          <div class="form-group" style="margin-bottom:16px;">
-            <label class="form-label" style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Patient Full Name *</label>
-            <input type="text" class="form-input" id="patient-name" placeholder="e.g. Rahul Sharma" required style="width:100%; padding:11px 14px; border:1px solid var(--card-border); border-radius:8px; font-size:14px;">
-          </div>
-
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
-            <div class="form-group">
-              <label class="form-label" style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Phone Number (WhatsApp Active) *</label>
-              <input type="tel" class="form-input" id="patient-phone" placeholder="098910 00000" required style="width:100%; padding:11px 14px; border:1px solid var(--card-border); border-radius:8px; font-size:14px;">
-            </div>
-            <div class="form-group">
-              <label class="form-label" style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Email Address (Optional)</label>
-              <input type="email" class="form-input" id="patient-email" placeholder="rahul@example.com" style="width:100%; padding:11px 14px; border:1px solid var(--card-border); border-radius:8px; font-size:14px;">
-            </div>
-          </div>
-
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
-            <div class="form-group">
-              <label class="form-label" style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Condition / Pain Location</label>
-              <select class="form-select" id="patient-pain-area" style="width:100%; padding:11px 14px; border:1px solid var(--card-border); border-radius:8px; font-size:14px;">
-                <option value="Lower Back & Sciatica">Lower Back &amp; Sciatica</option>
-                <option value="Neck & Cervical Spondylosis">Neck &amp; Cervical Spondylosis</option>
-                <option value="Frozen Shoulder">Frozen Shoulder</option>
-                <option value="Knee Osteoarthritis">Knee Osteoarthritis</option>
-                <option value="Sports Injury / ACL">Sports Injury / ACL</option>
-                <option value="Post-Surgical Joint Rehab">Post-Surgical Joint Rehab</option>
-                <option value="Cupping Therapy (Dry/Hijama/Fire)">Cupping Therapy (Dry/Hijama/Fire)</option>
-                <option value="Geriatric Mobility">Geriatric Mobility</option>
-                <option value="General Movement Assessment">General Movement Assessment</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Consultation Mode</label>
-              <select class="form-select" id="patient-mode" style="width:100%; padding:11px 14px; border:1px solid var(--card-border); border-radius:8px; font-size:14px;">
-                <option value="In-Clinic Session (SS Plaza 1)">In-Clinic Session (SS Plaza 1, Sector-16B)</option>
-                <option value="Home Visit (Noida Extension & Nearby)">Bedside Home Visit (Noida Extension &amp; Nearby)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group" style="margin-bottom:16px;">
-            <label class="form-label" style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Treatment Modality</label>
-            <select class="form-select" id="patient-treatment" style="width:100%; padding:11px 14px; border:1px solid var(--card-border); border-radius:8px; font-size:14px;">
-              <option value="Manual Therapy & Joint Mobilisation (₹600)">Manual Therapy &amp; Joint Mobilisation (₹600)</option>
-              <option value="Spine, Disc & Sciatica Rehabilitation (₹600)">Spine, Disc &amp; Sciatica Rehabilitation (₹600)</option>
-              <option value="Sports Injury Rehabilitation (₹700)">Sports Injury Rehabilitation (₹700)</option>
-              <option value="Post-Operative Rehabilitation (₹700)">Post-Operative Rehabilitation (₹700)</option>
-              <option value="Bedside Home Physiotherapy Visit (₹1,000)">Bedside Home Physiotherapy Visit (₹1,000)</option>
-              <option value="Dry Cupping Therapy (₹600)">Dry Cupping Therapy (₹600)</option>
-              <option value="Wet Cupping (Hijama) (₹1,000)">Wet Cupping (Hijama) (₹1,000)</option>
-              <option value="Fire Cupping Therapy (₹700)">Fire Cupping Therapy (₹700)</option>
-              <option value="Geriatric Mobility & Fall Prevention (₹600)">Geriatric Mobility &amp; Fall Prevention (₹600)</option>
-              <option value="Neurological Rehabilitation (₹800)">Neurological Rehabilitation (₹800)</option>
-            </select>
-          </div>
-
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
-            <div class="form-group">
-              <label class="form-label" style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Preferred Date *</label>
-              <input type="date" class="form-input" id="patient-date" required style="width:100%; padding:11px 14px; border:1px solid var(--card-border); border-radius:8px; font-size:14px;">
-            </div>
-            <div class="form-group">
-              <label class="form-label" style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Preferred Time Slot *</label>
-              <select class="form-select" id="patient-time" required style="width:100%; padding:11px 14px; border:1px solid var(--card-border); border-radius:8px; font-size:14px;">
-                <option value="09:30 AM">09:30 AM (Morning)</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="01:00 PM">01:00 PM</option>
-                <option value="03:30 PM">03:30 PM (Afternoon)</option>
-                <option value="05:30 PM">05:30 PM (Evening)</option>
-                <option value="07:00 PM">07:00 PM (Evening)</option>
-                <option value="08:30 PM">08:30 PM (Late Slot)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group" style="margin-bottom:20px;">
-            <label class="form-label" style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Describe your condition or address for home visit (Optional)</label>
-            <textarea class="form-textarea" id="patient-notes" rows="3" placeholder="e.g. Severe lower back ache when bending, or flat/society details for home visit..." style="width:100%; padding:11px 14px; border:1px solid var(--card-border); border-radius:8px; font-size:14px;"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" id="submit-booking-btn" style="width:100%; background:var(--primary); color:#fff; font-size:16px; font-weight:700; padding:15px; border-radius:10px;">
-            Confirm &amp; Reserve Appointment →
-          </button>
-
-          <div id="booking-alert" style="margin-top:16px; font-size:14px; font-weight:600; display:none; padding:14px; border-radius:8px;"></div>
-        </form>
-      </div>
-
+  <div id="mob-menu" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200;" onclick="this.style.display='none'">
+    <div style="background:#fff; width:280px; height:100%; padding:24px;" onclick="event.stopPropagation()">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;"><span style="font-family:var(--serif); font-size:20px; font-weight:600;">DS Polyclinic</span><button onclick="document.getElementById('mob-menu').style.display='none'" style="background:none; border:none; font-size:22px; cursor:pointer;">&times;</button></div>
+      <nav style="display:flex; flex-direction:column; gap:16px;"><a href="/">Home</a><a href="/treatments">Treatments</a><a href="/about">The Doctor</a><a href="/book" style="color:var(--green); font-weight:600;">Book a Visit</a><a href="/contact">Contact</a></nav>
     </div>
-  </main>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer" style="background:#14231a; color:#fff; padding:30px 0; text-align:center;">
-    <div class="container">
-      <div style="font-family:var(--font-serif); font-size:18px;">DS Polyclinic · Dr. Devansh Sharma</div>
-      <p style="font-size:12px; color:#7e9686; margin-top:6px;">Open daily 9:00 AM – 9:30 PM • Call 098910 18300 • WhatsApp: +91 98910 18300</p>
+  <!-- Booking Page -->
+  <section class="section" style="padding-top:48px;">
+    <div class="wrap">
+      <style>
+        .book-layout { display: grid; grid-template-columns: 1fr; gap: 48px; }
+        @media (min-width: 768px) { .book-layout { grid-template-columns: 0.55fr 0.45fr; gap: 64px; } }
+        .book-form { background: var(--white); padding: 36px; border-radius: 20px; border: 1px solid var(--gray-200); }
+        .book-sidebar { padding-top: 16px; }
+        .info-card { background: var(--gray-100); border-radius: 16px; padding: 28px; margin-bottom: 20px; }
+        .info-card h4 { font-family: var(--serif); font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+        .info-card p { font-size: 15px; color: var(--gray-600); line-height: 1.6; }
+        .info-card a { color: var(--green); font-weight: 500; }
+        .book-hero-img { width: 100%; height: 200px; object-fit: cover; border-radius: 16px; margin-bottom: 20px; }
+        .form-submit { width: 100%; padding: 14px; border: none; border-radius: 12px; background: var(--green); color: var(--white); font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s; margin-top: 8px; }
+        .form-submit:hover { background: var(--green-dark); }
+        .book-toast { padding: 12px 16px; border-radius: 10px; font-size: 14px; font-weight: 500; margin-top: 14px; display: none; }
+        .book-toast.success { display: block; background: #e8f5e3; color: #1a5e0a; }
+        .book-toast.error { display: block; background: #fde8e8; color: #991b1b; }
+      </style>
+
+      <div class="book-layout">
+        <div>
+          <p class="section-label">Book Your Visit</p>
+          <h1 class="section-heading" style="font-size:clamp(36px,5vw,52px); margin-bottom:12px;">Let's get you better.</h1>
+          <p class="section-text" style="margin-bottom:36px;">Fill in the form and we'll confirm your appointment via WhatsApp or call.</p>
+
+          <form class="book-form" id="book-page-form">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" id="bp-name" required></div>
+              <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" id="bp-phone" placeholder="+91 98XXX XXXXX" required></div>
+            </div>
+            <div class="form-group"><label class="form-label">Email (optional)</label><input type="email" class="form-input" id="bp-email"></div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Treatment</label>
+                <select class="form-select" id="bp-service">
+                  <option>Manual Therapy</option>
+                  <option>Sports Injury Rehab</option>
+                  <option>Spine & Sciatica Care</option>
+                  <option>Post-Operative Rehab</option>
+                  <option>Neuro Physiotherapy</option>
+                  <option>Geriatric Physiotherapy</option>
+                  <option>Home Visit Physiotherapy</option>
+                  <option>Dry Cupping Therapy</option>
+                  <option>Wet Cupping / Hijama</option>
+                  <option>Fire Cupping</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Visit type</label>
+                <select class="form-select" id="bp-type">
+                  <option>In-Clinic (SS Plaza 1)</option>
+                  <option>Home Visit</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Where does it hurt?</label>
+              <select class="form-select" id="bp-pain">
+                <option>Lower Back</option><option>Neck</option><option>Shoulder</option>
+                <option>Knee</option><option>Hip</option><option>Ankle / Foot</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Preferred date</label><input type="date" class="form-input" id="bp-date"></div>
+              <div class="form-group">
+                <label class="form-label">Time slot</label>
+                <select class="form-select" id="bp-time">
+                  <option>9:30 AM</option><option>10:00 AM</option><option>10:30 AM</option>
+                  <option>11:00 AM</option><option>11:30 AM</option><option>12:00 PM</option>
+                  <option>2:00 PM</option><option>2:30 PM</option><option>3:00 PM</option>
+                  <option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option>
+                  <option>7:00 PM</option><option>8:00 PM</option><option>8:30 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group"><label class="form-label">Anything we should know?</label><textarea class="form-textarea" id="bp-notes" rows="3" placeholder="Describe your condition briefly..."></textarea></div>
+            <button type="submit" class="form-submit" id="bp-submit">Confirm Booking</button>
+            <div class="book-toast" id="bp-toast"></div>
+          </form>
+        </div>
+
+        <div class="book-sidebar">
+          <img class="book-hero-img" src="https://images.pexels.com/photos/5473186/pexels-photo-5473186.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Physiotherapy treatment session">
+
+          <div class="info-card">
+            <h4>Clinic Location</h4>
+            <p>SS Plaza 1, Sector-16B Extension<br>Noida Extension, Greater Noida<br>UP 201009</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Hours</h4>
+            <p>Monday – Sunday<br>9:00 AM – 9:30 PM</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Prefer to call?</h4>
+            <p><a href="tel:+919891018300">098910 18300</a><br>or <a href="https://wa.me/919891018300" target="_blank" rel="noopener">WhatsApp us</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap-lg">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>DS Polyclinic</h4><ul class="footer-links"><li>Dr. Devansh Sharma</li><li>Consultant Physiotherapist</li><li style="margin-top:8px;"><a href="tel:+919891018300">098910 18300</a></li></ul></div>
+        <div class="footer-col"><h4>Clinic</h4><ul class="footer-links"><li>SS Plaza 1, Sector-16B Ext.</li><li>Noida Extension, Greater Noida</li><li>UP 201009</li></ul></div>
+        <div class="footer-col"><h4>Hours</h4><ul class="footer-links"><li>Monday – Sunday</li><li>9:00 AM – 9:30 PM</li><li>Home visits by appointment</li></ul></div>
+        <div class="footer-col"><h4>Pages</h4><ul class="footer-links"><li><a href="/treatments">Treatments</a></li><li><a href="/about">The Doctor</a></li><li><a href="/book">Book a Visit</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 DS Polyclinic.</span><span>5.0 &#9733; Google Rating</span></div>
     </div>
   </footer>
 
   <script>
     // Set min date to today
-    const dateInput = document.getElementById('patient-date');
-    if (dateInput) {
-      const today = new Date().toISOString().split('T')[0];
-      dateInput.min = today;
-      dateInput.value = today;
-    }
+    const dateInput = document.getElementById('bp-date');
+    if (dateInput) { dateInput.min = new Date().toISOString().split('T')[0]; dateInput.value = dateInput.min; }
 
-    // Prefill from query params if any
-    const urlParams = new URLSearchParams(window.location.search);
-    const serviceParam = urlParams.get('service');
-    if (serviceParam) {
-      const select = document.getElementById('patient-treatment');
-      for (let i = 0; i < select.options.length; i++) {
-        if (select.options[i].value.toLowerCase().includes(serviceParam.toLowerCase())) {
-          select.selectedIndex = i;
-          break;
-        }
-      }
-    }
-    const typeParam = urlParams.get('type');
-    if (typeParam && typeParam.includes('Home')) {
-      document.getElementById('patient-mode').selectedIndex = 1;
-    }
-
-    document.getElementById('dedicated-booking-form').addEventListener('submit', async (e) => {
+    document.getElementById('book-page-form').addEventListener('submit', async function(e) {
       e.preventDefault();
-      const btn = document.getElementById('submit-booking-btn');
-      const alert = document.getElementById('booking-alert');
-
-      btn.textContent = "Reserving your appointment...";
-      btn.disabled = true;
+      const btn = document.getElementById('bp-submit');
+      const toast = document.getElementById('bp-toast');
+      btn.textContent = 'Booking...'; btn.disabled = true;
+      toast.className = 'book-toast';
 
       const payload = {
-        patientName: document.getElementById('patient-name').value.trim(),
-        patientPhone: document.getElementById('patient-phone').value.trim(),
-        patientEmail: document.getElementById('patient-email').value.trim(),
-        serviceName: document.getElementById('patient-treatment').value,
-        painLocation: document.getElementById('patient-pain-area').value,
-        consultationType: document.getElementById('patient-mode').value,
-        date: document.getElementById('patient-date').value,
-        timeSlot: document.getElementById('patient-time').value,
-        patientNotes: document.getElementById('patient-notes').value.trim(),
-        urgency: "Moderate",
-        hp_clinic_token: document.getElementById('dedicated-hp').value
+        patientName: document.getElementById('bp-name').value.trim(),
+        patientPhone: document.getElementById('bp-phone').value.trim(),
+        patientEmail: document.getElementById('bp-email').value.trim(),
+        serviceName: document.getElementById('bp-service').value,
+        painLocation: document.getElementById('bp-pain').value,
+        urgency: 'Routine',
+        consultationType: document.getElementById('bp-type').value,
+        date: document.getElementById('bp-date').value,
+        timeSlot: document.getElementById('bp-time').value,
+        patientNotes: document.getElementById('bp-notes').value.trim()
       };
 
       try {
-        const res = await fetch('/api/bookings', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        const data = await res.json();
-
-        if (data.success) {
-          alert.style.display = 'block';
-          alert.style.background = '#eef6ea';
-          alert.style.color = '#33601f';
-          alert.style.border = '1px solid #d8e7d0';
-          alert.innerHTML = `✓ <strong>Appointment Request Reserved!</strong> (ID: ${data.data.id})<br>Dr. Devansh Sharma's clinic desk will confirm via WhatsApp / SMS at ${payload.patientPhone}.`;
-          document.getElementById('dedicated-booking-form').reset();
-          btn.textContent = "Appointment Reserved!";
+        const res = await fetch('/api/bookings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+        const result = await res.json();
+        if (result.success) {
+          toast.className = 'book-toast success';
+          toast.textContent = "Booked! We'll confirm via WhatsApp shortly.";
+          this.reset();
+          btn.textContent = 'Booked!';
+          setTimeout(() => { btn.textContent = 'Confirm Booking'; btn.disabled = false; }, 3000);
         } else {
-          alert.style.display = 'block';
-          alert.style.background = '#fee2e2';
-          alert.style.color = '#991b1b';
-          alert.textContent = data.error || "Reservation failed. Please call 098910 18300 directly.";
-          btn.textContent = "Confirm & Reserve Appointment →";
-          btn.disabled = false;
+          toast.className = 'book-toast error';
+          toast.textContent = result.error || 'Something went wrong. Please call us.';
+          btn.textContent = 'Confirm Booking'; btn.disabled = false;
         }
       } catch (err) {
-        alert.style.display = 'block';
-        alert.style.background = '#fee2e2';
-        alert.style.color = '#991b1b';
-        alert.textContent = "Connection error. Please call 098910 18300.";
-        btn.textContent = "Confirm & Reserve Appointment →";
-        btn.disabled = false;
+        toast.className = 'book-toast error';
+        toast.textContent = 'Connection error. Call 098910 18300.';
+        btn.textContent = 'Confirm Booking'; btn.disabled = false;
       }
     });
   </script>
-
 </body>
 </html>

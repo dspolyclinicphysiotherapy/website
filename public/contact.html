@@ -3,304 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact &amp; Location | DS Polyclinic — Noida Extension</title>
-  <meta name="description" content="Visit DS Polyclinic at SS Plaza 1, Sector-16B Extension, Chipiyana Buzurg, Noida Extension. Call 098910 18300 or WhatsApp Dr. Devansh Sharma. Open daily 9:00 AM – 9:30 PM. Home visits available.">
-  <meta name="theme-color" content="#447e2d">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
-  <style>
-    :root {
-      --primary: #447e2d;
-      --primary-dark: #33601f;
-      --primary-light: #eef6ea;
-      --primary-mint: #f6faf4;
-      --accent: #5fae41;
-      --dark: #14231a;
-      --dark-light: #46584c;
-      --muted: #7e9686;
-      --card-border: #d8e7d0;
-      --font-serif: "Cormorant Garamond", Georgia, serif;
-      --font-main: "Jost", -apple-system, sans-serif;
-    }
-    body { font-family: var(--font-main); color: var(--dark); background: #fff; line-height: 1.6; }
-    h1, h2, h3, .serif-font { font-family: var(--font-serif); }
-  </style>
+  <title>Contact & Location | DS Polyclinic — Noida Extension</title>
+  <meta name="description" content="Visit DS Polyclinic at SS Plaza 1, Sector-16B Extension, Noida Extension. Call 098910 18300 or WhatsApp. Open daily 9 AM – 9:30 PM.">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
-  <!-- Top Notification Bar -->
-  <div class="top-notice-bar" style="background:#14231a; color:#fff; padding:8px 0; font-size:13px;">
-    <div class="container top-notice-content" style="display:flex; justify-content:space-between; align-items:center;">
-      <div>
-        <span class="pulse-dot"></span> <strong>DS Polyclinic</strong> — S-NO 9, SS PLAZA 1, Sector-16B Extension, Noida Extension
-      </div>
-      <div class="top-notice-links" style="display:flex; gap:16px;">
-        <a href="tel:+919891018300" style="color:#fff; text-decoration:none;">📞 098910 18300</a>
-        <a href="https://wa.me/919891018300" target="_blank" style="color:#68d391; text-decoration:none;">💬 WhatsApp</a>
-        <a href="/admin" target="_blank" style="color:#cbd5e1; font-size:12px; text-decoration:none;">Staff CRM ↗</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header -->
-  <header class="navbar" style="background:#fff; border-bottom:1px solid var(--card-border); position:sticky; top:0; z-index:100;">
-    <div class="container nav-container" style="display:flex; justify-content:space-between; align-items:center; height:74px;">
-      <a href="/" class="brand-logo" style="text-decoration:none; display:flex; align-items:center; gap:10px;">
-        <div class="brand-icon" style="background:var(--primary); color:#fff; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:10px; font-family:var(--font-serif); font-size:19px; font-weight:700;">DS</div>
-        <div>
-          <div style="font-weight:800; font-size:20px; color:var(--dark);">DS Polyclinic</div>
-          <span class="brand-tag" style="font-size:11px; text-transform:uppercase; color:var(--primary); font-weight:600;">Dr. Devansh Sharma · Consultant</span>
-        </div>
-      </a>
-
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links" style="display:flex; gap:24px; list-style:none;">
-          <li><a href="/" style="text-decoration:none; color:var(--dark-light); font-weight:600;">Home</a></li>
-          <li><a href="/treatments" style="text-decoration:none; color:var(--dark-light); font-weight:600;">Treatments</a></li>
-          <li><a href="/about" style="text-decoration:none; color:var(--dark-light); font-weight:600;">The Doctor</a></li>
-          <li><a href="/book" style="text-decoration:none; color:var(--dark-light); font-weight:600;">Book Visit</a></li>
-          <li><a href="/contact" style="text-decoration:none; color:var(--primary); font-weight:800;">Visit &amp; Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions" style="display:flex; gap:12px; align-items:center;">
-        <a href="tel:+919891018300" class="btn btn-outline btn-sm">📞 098910 18300</a>
-        <a href="/book" class="btn btn-primary btn-sm" style="background:var(--primary); color:#fff;">⚡ Book Visit</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">DS Polyclinic <small>Dr. Devansh Sharma</small></a>
+      <nav><ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/treatments">Treatments</a></li><li><a href="/about">The Doctor</a></li><li><a href="/book">Book</a></li><li><a href="/contact">Contact</a></li></ul></nav>
+      <div class="nav-right">
+        <a href="tel:+919891018300" class="nav-phone">098910 18300</a>
+        <a href="/book" class="nav-cta">Book Visit</a>
+        <button class="nav-hamburger" onclick="document.getElementById('mob-menu').style.display='flex'" aria-label="Menu"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg></button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Contact Hero -->
-    <section style="background: linear-gradient(180deg, var(--primary-mint) 0%, #fff 100%); padding: 50px 0 60px; border-bottom:1px solid var(--card-border);">
-      <div class="container" style="text-align: center; max-width: 800px;">
-        <span style="background: var(--primary-light); color: var(--primary-dark); padding: 5px 16px; border-radius: 999px; font-size: 12px; font-weight: 700; text-transform: uppercase;">
-          Consultation &amp; Location
-        </span>
-        <h1 class="serif-font" style="font-size: clamp(32px, 4.5vw, 48px); font-weight: 600; margin: 16px 0 12px; color:var(--dark);">
-          Visit DS Polyclinic or Request a Home Visit
-        </h1>
-        <p style="font-size: 16px; color:var(--dark-light);">
-          Open daily from 9:00 in the morning until 9:30 at night, seven days a week including Sunday.
-        </p>
-      </div>
-    </section>
+  <div id="mob-menu" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200;" onclick="this.style.display='none'">
+    <div style="background:#fff; width:280px; height:100%; padding:24px;" onclick="event.stopPropagation()">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;"><span style="font-family:var(--serif); font-size:20px; font-weight:600;">DS Polyclinic</span><button onclick="document.getElementById('mob-menu').style.display='none'" style="background:none; border:none; font-size:22px; cursor:pointer;">&times;</button></div>
+      <nav style="display:flex; flex-direction:column; gap:16px;"><a href="/">Home</a><a href="/treatments">Treatments</a><a href="/about">The Doctor</a><a href="/book">Book a Visit</a><a href="/contact" style="color:var(--green); font-weight:600;">Contact</a></nav>
+    </div>
+  </div>
 
-    <!-- Contact & Map Grid -->
-    <section class="section" style="padding: 60px 0;">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 36px; align-items: start;">
-          
-          <!-- Clinic Details Card -->
-          <div>
-            <div style="background: white; border-radius: 16px; padding: 32px; border: 1px solid var(--card-border); box-shadow: var(--shadow-sm); margin-bottom: 24px;">
-              <h3 class="serif-font" style="font-size: 24px; font-weight: 600; margin-bottom: 20px; color: var(--dark);">
-                📍 Clinic Address &amp; Operating Hours
-              </h3>
-              
-              <div style="display: flex; flex-direction: column; gap: 18px; font-size: 14px; color:var(--dark-light);">
-                <div style="display: flex; gap: 14px;">
-                  <span style="font-size: 22px;">🏢</span>
-                  <div>
-                    <strong style="color:var(--dark);">DS Polyclinic</strong><br>
-                    S-NO 9, SS PLAZA 1, Maharaja Suraj Mal Marg,<br>
-                    Near Harsh Vihar Colony, Sector-16B Extension, Chipiyana Buzurg,<br>
-                    Noida Extension, Greater Noida, Uttar Pradesh 201009
-                  </div>
-                </div>
+  <!-- Hero -->
+  <section class="page-hero" style="min-height:45vh;">
+    <img class="page-hero-img" src="https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="DS Polyclinic interior">
+    <div class="page-hero-content">
+      <h1>Visit us.</h1>
+      <p>SS Plaza 1, Sector-16B Extension, Noida Extension.</p>
+    </div>
+  </section>
 
-                <div style="display: flex; gap: 14px;">
-                  <span style="font-size: 22px;">📞</span>
-                  <div>
-                    <strong style="color:var(--dark);">Direct Phone Consultation</strong><br>
-                    <a href="tel:+919891018300" style="color: var(--primary); font-weight: 700; font-size:16px;">098910 18300</a> / +91 98910 18300
-                  </div>
-                </div>
+  <!-- Contact Info + Map -->
+  <section class="section">
+    <div class="wrap-lg">
+      <style>
+        .contact-grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
+        @media (min-width: 768px) { .contact-grid { grid-template-columns: 0.45fr 0.55fr; gap: 64px; } }
+        .contact-block { margin-bottom: 36px; }
+        .contact-block h3 { font-family: var(--serif); font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+        .contact-block p, .contact-block a { font-size: 16px; color: var(--gray-600); line-height: 1.7; }
+        .contact-block a { color: var(--green); font-weight: 500; }
+        .map-frame { width: 100%; height: 400px; border: none; border-radius: 16px; background: var(--gray-100); }
+        @media (max-width: 767px) { .map-frame { height: 300px; } }
+      </style>
 
-                <div style="display: flex; gap: 14px;">
-                  <span style="font-size: 22px;">💬</span>
-                  <div>
-                    <strong style="color:var(--dark);">WhatsApp Dr. Devansh</strong><br>
-                    <a href="https://wa.me/919891018300" target="_blank" rel="noopener" style="color: #16A34A; font-weight: 700;">+91 98910 18300 (Chat Directly) ↗</a>
-                  </div>
-                </div>
-
-                <div style="display: flex; gap: 14px;">
-                  <span style="font-size: 22px;">🕒</span>
-                  <div>
-                    <strong style="color:var(--dark);">Clinic Hours</strong><br>
-                    Monday – Sunday: <strong>9:00 AM – 9:30 PM</strong> (Open All 7 Days)
-                  </div>
-                </div>
-
-                <div style="display: flex; gap: 14px;">
-                  <span style="font-size: 22px;">🏡</span>
-                  <div>
-                    <strong style="color:var(--dark);">Home Physiotherapy</strong><br>
-                    Available across Noida Extension, Gaur City 1 &amp; 2, Greater Noida West, and Ghaziabad.
-                  </div>
-                </div>
-              </div>
-
-              <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--card-border); display: flex; flex-direction:column; gap: 10px;">
-                <a href="https://www.google.com/maps/dir/?api=1&destination=DS+Polyclinic+SS+Plaza+1+Chipiyana+Buzurg+Sector+16B+Noida+Extension+Greater+Noida+201009" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--primary); text-align:center;">
-                  🧭 Open Directions in Google Maps ↗
-                </a>
-                <a href="https://share.google/rizgICnnFiTidpl9W" target="_blank" rel="noopener" class="btn btn-outline" style="text-align:center;">
-                  ⭐ Read 5.0 Google Reviews ↗
-                </a>
-              </div>
-            </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-block">
+            <h3>Address</h3>
+            <p>S-NO 9, SS Plaza 1<br>Maharaja Suraj Mal Marg<br>Near Harsh Vihar Colony<br>Sector-16B Extension, Chipiyana Buzurg<br>Greater Noida, UP 201009</p>
           </div>
-
-          <!-- Quick Inquiry / Lead Form -->
-          <div>
-            <div style="background: white; border-radius: 16px; padding: 32px; border: 1px solid var(--card-border); box-shadow: var(--shadow-sm);">
-              <h3 class="serif-font" style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: var(--dark);">
-                ✉️ Send an Inquiry or Request a Call
-              </h3>
-              <p style="font-size: 13px; color: var(--muted); margin-bottom: 20px;">
-                Dr. Devansh will review your message and reply promptly via WhatsApp or phone.
-              </p>
-
-              <form id="contact-inquiry-form">
-                <input type="text" id="contact-hp" class="hp-field" tabindex="-1" autocomplete="off" style="display:none;">
-
-                <div class="form-group" style="margin-bottom:14px;">
-                  <label class="form-label" style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Full Name *</label>
-                  <input type="text" class="form-input" id="contact-name" placeholder="e.g. Ankit Tyagi" required style="width:100%; padding:10px 14px; border:1px solid var(--card-border); border-radius:8px;">
-                </div>
-
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:14px;">
-                  <div class="form-group">
-                    <label class="form-label" style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Phone Number *</label>
-                    <input type="tel" class="form-input" id="contact-phone" placeholder="098910 00000" required style="width:100%; padding:10px 14px; border:1px solid var(--card-border); border-radius:8px;">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label" style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Email (Optional)</label>
-                    <input type="email" class="form-input" id="contact-email" placeholder="ankit@example.com" style="width:100%; padding:10px 14px; border:1px solid var(--card-border); border-radius:8px;">
-                  </div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:14px;">
-                  <div class="form-group">
-                    <label class="form-label" style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Condition / Symptom</label>
-                    <select class="form-select" id="contact-pain-area" style="width:100%; padding:10px 14px; border:1px solid var(--card-border); border-radius:8px;">
-                      <option value="Lower Back & Sciatica">Lower Back &amp; Sciatica</option>
-                      <option value="Neck & Cervical Stiffness">Neck &amp; Cervical Stiffness</option>
-                      <option value="Frozen Shoulder">Frozen Shoulder</option>
-                      <option value="Knee Osteoarthritis">Knee Osteoarthritis</option>
-                      <option value="Post-Op Joint Rehab">Post-Op Joint Rehab</option>
-                      <option value="Cupping Therapy (Dry/Hijama/Fire)">Cupping Therapy (Dry/Hijama/Fire)</option>
-                      <option value="Home Physiotherapy">Home Physiotherapy</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="form-label" style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Consultation Mode</label>
-                    <select class="form-select" id="contact-mode" style="width:100%; padding:10px 14px; border:1px solid var(--card-border); border-radius:8px;">
-                      <option value="In-Clinic (SS Plaza 1)">In-Clinic (SS Plaza 1)</option>
-                      <option value="Home Visit (Noida Extension)">Home Visit (Noida Extension)</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group" style="margin-bottom:16px;">
-                  <label class="form-label" style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Tell us about your pain</label>
-                  <textarea class="form-textarea" id="contact-message" rows="3" placeholder="e.g. Pain began 2 weeks ago when lifting, radiating to left leg..." style="width:100%; padding:10px 14px; border:1px solid var(--card-border); border-radius:8px;"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width:100%; background:var(--primary); padding:13px; font-size:15px;">
-                  Send Inquiry to Dr. Devansh →
-                </button>
-
-                <div id="contact-toast" style="margin-top:14px; font-size:13px; font-weight:600; display:none; padding:10px; border-radius:8px;"></div>
-              </form>
-            </div>
+          <div class="contact-block">
+            <h3>Phone</h3>
+            <p><a href="tel:+919891018300">098910 18300</a></p>
           </div>
-
+          <div class="contact-block">
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/919891018300" target="_blank" rel="noopener">Message Dr. Devansh Sharma</a></p>
+          </div>
+          <div class="contact-block">
+            <h3>Hours</h3>
+            <p>Monday – Sunday<br>9:00 AM – 9:30 PM<br><br>Home visits available by appointment across Noida Extension, Gaur City, Greater Noida & Ghaziabad.</p>
+          </div>
         </div>
-
-        <!-- Google Maps Embed -->
-        <div style="margin-top:40px; border-radius:16px; overflow:hidden; border:1px solid var(--card-border); box-shadow:var(--shadow-sm);">
-          <iframe 
-            src="https://maps.google.com/maps?q=S-NO%209%2C%20SS%20PLAZA%201%2C%20Maharaja%20Suraj%20Mal%20Marg%2C%20Chipiyana%20Buzurg%2C%20Sector%2016B%20Extension%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201009&z=17&ie=UTF8&iwloc=&output=embed" 
-            width="100%" 
-            height="380" 
-            style="border:0; display:block;" 
-            allowfullscreen="" 
-            loading="lazy">
-          </iframe>
+        <div>
+          <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5!2d77.4475!3d28.6089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzMyLjAiTiA3N8KwMjYnNTEuMCJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer" style="background:#14231a; color:#fff; padding:40px 0;">
-    <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; align-items:center;">
-      <div>
-        <div style="font-family:var(--font-serif); font-size:20px; font-weight:700;">DS Polyclinic</div>
-        <p style="font-size:13px; color:#a2b5a6;">S-NO 9, SS PLAZA 1, Sector-16B Extension, Chipiyana Buzurg, Noida Extension • Daily 9:00 AM – 9:30 PM</p>
-      </div>
-      <div>
-        <a href="/book" class="btn btn-primary btn-sm" style="background:var(--primary);">Book Visit Online</a>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById('contact-inquiry-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = document.getElementById('contact-submit-btn');
-      const toast = document.getElementById('contact-toast');
-      btn.textContent = "Sending inquiry...";
-      btn.disabled = true;
+  <!-- Inquiry Form -->
+  <section class="section section-gray">
+    <div class="wrap-sm">
+      <p class="section-label">Send a Message</p>
+      <h2 class="section-heading" style="margin-bottom:32px;">Have a question?</h2>
 
-      const payload = {
-        name: document.getElementById('contact-name').value.trim(),
-        phone: document.getElementById('contact-phone').value.trim(),
-        email: document.getElementById('contact-email').value.trim(),
-        painArea: document.getElementById('contact-pain-area').value,
-        dailyImpact: document.getElementById('contact-mode').value,
-        notes: document.getElementById('contact-message').value.trim(),
-        source: "Contact Page Form",
-        hp_clinic_token: document.getElementById('contact-hp').value
-      };
+      <form id="contact-form" style="background:var(--white); padding:32px; border-radius:16px;">
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-input" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone</label>
+          <input type="tel" class="form-input" placeholder="+91 98XXX XXXXX" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" rows="4" placeholder="How can we help?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-green" style="width:100%;">Send Message</button>
+      </form>
 
-      try {
-        const res = await fetch('/api/leads', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          this.innerHTML = '<div style="text-align:center; padding:40px 0;"><p style="font-size:18px; font-weight:500; margin-bottom:8px;">Message sent.</p><p style="color:var(--gray-600);">We\'ll get back to you shortly. You can also call us at <a href="tel:+919891018300" style="color:var(--green);">098910 18300</a>.</p></div>';
         });
-        const data = await res.json();
-        if (data.success) {
-          toast.style.display = 'block';
-          toast.style.background = '#eef6ea';
-          toast.style.color = '#33601f';
-          toast.style.border = '1px solid #d8e7d0';
-          toast.textContent = "✓ Thank you! Dr. Devansh has received your inquiry and will contact you shortly.";
-          document.getElementById('contact-inquiry-form').reset();
-        } else {
-          toast.style.display = 'block';
-          toast.style.background = '#fee2e2';
-          toast.style.color = '#991b1b';
-          toast.textContent = data.error || "Failed to submit. Please call 098910 18300 directly.";
-        }
-      } catch (err) {
-        toast.style.display = 'block';
-        toast.style.background = '#fee2e2';
-        toast.style.color = '#991b1b';
-        toast.textContent = "Network error. Please call 098910 18300 directly.";
-      } finally {
-        btn.textContent = "Send Inquiry to Dr. Devansh →";
-        btn.disabled = false;
-      }
-    });
-  </script>
+      </script>
+    </div>
+  </section>
 
+  <footer class="footer">
+    <div class="wrap-lg">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>DS Polyclinic</h4><ul class="footer-links"><li>Dr. Devansh Sharma</li><li>Consultant Physiotherapist</li><li style="margin-top:8px;"><a href="tel:+919891018300">098910 18300</a></li></ul></div>
+        <div class="footer-col"><h4>Clinic</h4><ul class="footer-links"><li>SS Plaza 1, Sector-16B Ext.</li><li>Noida Extension, Greater Noida</li><li>UP 201009</li></ul></div>
+        <div class="footer-col"><h4>Hours</h4><ul class="footer-links"><li>Monday – Sunday</li><li>9:00 AM – 9:30 PM</li><li>Home visits by appointment</li></ul></div>
+        <div class="footer-col"><h4>Pages</h4><ul class="footer-links"><li><a href="/treatments">Treatments</a></li><li><a href="/about">The Doctor</a></li><li><a href="/book">Book a Visit</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 DS Polyclinic.</span><span>5.0 &#9733; Google Rating</span></div>
+    </div>
+  </footer>
 </body>
 </html>

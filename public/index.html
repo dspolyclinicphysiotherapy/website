@@ -25,7 +25,7 @@
   <meta property="twitter:image" content="https://images.pexels.com/photos/20860584/pexels-photo-20860584.jpeg?auto=compress&cs=tinysrgb&w=1200">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/styles.css">
   <style>
@@ -42,7 +42,7 @@
   --white: #ffffff;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Jost", system-ui, -apple-system, sans-serif;
-  --mono: "Montserrat", system-ui, sans-serif;
+  --mono: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -91,8 +91,8 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   color: var(--black); letter-spacing: -0.3px;
 }
 .nav-brand small {
-  display: block; font-family: var(--sans); font-size: 10px; font-weight: 400;
-  color: var(--gray-600); letter-spacing: 0.5px; text-transform: uppercase; line-height: 1;
+  display: block; font-family: var(--sans); font-size: 11px; font-weight: 400;
+  color: var(--gray-600); letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.2; margin-top: 2px;
 }
 .nav-links { display: none; list-style: none; gap: 28px; align-items: center; }
 @media (min-width: 900px) { .nav-links { display: flex; } }
@@ -157,7 +157,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   font-weight: 600; line-height: 1.05; color: var(--white);
   letter-spacing: -1px; margin-bottom: 24px;
 }
-.hero h1 em { font-style: italic; color: #8fcf7a; }
+.hero h1 em { font-style: normal; color: #8fcf7a; }
 .hero-sub {
   font-size: clamp(16px, 2.2vw, 20px); color: rgba(255,255,255,0.75);
   font-weight: 300; line-height: 1.6; max-width: 520px; margin: 0 auto 40px;
@@ -288,7 +288,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
 .hotspot-label {
   position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   background: var(--black); color: var(--white);
-  font-size: 10px; font-weight: 600; padding: 2px 8px;
+  font-size: 11px; font-weight: 500; padding: 3px 8px;
   border-radius: 4px; white-space: nowrap; margin-top: 4px; opacity: 0;
   transition: opacity 0.2s;
 }
@@ -458,7 +458,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   font-family: var(--serif); font-size: clamp(28px, 4vw, 44px);
   font-weight: 600; margin-bottom: 12px;
 }
-.cta-strip p { font-size: 16px; opacity: 0.8; margin-bottom: 32px; }
+.cta-strip p { font-size: 16px; color: #ffffff; opacity: 0.95; margin-bottom: 32px; }
 .btn-cta-white {
   display: inline-block; padding: 14px 36px; border-radius: 980px;
   background: var(--white); color: var(--green); font-size: 16px; font-weight: 600;

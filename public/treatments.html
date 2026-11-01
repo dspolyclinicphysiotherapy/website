@@ -3,18 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Treatments & Conditions | DS Polyclinic — Dr. Devansh Sharma</title>
-  <meta name="description" content="Physiotherapy treatments at DS Polyclinic: manual therapy, spine & sciatica care, sports rehab, cupping therapy, home visits. Noida Extension.">
+  <title>Clinical Treatments & Rehabilitation Protocols | DS Polyclinic — Dr. Devansh Sharma</title>
+  <meta name="description" content="Consultant-delivered physiotherapy treatments at DS Polyclinic, Noida Extension: manual therapy, spine decompression, sports injury rehab, cupping therapy, and home visits.">
+  <link rel="canonical" href="https://dspolyclinicphysiotherapy.com/treatments.html">
   <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Physiotherapy Treatments & Protocols - DS Polyclinic",
+    "url": "https://dspolyclinicphysiotherapy.com/treatments.html",
+    "description": "Comprehensive evidence-based physiotherapy treatments directed by Dr. Devansh Sharma in Noida Extension.",
+    "about": [
+      { "@type": "MedicalProcedure", "name": "Manual Therapy & Joint Mobilisation" },
+      { "@type": "MedicalProcedure", "name": "Spine & Sciatica Decompression" },
+      { "@type": "MedicalProcedure", "name": "Sports Injury Rehabilitation" },
+      { "@type": "MedicalProcedure", "name": "Post-Operative Recovery" },
+      { "@type": "MedicalProcedure", "name": "Neurological Physiotherapy" },
+      { "@type": "MedicalProcedure", "name": "Cupping & Fascial Therapy" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Accessible skip link (impeccable & agent-skills standard) -->
+  <!-- Accessible skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- Top Navigation -->
   <header class="nav" role="banner">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand" aria-label="DS Polyclinic homepage">DS Polyclinic <small>Dr. Devansh Sharma</small></a>
+      <a href="index.html" class="nav-brand" aria-label="DS Polyclinic homepage">
+        DS Polyclinic
+        <small>Dr. Devansh Sharma</small>
+      </a>
       <nav aria-label="Primary navigation">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -25,174 +47,416 @@
         </ul>
       </nav>
       <div class="nav-right">
-        <a href="tel:+919891018300" class="nav-phone" aria-label="Call clinic at 098910 18300">098910 18300</a>
+        <a href="tel:+919891018300" class="nav-phone" aria-label="Call clinic directly at 098910 18300">098910 18300</a>
         <a href="book.html" class="nav-cta">Book Visit</a>
-        <button class="nav-hamburger" onclick="document.getElementById('mob-menu').style.display='flex'" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mob-menu"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg></button>
+        <button class="nav-hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile menu -->
-  <div id="mob-menu" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200;" onclick="this.style.display='none'" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-    <div style="background:#fff; width:280px; height:100%; padding:24px;" onclick="event.stopPropagation()">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;"><span style="font-family:var(--serif); font-size:20px; font-weight:600;">DS Polyclinic</span><button onclick="document.getElementById('mob-menu').style.display='none'" aria-label="Close navigation" style="background:none; border:none; font-size:22px; cursor:pointer;">&times;</button></div>
-      <nav style="display:flex; flex-direction:column; gap:16px;"><a href="index.html">Home</a><a href="treatments.html" style="font-size:16px; font-weight:600; color:var(--green);" aria-current="page">Treatments</a><a href="about.html" style="font-size:16px;">The Doctor</a><a href="book.html" style="font-size:16px;">Book a Visit</a><a href="contact.html" style="font-size:16px;">Contact</a></nav>
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <span class="nav-brand" style="font-size:20px;">DS Polyclinic</span>
+        <button class="mobile-nav-close" id="mobile-drawer-close" aria-label="Close navigation">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treatments.html" class="active" aria-current="page">Treatments</a></li>
+        <li><a href="about.html">The Doctor</a></li>
+        <li><a href="book.html">Book a Visit</a></li>
+        <li><a href="contact.html">Contact & Location</a></li>
+      </ul>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:12px;">
+        <a href="book.html" class="btn btn-green" style="width:100%; text-align:center;">Book Appointment</a>
+        <a href="tel:+919891018300" style="text-align:center; font-size:14.5px; color:var(--green); font-weight:600; padding:8px;">Call 098910 18300</a>
+      </div>
     </div>
   </div>
 
   <main id="main-content">
 
-  <!-- Hero -->
-  <section class="page-hero">
-    <img class="page-hero-img" src="https://images.pexels.com/photos/5473223/pexels-photo-5473223.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Physiotherapist treating a patient's shoulder">
-    <div class="page-hero-content">
-      <h1>Treatments.</h1>
-      <p>Hands-on, consultant-delivered physiotherapy for pain, injury, surgery recovery, and mobility.</p>
-    </div>
-  </section>
+    <!-- Hero Header -->
+    <section class="page-hero">
+      <img class="page-hero-img" src="https://images.pexels.com/photos/5473223/pexels-photo-5473223.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Consultant physiotherapist treating patient shoulder and cervical spine">
+      <div class="page-hero-content">
+        <p class="section-label" style="color:var(--green-soft);">Clinical Practice</p>
+        <h1>Treatments & Protocols.</h1>
+        <p>Targeted, evidence-based manual and exercise protocols. Every session is diagnosed, planned, and delivered personally by Dr. Devansh Sharma.</p>
+      </div>
+    </section>
 
-  <!-- Treatments Grid -->
-  <section class="section">
-    <div class="wrap-lg">
-      <p class="section-label">All Treatments</p>
-      <h2 class="section-heading" style="margin-bottom: 40px;">Evidence-based care for every condition.</h2>
-      <style>
-        .t-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
-        @media (min-width: 768px) { .t-grid { grid-template-columns: 1fr 1fr; } }
-        .t-card { display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; background: var(--gray-100); }
-        @media (min-width: 640px) { .t-card { grid-template-columns: 0.45fr 0.55fr; } }
-        .t-card img { width: 100%; height: 100%; min-height: 220px; object-fit: cover; }
-        .t-card-body { padding: 32px; display: flex; flex-direction: column; justify-content: center; }
-        .t-card h3 { font-family: var(--serif); font-size: 24px; font-weight: 600; margin-bottom: 10px; }
-        .t-card p { font-size: 15px; color: var(--gray-600); line-height: 1.6; margin-bottom: 16px; }
-        .t-card a { font-size: 14px; font-weight: 500; color: var(--green); }
-      </style>
-
-      <div class="t-grid">
-        <div class="t-card">
-          <img src="https://images.pexels.com/photos/5473186/pexels-photo-5473186.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Manual therapy session on patient's back">
-          <div class="t-card-body">
-            <h3>Manual Therapy</h3>
-            <p>Joint mobilisation, soft tissue work, and trigger point release. Hands directly on the problem — no machines, no shortcuts.</p>
-            <a href="book.html">Book this treatment &rarr;</a>
+    <!-- Clinical Pillars -->
+    <section class="section section-gray">
+      <div class="wrap-lg">
+        <p class="section-label">Consultant Philosophy</p>
+        <h2 class="section-heading">How clinical care is delivered here.</h2>
+        <p class="section-text" style="margin-bottom:48px;">We do not believe in 10-minute machine attachments or unsupervised exercises. Every patient receives rigorous clinical attention.</p>
+        
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-number">01</div>
+            <h3 class="pillar-title">100% Consultant Delivered</h3>
+            <p class="pillar-desc">Your treatment is never delegated to an inexperienced assistant or intern. Dr. Devansh Sharma examines, adjusts, and treats you directly in every session.</p>
           </div>
-        </div>
-
-        <div class="t-card">
-          <img src="https://images.pexels.com/photos/7298404/pexels-photo-7298404.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sports injury rehabilitation exercise">
-          <div class="t-card-body">
-            <h3>Sports Injury Rehab</h3>
-            <p>ACL/MCL recovery, rotator cuff repair, tennis elbow, and return-to-play protocols for athletes and active people.</p>
-            <a href="book.html">Book this treatment &rarr;</a>
+          <div class="pillar-card">
+            <div class="pillar-number">02</div>
+            <h3 class="pillar-title">Root Cause Resolution</h3>
+            <p class="pillar-desc">We investigate kinetic chain dysfunction, muscle imbalances, and joint restrictions rather than merely numbing local symptoms with temporary modalities.</p>
           </div>
-        </div>
-
-        <div class="t-card">
-          <img src="https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spine and back assessment">
-          <div class="t-card-body">
-            <h3>Spine & Sciatica Care</h3>
-            <p>Disc herniation, nerve compression, and chronic back pain. Spinal decompression and targeted mobilisation without surgery.</p>
-            <a href="book.html">Book this treatment &rarr;</a>
-          </div>
-        </div>
-
-        <div class="t-card">
-          <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Post-operative knee rehabilitation">
-          <div class="t-card-body">
-            <h3>Post-Operative Rehab</h3>
-            <p>Structured recovery after knee/hip replacement, fracture surgery, and ligament repair. Milestone-based protocols.</p>
-            <a href="book.html">Book this treatment &rarr;</a>
-          </div>
-        </div>
-
-        <div class="t-card">
-          <img src="https://images.pexels.com/photos/5473182/pexels-photo-5473182.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Neurological physiotherapy assessment">
-          <div class="t-card-body">
-            <h3>Neuro Physiotherapy</h3>
-            <p>Stroke recovery, Bell's palsy, and peripheral nerve injuries. Restoring function through targeted neurological rehab.</p>
-            <a href="book.html">Book this treatment &rarr;</a>
-          </div>
-        </div>
-
-        <div class="t-card">
-          <img src="https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Elderly patient physiotherapy session">
-          <div class="t-card-body">
-            <h3>Geriatric Physiotherapy</h3>
-            <p>Balance training, fall prevention, and arthritis management. Gentle, patient care for older adults.</p>
-            <a href="book.html">Book this treatment &rarr;</a>
-          </div>
-        </div>
-
-        <div class="t-card">
-          <img src="https://images.pexels.com/photos/5473224/pexels-photo-5473224.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cupping therapy on patient's back">
-          <div class="t-card-body">
-            <h3>Cupping Therapy</h3>
-            <p>Dry cupping, wet cupping (Hijama), and fire cupping. Deep fascial release for chronic muscular tension and congestion.</p>
-            <a href="book.html">Book this treatment &rarr;</a>
-          </div>
-        </div>
-
-        <div class="t-card">
-          <img src="https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Home visit physiotherapy session">
-          <div class="t-card-body">
-            <h3>Home Visit Physiotherapy</h3>
-            <p>Full consultant-delivered sessions at your home. Available across Noida Extension, Gaur City, Greater Noida & Ghaziabad.</p>
-            <a href="book.html">Book this treatment &rarr;</a>
+          <div class="pillar-card">
+            <div class="pillar-number">03</div>
+            <h3 class="pillar-title">Objective Progression</h3>
+            <p class="pillar-desc">Every phase has quantifiable benchmarks: range of motion in degrees, pain reduction scores, and functional mobility tests so you see measurable weekly milestones.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Conditions -->
-  <section class="section section-gray">
-    <div class="wrap">
-      <p class="section-label">Conditions We Treat</p>
-      <h2 class="section-heading" style="margin-bottom:40px;">From acute pain to long-term recovery.</h2>
-      <style>
-        .cond-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
-        .cond-item { background: var(--white); padding: 16px 20px; border-radius: 10px; font-size: 15px; font-weight: 500; color: var(--black); }
-      </style>
-      <div class="cond-grid">
-        <div class="cond-item">Sciatica</div>
-        <div class="cond-item">Frozen Shoulder</div>
-        <div class="cond-item">Cervical Spondylosis</div>
-        <div class="cond-item">Slip Disc (IVDP)</div>
-        <div class="cond-item">Knee Pain / Osteoarthritis</div>
-        <div class="cond-item">ACL / MCL Tear Rehab</div>
-        <div class="cond-item">Tennis / Golfer's Elbow</div>
-        <div class="cond-item">Plantar Fasciitis</div>
-        <div class="cond-item">Post-Fracture Stiffness</div>
-        <div class="cond-item">Stroke Recovery</div>
-        <div class="cond-item">Bell's Palsy</div>
-        <div class="cond-item">Carpal Tunnel Syndrome</div>
-        <div class="cond-item">Posture Correction</div>
-        <div class="cond-item">Piriformis Syndrome</div>
-        <div class="cond-item">IT Band Syndrome</div>
-        <div class="cond-item">Muscle Spasm & Strain</div>
+    <!-- Detailed Treatment Showcases -->
+    <section class="section">
+      <div class="wrap-lg">
+        <p class="section-label">Specialised Disciplines</p>
+        <h2 class="section-heading" style="margin-bottom: 56px;">Targeted rehabilitation programs.</h2>
+
+        <div class="editorial-grid">
+
+          <!-- 1. Manual Therapy -->
+          <article class="editorial-row">
+            <div class="editorial-media">
+              <span class="editorial-badge">Foundational Care</span>
+              <img src="https://images.pexels.com/photos/5473186/pexels-photo-5473186.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Hands-on spinal mobilization and manual therapy">
+            </div>
+            <div class="editorial-content">
+              <span class="editorial-tag">Therapy 01</span>
+              <h3 class="editorial-title">Manual Therapy & Joint Mobilisation</h3>
+              <p class="editorial-desc">High-precision hands-on techniques designed to restore physiological joint glide, break deep myofascial adhesions, and modulate neurological pain pathways without aggressive cracking.</p>
+              <ul class="editorial-points">
+                <li>Maitland and Mulligan joint mobilisations for restricted capsules</li>
+                <li>Myofascial trigger point release for chronic muscular spasm</li>
+                <li>Passive and active neural tissue mobilisations</li>
+                <li>Immediate pain alleviation and expanded articulation range</li>
+              </ul>
+              <a href="book.html?service=Manual+Therapy" class="editorial-cta">Book Manual Therapy Session &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 2. Spine & Sciatica Care -->
+          <article class="editorial-row reverse">
+            <div class="editorial-media">
+              <span class="editorial-badge">High Demand</span>
+              <img src="https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Spinal examination and lumbar decompression treatment">
+            </div>
+            <div class="editorial-content">
+              <span class="editorial-tag">Therapy 02</span>
+              <h3 class="editorial-title">Spine & Sciatica Decompression Protocol</h3>
+              <p class="editorial-desc">Comprehensive conservative management for lumbar disc herniation, cervical radiculopathy, and sciatica. We relieve nerve compression and rebuild core spinal stability.</p>
+              <ul class="editorial-points">
+                <li>Disc decompression maneuvers and McKenzie directional preference</li>
+                <li>Sciatic nerve flossing to reduce radiating tingling and numbness</li>
+                <li>Deep core and multifidus muscle activation</li>
+                <li>Ergonomic posture retraining for desk workers and drivers</li>
+              </ul>
+              <a href="book.html?service=Spine+Care" class="editorial-cta">Consult for Spine & Sciatica &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 3. Sports Rehab -->
+          <article class="editorial-row">
+            <div class="editorial-media">
+              <span class="editorial-badge">Performance</span>
+              <img src="https://images.pexels.com/photos/7298404/pexels-photo-7298404.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Athlete undergoing resistance rehabilitation and kinetic retraining">
+            </div>
+            <div class="editorial-content">
+              <span class="editorial-tag">Therapy 03</span>
+              <h3 class="editorial-title">Sports Injury Rehabilitation</h3>
+              <p class="editorial-desc">From acute ligament sprains to chronic tendon overuse, our sports protocols restore tissue tensile strength, proprioceptive control, and explosive return-to-sport capability.</p>
+              <ul class="editorial-points">
+                <li>ACL, PCL, and meniscus progressive kinetic chain recovery</li>
+                <li>Rotator cuff impingement, tennis elbow, and runner's knee</li>
+                <li>Agility, balance, and sport-specific plyometric testing</li>
+                <li>Biomechanical movement screening to prevent reinjury</li>
+              </ul>
+              <a href="book.html?service=Sports+Rehab" class="editorial-cta">Schedule Sports Rehabilitation &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 4. Post-Operative Rehab -->
+          <article class="editorial-row reverse">
+            <div class="editorial-media">
+              <span class="editorial-badge">Surgical Care</span>
+              <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Patient undergoing post-operative knee recovery session">
+            </div>
+            <div class="editorial-content">
+              <span class="editorial-tag">Therapy 04</span>
+              <h3 class="editorial-title">Post-Operative Milestone Recovery</h3>
+              <p class="editorial-desc">Structured, surgeon-aligned physical therapy following total knee replacement (TKR), total hip replacement (THR), fracture fixation, and spine surgeries.</p>
+              <ul class="editorial-points">
+                <li>Early post-surgical edema and hematoma control</li>
+                <li>Safe, graduated progressive range-of-motion restoration</li>
+                <li>Gait re-education with assistive devices and independent walking</li>
+                <li>Home visits available for patients during early non-weightbearing stages</li>
+              </ul>
+              <a href="book.html?service=Post-Op" class="editorial-cta">Book Post-Surgery Consultation &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 5. Specialized Cupping (Hijama) -->
+          <article class="editorial-row">
+            <div class="editorial-media">
+              <span class="editorial-badge">Traditional & Clinical</span>
+              <img src="https://images.pexels.com/photos/5473224/pexels-photo-5473224.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Clinical cupping therapy applied along the muscular meridian">
+            </div>
+            <div class="editorial-content">
+              <span class="editorial-tag">Therapy 05</span>
+              <h3 class="editorial-title">Cupping & Deep Fascial Release</h3>
+              <p class="editorial-desc">Certified clinical dry cupping, wet cupping (Hijama), and moving myofascial vacuum therapy. Negative pressure enhances local microcirculation and releases rigid fibrous fascia.</p>
+              <ul class="editorial-points">
+                <li>Negative pressure decompression for stubborn muscular knots</li>
+                <li>Accelerated cellular metabolic exchange and toxic byproduct drainage</li>
+                <li>Safe, medical-grade single-use sterile apparatus</li>
+                <li>Highly effective for upper back tightness, trapezius spasms, and sciatica</li>
+              </ul>
+              <a href="book.html?service=Cupping+Therapy" class="editorial-cta">Explore Cupping Therapy &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 6. Home Visit Physiotherapy -->
+          <article class="editorial-row reverse">
+            <div class="editorial-media">
+              <span class="editorial-badge">Doorstep Service</span>
+              <img src="https://images.pexels.com/photos/3779702/pexels-photo-3779702.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Physiotherapist conducting home visit treatment for bedridden patient">
+            </div>
+            <div class="editorial-content">
+              <span class="editorial-tag">Therapy 06</span>
+              <h3 class="editorial-title">Consultant Physiotherapy at Home</h3>
+              <p class="editorial-desc">For elderly patients, acute pain episodes, or post-surgical recovery where travelling to the clinic is painful or difficult. Full clinical treatment brought right to your residence.</p>
+              <ul class="editorial-points">
+                <li>Available across Noida Extension, Gaur City 1 & 2, Greater Noida West</li>
+                <li>Portable electrotherapy modalities (IFT, TENS, Ultrasound) provided</li>
+                <li>Direct one-on-one session with Dr. Devansh Sharma</li>
+                <li>Bed mobility, transfer training, and home ergonomics guidance</li>
+              </ul>
+              <a href="book.html?type=home" class="editorial-cta">Request Home Visit Session &rarr;</a>
+            </div>
+          </article>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section style="background:var(--green); color:#fff; text-align:center; padding:80px 24px;">
-    <h2 style="font-family:var(--serif); font-size:clamp(28px,4vw,44px); font-weight:600; margin-bottom:12px;">Ready to start your recovery?</h2>
-    <p style="font-size:16px; color:#ffffff; opacity:0.95; margin-bottom:32px;">Book a one-to-one session with Dr. Devansh Sharma.</p>
-    <a href="book.html" class="btn" style="background:#fff; color:var(--green); font-weight:600;">Book Your Visit</a>
-  </section>
+    <!-- Conditions Directory -->
+    <section class="section section-gray">
+      <div class="wrap-lg">
+        <p class="section-label">Clinical Directory</p>
+        <h2 class="section-heading">Conditions treated at DS Polyclinic.</h2>
+        <p class="section-text" style="margin-bottom: 44px;">If you are experiencing pain, stiffness, or functional weakness in any of the following areas, we have structured rehabilitation pathways.</p>
+
+        <div class="category-directory">
+          <div class="category-group">
+            <h3>Spine, Neck & Upper Body</h3>
+            <div class="condition-pill-list">
+              <span class="condition-pill">Cervical Spondylosis</span>
+              <span class="condition-pill">Lumbar Disc Bulge (L4-L5, L5-S1)</span>
+              <span class="condition-pill">Sciatica & Piriformis Syndrome</span>
+              <span class="condition-pill">Upper Trapezius Spasms</span>
+              <span class="condition-pill">Postural Thoracic Kyphosis</span>
+              <span class="condition-pill">Ankylosing Spondylitis Support</span>
+            </div>
+          </div>
+
+          <div class="category-group">
+            <h3>Shoulder, Elbow & Hand</h3>
+            <div class="condition-pill-list">
+              <span class="condition-pill">Frozen Shoulder (Adhesive Capsulitis)</span>
+              <span class="condition-pill">Rotator Cuff Tendinopathy</span>
+              <span class="condition-pill">Tennis Elbow (Lateral Epicondylitis)</span>
+              <span class="condition-pill">Golfer's Elbow (Medial Epicondylitis)</span>
+              <span class="condition-pill">Carpal Tunnel Syndrome</span>
+              <span class="condition-pill">De Quervain's Tenosynovitis</span>
+            </div>
+          </div>
+
+          <div class="category-group">
+            <h3>Hip, Knee & Ankle</h3>
+            <div class="condition-pill-list">
+              <span class="condition-pill">Knee Osteoarthritis</span>
+              <span class="condition-pill">ACL & Meniscal Tear Rehabilitation</span>
+              <span class="condition-pill">Patellofemoral Pain Syndrome</span>
+              <span class="condition-pill">Plantar Fasciitis & Heel Spurs</span>
+              <span class="condition-pill">Achilles Tendonitis</span>
+              <span class="condition-pill">Inversion Ankle Sprain Recovery</span>
+            </div>
+          </div>
+
+          <div class="category-group">
+            <h3>Neurological & Systemic Care</h3>
+            <div class="condition-pill-list">
+              <span class="condition-pill">Stroke Hemiplegia Recovery</span>
+              <span class="condition-pill">Bell's Palsy & Facial Nerve Rehab</span>
+              <span class="condition-pill">Parkinson's Mobility Training</span>
+              <span class="condition-pill">Geriatric Balance & Fall Prevention</span>
+              <span class="condition-pill">Fibromyalgia Pain Relief</span>
+              <span class="condition-pill">Post-Fracture Joint Stiffness</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparent Consultation Fees -->
+    <section class="section">
+      <div class="wrap-lg">
+        <p class="section-label">Transparent Economics</p>
+        <h2 class="section-heading">Clear pricing. Zero hidden charges.</h2>
+        <p class="section-text" style="margin-bottom: 48px;">High-grade consultant physiotherapy should be honest, accessible, and transparent.</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3 class="pricing-plan">Initial Diagnostic Evaluation</h3>
+            <div class="pricing-amount">₹500</div>
+            <div class="pricing-unit">Comprehensive 45-min consultation</div>
+            <ul class="pricing-features">
+              <li>Detailed orthopedic joint assessment</li>
+              <li>Neurological and gait movement screening</li>
+              <li>Radiology & MRI review</li>
+              <li>Personalized prognosis & recovery roadmap</li>
+            </ul>
+            <a href="book.html?service=Initial+Assessment" class="btn btn-outline" style="width:100%; text-align:center;">Book Assessment</a>
+          </div>
+
+          <div class="pricing-card featured">
+            <h3 class="pricing-plan">In-Clinic Therapy Session</h3>
+            <div class="pricing-amount">₹800</div>
+            <div class="pricing-unit">Per 50–60 min treatment session</div>
+            <ul class="pricing-features">
+              <li>Direct manual therapy by Dr. Devansh Sharma</li>
+              <li>Targeted electrotherapy modalities included</li>
+              <li>Supervised kinetic rehabilitation exercises</li>
+              <li>Continuous milestone progress tracking</li>
+            </ul>
+            <a href="book.html?service=In-Clinic+Session" class="btn btn-green" style="width:100%; text-align:center;">Book Clinic Session</a>
+          </div>
+
+          <div class="pricing-card">
+            <h3 class="pricing-plan">Home Visit Physiotherapy</h3>
+            <div class="pricing-amount">₹1,200</div>
+            <div class="pricing-unit">At your doorstep (Noida Extension)</div>
+            <ul class="pricing-features">
+              <li>Doctor visits directly at your home</li>
+              <li>Portable electrotherapy & tools brought along</li>
+              <li>Bedside mobility & gait retraining</li>
+              <li>Family caregiver ergonomics instruction</li>
+            </ul>
+            <a href="book.html?type=home" class="btn btn-outline" style="width:100%; text-align:center;">Book Home Visit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Call to Action -->
+    <section class="section section-dark" style="text-align: center;">
+      <div class="wrap">
+        <p class="section-label" style="color:var(--green-soft);">Begin Today</p>
+        <h2 class="section-heading" style="margin-bottom:16px;">Take the first step toward pain-free movement.</h2>
+        <p class="section-text" style="margin: 0 auto 36px; max-width: 600px;">Direct consultant care, personalized recovery schedules, and verified 5.0 Google clinical results.</p>
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <a href="book.html" class="btn btn-green">Schedule an Appointment</a>
+          <a href="tel:+919891018300" class="btn btn-outline" style="border-color: rgba(255,255,255,0.7); color: #ffffff;">Direct Call 098910 18300</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
+  <!-- Global Footer -->
   <footer class="footer" role="contentinfo">
     <div class="wrap-lg">
       <div class="footer-grid">
-        <div class="footer-col"><h4>DS Polyclinic</h4><ul class="footer-links"><li>Dr. Devansh Sharma</li><li>Consultant Physiotherapist</li><li style="margin-top:8px;"><a href="tel:+919891018300">098910 18300</a></li></ul></div>
-        <div class="footer-col"><h4>Clinic</h4><ul class="footer-links"><li>SS Plaza 1, Sector-16B Ext.</li><li>Noida Extension, Greater Noida</li><li>UP 201009</li></ul></div>
-        <div class="footer-col"><h4>Hours</h4><ul class="footer-links"><li>Monday – Sunday</li><li>9:00 AM – 9:30 PM</li><li>Home visits by appointment</li></ul></div>
-        <div class="footer-col"><h4>Pages</h4><ul class="footer-links"><li><a href="treatments.html">Treatments</a></li><li><a href="about.html">The Doctor</a></li><li><a href="book.html">Book a Visit</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col">
+          <h4>DS Polyclinic</h4>
+          <ul class="footer-links">
+            <li>Dr. Devansh Sharma</li>
+            <li>Consultant Physiotherapist</li>
+            <li style="margin-top:8px;"><a href="tel:+919891018300">098910 18300</a></li>
+            <li>SS Plaza 1, Sector-16B Ext., Noida Extension</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Disciplines</h4>
+          <ul class="footer-links">
+            <li><a href="treatments.html">Manual Therapy</a></li>
+            <li><a href="treatments.html">Spine & Sciatica Care</a></li>
+            <li><a href="treatments.html">Sports Injury Rehab</a></li>
+            <li><a href="treatments.html">Post-Operative Recovery</a></li>
+            <li><a href="treatments.html">Cupping & Hijama</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Practice Hours</h4>
+          <ul class="footer-links">
+            <li>Monday – Sunday: 9:00 AM – 9:30 PM</li>
+            <li>Open all 7 days for consultations</li>
+            <li>Home visits scheduled daily across Noida Extension</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="about.html">The Doctor</a></li>
+            <li><a href="book.html">Book a Visit</a></li>
+            <li><a href="contact.html">Contact & Location</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-bottom"><span>&copy; 2026 DS Polyclinic.</span><span>5.0 &#9733; Google Rating</span></div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DS Polyclinic. Dr. Devansh Sharma. All rights reserved.</span>
+        <span>5.0 &#9733; Verified Google Rating (58+ Reviews)</span>
+      </div>
     </div>
   </footer>
+
+  <!-- Unified Navigation Script -->
+  <script>
+    (function() {
+      const hamburger = document.getElementById('hamburger-btn');
+      const drawer = document.getElementById('mobile-drawer');
+      const closeBtn = document.getElementById('mobile-drawer-close');
+
+      if (hamburger && drawer) {
+        hamburger.addEventListener('click', function() {
+          drawer.classList.add('open');
+          hamburger.setAttribute('aria-expanded', 'true');
+        });
+      }
+      if (closeBtn && drawer) {
+        closeBtn.addEventListener('click', function() {
+          drawer.classList.remove('open');
+          if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+        });
+      }
+      if (drawer) {
+        drawer.addEventListener('click', function(e) {
+          if (e.target === drawer) {
+            drawer.classList.remove('open');
+            if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+          }
+        });
+        const links = drawer.querySelectorAll('a');
+        links.forEach(function(link) {
+          link.addEventListener('click', function() {
+            drawer.classList.remove('open');
+            if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+  </script>
+
 </body>
 </html>

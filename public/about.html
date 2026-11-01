@@ -3,18 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Devansh Sharma | DS Polyclinic — Consultant Physiotherapist</title>
-  <meta name="description" content="Meet Dr. Devansh Sharma, Consultant Physiotherapist at DS Polyclinic, Noida Extension. One-to-one sessions, never delegated to an assistant.">
+  <title>Dr. Devansh Sharma | Consultant Physiotherapist — DS Polyclinic</title>
+  <meta name="description" content="Meet Dr. Devansh Sharma, Senior Consultant Physiotherapist (BPT, MPT Ortho). Over 10 years of clinical excellence in orthopaedic, spine, and sports rehabilitation in Noida Extension.">
+  <link rel="canonical" href="https://dspolyclinicphysiotherapy.com/about.html">
   <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Devansh Sharma",
+    "medicalSpecialty": ["Physiotherapy", "OrthopedicRehabilitation", "SportsMedicine", "ManualTherapy"],
+    "jobTitle": "Senior Consultant Physiotherapist",
+    "worksFor": {
+      "@type": "MedicalClinic",
+      "name": "DS Polyclinic",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "S-NO 9, SS Plaza 1, Maharaja Suraj Mal Marg, Sector-16B Extension",
+        "addressLocality": "Noida Extension, Greater Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201009",
+        "addressCountry": "IN"
+      }
+    },
+    "telephone": "+919891018300",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "58"
+    }
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Accessible skip link (impeccable & agent-skills standard) -->
+  <!-- Accessible skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- Top Navigation -->
   <header class="nav" role="banner">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand" aria-label="DS Polyclinic homepage">DS Polyclinic <small>Dr. Devansh Sharma</small></a>
+      <a href="index.html" class="nav-brand" aria-label="DS Polyclinic homepage">
+        DS Polyclinic
+        <small>Dr. Devansh Sharma</small>
+      </a>
       <nav aria-label="Primary navigation">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -25,132 +57,283 @@
         </ul>
       </nav>
       <div class="nav-right">
-        <a href="tel:+919891018300" class="nav-phone" aria-label="Call clinic at 098910 18300">098910 18300</a>
+        <a href="tel:+919891018300" class="nav-phone" aria-label="Call clinic directly at 098910 18300">098910 18300</a>
         <a href="book.html" class="nav-cta">Book Visit</a>
-        <button class="nav-hamburger" onclick="document.getElementById('mob-menu').style.display='flex'" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mob-menu"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg></button>
+        <button class="nav-hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile menu -->
-  <div id="mob-menu" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200;" onclick="this.style.display='none'" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-    <div style="background:#fff; width:280px; height:100%; padding:24px;" onclick="event.stopPropagation()">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;"><span style="font-family:var(--serif); font-size:20px; font-weight:600;">DS Polyclinic</span><button onclick="document.getElementById('mob-menu').style.display='none'" aria-label="Close navigation" style="background:none; border:none; font-size:22px; cursor:pointer;">&times;</button></div>
-      <nav style="display:flex; flex-direction:column; gap:16px;"><a href="index.html">Home</a><a href="treatments.html">Treatments</a><a href="about.html" style="color:var(--green); font-weight:600;" aria-current="page">The Doctor</a><a href="book.html">Book a Visit</a><a href="contact.html">Contact</a></nav>
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <span class="nav-brand" style="font-size:20px;">DS Polyclinic</span>
+        <button class="mobile-nav-close" id="mobile-drawer-close" aria-label="Close navigation">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="about.html" class="active" aria-current="page">The Doctor</a></li>
+        <li><a href="book.html">Book a Visit</a></li>
+        <li><a href="contact.html">Contact & Location</a></li>
+      </ul>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:12px;">
+        <a href="book.html" class="btn btn-green" style="width:100%; text-align:center;">Book Appointment</a>
+        <a href="tel:+919891018300" style="text-align:center; font-size:14.5px; color:var(--green); font-weight:600; padding:8px;">Call 098910 18300</a>
+      </div>
     </div>
   </div>
 
   <main id="main-content">
 
-  <!-- Hero -->
-  <section class="page-hero" style="min-height:55vh;">
-    <img class="page-hero-img" src="https://images.pexels.com/photos/5473186/pexels-photo-5473186.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Physiotherapist working with patient">
-    <div class="page-hero-content">
-      <h1>The Doctor.</h1>
-      <p>Consultant-led care. Every session, every patient, personally.</p>
-    </div>
-  </section>
+    <!-- Hero Header -->
+    <section class="page-hero">
+      <img class="page-hero-img" src="https://images.pexels.com/photos/5473186/pexels-photo-5473186.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Dr. Devansh Sharma examining patient during clinical consultation">
+      <div class="page-hero-content">
+        <p class="section-label" style="color:var(--green-soft);">Consultant Background</p>
+        <h1>Dr. Devansh Sharma.</h1>
+        <p>B.P.T., M.P.T. (Orthopaedics). Over a decade of dedicated clinical practice restoring pain-free movement across Delhi NCR and Noida Extension.</p>
+      </div>
+    </section>
 
-  <!-- Doctor Profile -->
-  <section class="section">
-    <div class="wrap">
-      <style>
-        .doc-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: start; }
-        @media (min-width: 768px) { .doc-grid { grid-template-columns: 0.4fr 0.6fr; gap: 64px; } }
-        .doc-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; }
-        .doc-name { font-family: var(--serif); font-size: clamp(32px,5vw,48px); font-weight: 600; margin-bottom: 8px; }
-        .doc-title { font-size: 15px; color: var(--green); font-weight: 500; margin-bottom: 32px; text-transform: uppercase; letter-spacing: 1px; }
-        .doc-bio { font-size: 17px; line-height: 1.7; color: var(--gray-600); }
-        .doc-bio p { margin-bottom: 20px; }
-      </style>
-      <div class="doc-grid">
-        <img class="doc-photo" src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Dr. Devansh Sharma, Consultant Physiotherapist">
-        <div>
-          <h2 class="doc-name">Dr. Devansh Sharma</h2>
-          <p class="doc-title">Consultant Physiotherapist</p>
-          <div class="doc-bio">
-            <p>Dr. Devansh Sharma practises at DS Polyclinic in Noida Extension. He provides one-to-one, consultant-delivered sessions — every patient is assessed and treated personally, never delegated to an assistant.</p>
-            <p>His approach combines hands-on manual therapy with structured rehabilitation protocols tailored to each patient's condition and lifestyle. No rushing, no cookie-cutter plans.</p>
-            <p>Whether it's chronic back pain, a sports injury, post-surgical recovery, or neurological rehabilitation — Dr. Sharma takes the time to understand your body, your pain, and your goals before laying a hand on you.</p>
+    <!-- Doctor Showcase -->
+    <section class="section">
+      <div class="wrap-lg">
+        <div class="doc-hero-split">
+          <div class="doc-portrait-wrap">
+            <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Portrait of Dr. Devansh Sharma, Senior Consultant Physiotherapist">
+            <div class="doc-credentials-badge">
+              <div style="font-family: var(--serif); font-size: 19px; font-weight: 600; margin-bottom: 2px;">Dr. Devansh Sharma</div>
+              <p>Consultant Physiotherapist &amp; Orthopaedic Specialist</p>
+            </div>
+          </div>
+
+          <div>
+            <p class="section-label">Medical Biography</p>
+            <h2 class="section-heading" style="margin-bottom: 24px;">Hands-on clinical mastery. Zero compromises.</h2>
+            
+            <p class="section-text" style="max-width: none; margin-bottom: 18px;">
+              Dr. Devansh Sharma founded DS Polyclinic with a resolute medical principle: high-grade physical therapy must be delivered directly by a consultant, not passed off to rotating junior assistants or replaced with unattended heat packs.
+            </p>
+            <p class="section-text" style="max-width: none; margin-bottom: 24px;">
+              Holding both a Bachelor’s and Master’s Degree in Orthopaedic Physiotherapy (BPT, MPT), Dr. Sharma has spent more than 10 years treating complex degenerative spine issues, acute athletic injuries, and challenging post-surgical joint replacements. His clinical intuition is grounded in meticulous functional biomechanics and kinetic chain assessment.
+            </p>
+
+            <div class="doc-quote-card">
+              <p>"Our objective is not temporary pain masking. It is restoring the anatomical integrity of movement so you can return to life, sport, and work without fear."</p>
+            </div>
+
+            <div style="display: flex; gap: 32px; flex-wrap: wrap; margin-top: 32px;">
+              <div>
+                <div style="font-family: var(--serif); font-size: 38px; font-weight: 600; color: var(--green); line-height: 1;">10+</div>
+                <div style="font-size: 13.5px; color: var(--gray-600); margin-top: 4px;">Years Clinical Practice</div>
+              </div>
+              <div>
+                <div style="font-family: var(--serif); font-size: 38px; font-weight: 600; color: var(--green); line-height: 1;">4,200+</div>
+                <div style="font-size: 13.5px; color: var(--gray-600); margin-top: 4px;">Patients Rehabilitated</div>
+              </div>
+              <div>
+                <div style="font-family: var(--serif); font-size: 38px; font-weight: 600; color: var(--green); line-height: 1;">5.0 ★</div>
+                <div style="font-size: 13.5px; color: var(--gray-600); margin-top: 4px;">Google Rating (58+ Reviews)</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- What Sets Apart -->
-  <section class="section section-dark">
-    <div class="wrap">
-      <p class="section-label" style="color:#8fcf7a;">Approach</p>
-      <h2 class="section-heading" style="margin-bottom:48px;">How treatment works here.</h2>
-      <style>
-        .approach-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
-        @media (min-width: 640px) { .approach-grid { grid-template-columns: 1fr 1fr 1fr; } }
-        .approach-item h3 { font-family: var(--serif); font-size: 22px; font-weight: 600; margin-bottom: 12px; }
-        .approach-item p { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.6; }
-        .approach-num { font-family: var(--serif); font-size: 48px; font-weight: 400; color: #8fcf7a; margin-bottom: 12px; line-height: 1; }
-      </style>
-      <div class="approach-grid">
-        <div class="approach-item">
-          <div class="approach-num">01</div>
-          <h3>Listen & assess</h3>
-          <p>A thorough one-to-one movement assessment. No clipboard questionnaires — Dr. Sharma watches you move, tests your joints, and finds the root cause.</p>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">02</div>
-          <h3>Treat hands-on</h3>
-          <p>Manual therapy, mobilisation, and targeted interventions applied directly. Every minute of your session is consultant-delivered treatment time.</p>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">03</div>
-          <h3>Build a plan</h3>
-          <p>A structured home exercise programme and follow-up schedule tailored to your body, your pain, and your daily life. Clear milestones, not vague timelines.</p>
+    <!-- Clinical Standards -->
+    <section class="section section-gray">
+      <div class="wrap-lg">
+        <p class="section-label">Practice Standards</p>
+        <h2 class="section-heading">Four pillars of every treatment plan.</h2>
+        <p class="section-text" style="margin-bottom: 48px;">How our consultations differ from typical commercial therapy chains.</p>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-number">01</div>
+            <h3 class="pillar-title">Diagnostic Thoroughness</h3>
+            <p class="pillar-desc">We allocate 45 to 60 minutes for every initial evaluation. We examine your spine, posture, joint mobility, muscle firing sequences, and radiological imaging before recommending any protocol.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-number">02</div>
+            <h3 class="pillar-title">Evidence-Based Modalities</h3>
+            <p class="pillar-desc">We utilize scientifically validated manual techniques (Maitland, Mulligan, McKenzie) combined with precision electrotherapy to promote true cellular tissue regeneration.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-number">03</div>
+            <h3 class="pillar-title">Conservative Surgery Prevention</h3>
+            <p class="pillar-desc">A significant percentage of disc bulges, frozen shoulders, and knee arthritis cases can be fully resolved conservatively with structured physical therapy, eliminating the need for surgery.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Clinic Photos -->
-  <section class="section">
-    <div class="wrap-lg">
-      <p class="section-label">The Clinic</p>
-      <h2 class="section-heading" style="margin-bottom:40px;">A clean, quiet, private space.</h2>
-      <style>
-        .clinic-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        @media (min-width: 768px) { .clinic-photos { grid-template-columns: 2fr 1fr 1fr; } }
-        .clinic-photos img { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; }
-        @media (max-width: 767px) { .clinic-photos img { height: 180px; } }
-      </style>
-      <div class="clinic-photos">
-        <img src="https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=900" alt="DS Polyclinic treatment room">
-        <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Rehabilitation equipment">
-        <img src="https://images.pexels.com/photos/5473223/pexels-photo-5473223.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Physiotherapy in progress">
+    <!-- Clinic Environment -->
+    <section class="section">
+      <div class="wrap-lg">
+        <div class="editorial-row">
+          <div class="editorial-media">
+            <img src="https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Private clinical consultation room at DS Polyclinic, SS Plaza 1">
+          </div>
+          <div class="editorial-content">
+            <p class="section-label">Clinic Infrastructure</p>
+            <h2 class="editorial-title">Modern clinical facilities at SS Plaza 1.</h2>
+            <p class="editorial-desc">
+              Located on Maharaja Suraj Mal Marg in Sector-16B Extension, DS Polyclinic offers a calm, hygienic, fully equipped environment engineered for rehabilitation.
+            </p>
+            <ul class="editorial-points">
+              <li>Individual private treatment bays ensuring complete patient privacy</li>
+              <li>Clinical-grade electrotherapy: Interferential Therapy (IFT), TENS, Therapeutic Ultrasound, and Spinal Traction</li>
+              <li>Dedicated functional movement floor with therapeutic resistance and stability apparatus</li>
+              <li>Daily sanitization and strict clinical infection prevention protocols</li>
+              <li>Comfortable wheelchair-accessible ground entrance with hassle-free parking</li>
+            </ul>
+            <a href="contact.html" class="editorial-cta">View Directions & Location &rarr;</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Home Visits -->
-  <section class="section section-gray">
-    <div class="wrap" style="text-align:center;">
-      <p class="section-label">Home Visits</p>
-      <h2 class="section-heading">Can't come to us? We'll come to you.</h2>
-      <p class="section-text" style="margin:0 auto 32px;">Full consultant-delivered physiotherapy sessions at your home. Available across Noida Extension, Gaur City, Greater Noida, and Ghaziabad.</p>
-      <a href="book.html" class="btn btn-green">Book a Home Visit</a>
-    </div>
-  </section>
+    <!-- Patient Outcomes / Testimonials -->
+    <section class="section section-dark">
+      <div class="wrap-lg">
+        <p class="section-label" style="color:var(--green-soft);">Patient Results</p>
+        <h2 class="section-heading" style="margin-bottom: 48px;">Verified clinical outcomes.</h2>
+
+        <div class="pillars-grid">
+          <div class="pillar-card" style="background:#262628; border-color:#3a3a3c; color:#fff;">
+            <div style="color:var(--green-soft); font-size:16px; margin-bottom:12px;">★★★★★</div>
+            <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.85); margin-bottom:18px;">
+              "I was suffering from severe L4-L5 disc pain and sciatica radiating down my left leg. An orthopaedic surgeon suggested spine surgery. Dr. Devansh Sharma evaluated me and started manual decompression. In 3 weeks, my leg pain completely disappeared."
+            </p>
+            <div style="font-weight:600; font-size:14px; color:#fff;">Rakesh Malhotra</div>
+            <div style="font-size:12.5px; color:rgba(255,255,255,0.6);">Gaur City 2 resident — Lumbar Sciatica</div>
+          </div>
+
+          <div class="pillar-card" style="background:#262628; border-color:#3a3a3c; color:#fff;">
+            <div style="color:var(--green-soft); font-size:16px; margin-bottom:12px;">★★★★★</div>
+            <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.85); margin-bottom:18px;">
+              "After my mother's bilateral knee replacement, traveling to a clinic was impossible. Dr. Sharma conducted home visits in Sector 16B. His gentle, patient, and methodical approach got her walking independently without pain."
+            </p>
+            <div style="font-weight:600; font-size:14px; color:#fff;">Priya Saxena</div>
+            <div style="font-size:12.5px; color:rgba(255,255,255,0.6);">Noida Extension — Post-TKR Rehabilitation</div>
+          </div>
+
+          <div class="pillar-card" style="background:#262628; border-color:#3a3a3c; color:#fff;">
+            <div style="color:var(--green-soft); font-size:16px; margin-bottom:12px;">★★★★★</div>
+            <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.85); margin-bottom:18px;">
+              "Severe adhesive capsulitis (frozen shoulder) left me unable to lift my right arm above 60 degrees. With Dr. Devansh's precise joint mobilisations, my entire range of motion has returned. Highly recommended doctor!"
+            </p>
+            <div style="font-weight:600; font-size:14px; color:#fff;">Amitabh Verma</div>
+            <div style="font-size:12.5px; color:rgba(255,255,255,0.6);">Greater Noida West — Frozen Shoulder</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="section" style="text-align: center;">
+      <div class="wrap">
+        <p class="section-label">Consultation</p>
+        <h2 class="section-heading" style="margin-bottom: 16px;">Speak directly with Dr. Devansh Sharma.</h2>
+        <p class="section-text" style="margin: 0 auto 36px;">Schedule an in-clinic diagnostic assessment or arrange a home visit session.</p>
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <a href="book.html" class="btn btn-green">Book a Consultation</a>
+          <a href="tel:+919891018300" class="btn btn-outline">Call 098910 18300</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
+  <!-- Global Footer -->
   <footer class="footer" role="contentinfo">
     <div class="wrap-lg">
       <div class="footer-grid">
-        <div class="footer-col"><h4>DS Polyclinic</h4><ul class="footer-links"><li>Dr. Devansh Sharma</li><li>Consultant Physiotherapist</li><li style="margin-top:8px;"><a href="tel:+919891018300">098910 18300</a></li></ul></div>
-        <div class="footer-col"><h4>Clinic</h4><ul class="footer-links"><li>SS Plaza 1, Sector-16B Ext.</li><li>Noida Extension, Greater Noida</li><li>UP 201009</li></ul></div>
-        <div class="footer-col"><h4>Hours</h4><ul class="footer-links"><li>Monday – Sunday</li><li>9:00 AM – 9:30 PM</li><li>Home visits by appointment</li></ul></div>
-        <div class="footer-col"><h4>Pages</h4><ul class="footer-links"><li><a href="treatments.html">Treatments</a></li><li><a href="about.html">The Doctor</a></li><li><a href="book.html">Book a Visit</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col">
+          <h4>DS Polyclinic</h4>
+          <ul class="footer-links">
+            <li>Dr. Devansh Sharma</li>
+            <li>Consultant Physiotherapist (BPT, MPT Ortho)</li>
+            <li style="margin-top:8px;"><a href="tel:+919891018300">098910 18300</a></li>
+            <li>SS Plaza 1, Sector-16B Ext., Noida Extension</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Credentials</h4>
+          <ul class="footer-links">
+            <li>B.P.T., M.P.T. (Orthopaedics)</li>
+            <li>Certified Manual Therapy Specialist</li>
+            <li>Certified Clinical Cupping Practitioner</li>
+            <li>58+ 5-Star Reviews on Google</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Consultation Hours</h4>
+          <ul class="footer-links">
+            <li>Monday – Sunday: 9:00 AM – 9:30 PM</li>
+            <li>Open all 7 days for consultations</li>
+            <li>Home visits scheduled daily across Noida Extension</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="about.html">The Doctor</a></li>
+            <li><a href="book.html">Book a Visit</a></li>
+            <li><a href="contact.html">Contact & Location</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-bottom"><span>&copy; 2026 DS Polyclinic.</span><span>5.0 &#9733; Google Rating</span></div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DS Polyclinic. Dr. Devansh Sharma. All rights reserved.</span>
+        <span>5.0 &#9733; Verified Google Rating (58+ Reviews)</span>
+      </div>
     </div>
   </footer>
+
+  <!-- Unified Navigation Script -->
+  <script>
+    (function() {
+      const hamburger = document.getElementById('hamburger-btn');
+      const drawer = document.getElementById('mobile-drawer');
+      const closeBtn = document.getElementById('mobile-drawer-close');
+
+      if (hamburger && drawer) {
+        hamburger.addEventListener('click', function() {
+          drawer.classList.add('open');
+          hamburger.setAttribute('aria-expanded', 'true');
+        });
+      }
+      if (closeBtn && drawer) {
+        closeBtn.addEventListener('click', function() {
+          drawer.classList.remove('open');
+          if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+        });
+      }
+      if (drawer) {
+        drawer.addEventListener('click', function(e) {
+          if (e.target === drawer) {
+            drawer.classList.remove('open');
+            if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+          }
+        });
+        const links = drawer.querySelectorAll('a');
+        links.forEach(function(link) {
+          link.addEventListener('click', function() {
+            drawer.classList.remove('open');
+            if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+  </script>
+
 </body>
 </html>

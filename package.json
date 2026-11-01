@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
-    "archify:diagram": "node .agents/skills/archify/bin/archify.mjs finalize architecture docs/physio-platform.architecture.json docs/archify-system-architecture.html --quality standard",
-    "test": "node -e \"console.log('Tests passing')\""
+    "test": "node tests/site-audit.test.js"
   },
   "keywords": [],
   "author": "",

@@ -9,24 +9,38 @@
 </head>
 <body>
 
-  <header class="nav">
+  <!-- Accessible skip link (impeccable & agent-skills standard) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="nav" role="banner">
     <div class="nav-inner">
-      <a href="/" class="nav-brand">DS Polyclinic <small>Dr. Devansh Sharma</small></a>
-      <nav><ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/treatments">Treatments</a></li><li><a href="/about">The Doctor</a></li><li><a href="/book">Book</a></li><li><a href="/contact">Contact</a></li></ul></nav>
+      <a href="/" class="nav-brand" aria-label="DS Polyclinic homepage">DS Polyclinic <small>Dr. Devansh Sharma</small></a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/treatments">Treatments</a></li>
+          <li><a href="/about" class="active" aria-current="page">The Doctor</a></li>
+          <li><a href="/book">Book</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
       <div class="nav-right">
-        <a href="tel:+919891018300" class="nav-phone">098910 18300</a>
+        <a href="tel:+919891018300" class="nav-phone" aria-label="Call clinic at 098910 18300">098910 18300</a>
         <a href="/book" class="nav-cta">Book Visit</a>
-        <button class="nav-hamburger" onclick="document.getElementById('mob-menu').style.display='flex'" aria-label="Menu"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg></button>
+        <button class="nav-hamburger" onclick="document.getElementById('mob-menu').style.display='flex'" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mob-menu"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg></button>
       </div>
     </div>
   </header>
 
-  <div id="mob-menu" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200;" onclick="this.style.display='none'">
+  <!-- Mobile menu -->
+  <div id="mob-menu" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200;" onclick="this.style.display='none'" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <div style="background:#fff; width:280px; height:100%; padding:24px;" onclick="event.stopPropagation()">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;"><span style="font-family:var(--serif); font-size:20px; font-weight:600;">DS Polyclinic</span><button onclick="document.getElementById('mob-menu').style.display='none'" style="background:none; border:none; font-size:22px; cursor:pointer;">&times;</button></div>
-      <nav style="display:flex; flex-direction:column; gap:16px;"><a href="/">Home</a><a href="/treatments">Treatments</a><a href="/about" style="color:var(--green); font-weight:600;">The Doctor</a><a href="/book">Book a Visit</a><a href="/contact">Contact</a></nav>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;"><span style="font-family:var(--serif); font-size:20px; font-weight:600;">DS Polyclinic</span><button onclick="document.getElementById('mob-menu').style.display='none'" aria-label="Close navigation" style="background:none; border:none; font-size:22px; cursor:pointer;">&times;</button></div>
+      <nav style="display:flex; flex-direction:column; gap:16px;"><a href="/">Home</a><a href="/treatments">Treatments</a><a href="/about" style="color:var(--green); font-weight:600;" aria-current="page">The Doctor</a><a href="/book">Book a Visit</a><a href="/contact">Contact</a></nav>
     </div>
   </div>
+
+  <main id="main-content">
 
   <!-- Hero -->
   <section class="page-hero" style="min-height:55vh;">
@@ -125,7 +139,9 @@
     </div>
   </section>
 
-  <footer class="footer">
+  </main>
+
+  <footer class="footer" role="contentinfo">
     <div class="wrap-lg">
       <div class="footer-grid">
         <div class="footer-col"><h4>DS Polyclinic</h4><ul class="footer-links"><li>Dr. Devansh Sharma</li><li>Consultant Physiotherapist</li><li style="margin-top:8px;"><a href="tel:+919891018300">098910 18300</a></li></ul></div>

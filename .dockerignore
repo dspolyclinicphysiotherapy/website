@@ -1,0 +1,11 @@
+node_modules/
+npm-debug.log
+.git
+.gitignore
+.vercel
+tests/
+test/
+.taste-skill/
+docs/
+.env*
+.DS_Store

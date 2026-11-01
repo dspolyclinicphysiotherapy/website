@@ -1,5 +1,12 @@
 [
   {
+    "id": "LOG-1793522877208",
+    "timestamp": "2026-11-01T08:47:57.208Z",
+    "action": "LEAD_CAPTURED",
+    "actor": "PATIENT",
+    "details": "New lead: Audit Bot (Lower Back) via Automated Test"
+  },
+  {
     "id": "LOG-1793522208696",
     "timestamp": "2026-11-01T08:36:48.696Z",
     "action": "LEAD_CAPTURED",

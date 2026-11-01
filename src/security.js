@@ -8,11 +8,12 @@ const configureHelmet = () => {
       directives: {
         defaultSrc: ["'self'"],
         scriptSrc: ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com"],
+        scriptSrcAttr: ["'unsafe-inline'"],
         styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdnjs.cloudflare.com"],
         fontSrc: ["'self'", "https://fonts.gstatic.com", "https://cdnjs.cloudflare.com", "data:"],
         imgSrc: ["'self'", "data:", "https:", "http:"],
         connectSrc: ["'self'"],
-        frameSrc: ["'none'"],
+        frameSrc: ["'self'", "https://www.google.com", "https://maps.google.com"],
         objectSrc: ["'none'"],
         upgradeInsecureRequests: []
       }

@@ -102,23 +102,23 @@ app.use('/api', apiRoutes);
 app.use('/api/admin', adminApiRoutes);
 
 // Dedicated Page Routes
-app.get('/', (req, res) => {
+app.get(['/', '/index.html'], (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
-app.get('/treatments', (req, res) => {
+app.get(['/treatments', '/treatments.html'], (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'treatments.html'));
 });
 
-app.get('/about', (req, res) => {
+app.get(['/about', '/about.html'], (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'about.html'));
 });
 
-app.get('/contact', (req, res) => {
+app.get(['/contact', '/contact.html'], (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'contact.html'));
 });
 
-app.get('/book', (req, res) => {
+app.get(['/book', '/book.html'], (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'book.html'));
 });
 

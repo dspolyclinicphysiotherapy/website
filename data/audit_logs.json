@@ -1,5 +1,19 @@
 [
   {
+    "id": "LOG-1793522208696",
+    "timestamp": "2026-11-01T08:36:48.696Z",
+    "action": "LEAD_CAPTURED",
+    "actor": "PATIENT",
+    "details": "New lead: Audit Bot (Lower Back) via Automated Test"
+  },
+  {
+    "id": "LOG-1793521574025",
+    "timestamp": "2026-11-01T08:26:14.025Z",
+    "action": "LEAD_CAPTURED",
+    "actor": "PATIENT",
+    "details": "New lead: Audit Bot (Lower Back) via Automated Test"
+  },
+  {
     "id": "LOG-1793520980693",
     "timestamp": "2026-11-01T08:16:20.693Z",
     "action": "LEAD_CAPTURED",

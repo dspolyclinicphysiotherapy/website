@@ -148,7 +148,7 @@ button, input, select, textarea {
   gap: 32px;
   align-items: center;
 }
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .nav-links { display: flex; }
 }
 .nav-links a {
@@ -217,7 +217,7 @@ button, input, select, textarea {
   width: 20px;
   height: 20px;
 }
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .nav-hamburger { display: none; }
 }
 

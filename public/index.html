@@ -95,7 +95,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   color: var(--gray-600); letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.2; margin-top: 2px;
 }
 .nav-links { display: none; list-style: none; gap: 28px; align-items: center; }
-@media (min-width: 900px) { .nav-links { display: flex; } }
+@media (min-width: 768px) { .nav-links { display: flex; } }
 .nav-links a {
   font-size: 13px; font-weight: 400; color: var(--black); opacity: 0.8;
   transition: opacity 0.2s;
@@ -115,7 +115,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   width: 36px; height: 36px; align-items: center; justify-content: center;
 }
 .nav-hamburger svg { width: 18px; height: 18px; }
-@media (min-width: 900px) { .nav-hamburger { display: none; } }
+@media (min-width: 768px) { .nav-hamburger { display: none; } }
 
 /* ---- Mobile Drawer ---- */
 .mobile-nav-drawer {
@@ -260,104 +260,6 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   padding-bottom: 2px; transition: border-color 0.2s;
 }
 .treat-more:hover { border-color: var(--green); }
-
-/* ---- Body Navigator ---- */
-.body-navigator-layout {
-  display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start;
-}
-@media (min-width: 768px) {
-  .body-navigator-layout { grid-template-columns: 340px 1fr; gap: 56px; }
-}
-.body-diagram-card {
-  background: var(--gray-100); border-radius: 16px; padding: 32px; text-align: center;
-}
-.body-map-interactive { position: relative; max-width: 260px; margin: 0 auto; }
-.body-silhouette-svg { width: 100%; height: auto; }
-
-.body-hotspot {
-  position: absolute; transform: translate(-50%, -50%);
-  cursor: pointer; z-index: 10;
-}
-.hotspot-pin {
-  width: 28px; height: 28px; background: var(--white);
-  border: 2px solid var(--green); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700; color: var(--green);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: all 0.2s;
-}
-.hotspot-label {
-  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background: var(--black); color: var(--white);
-  font-size: 11px; font-weight: 500; padding: 3px 8px;
-  border-radius: 4px; white-space: nowrap; margin-top: 4px; opacity: 0;
-  transition: opacity 0.2s;
-}
-.body-hotspot:hover .hotspot-label,
-.body-hotspot.active .hotspot-label { opacity: 1; }
-.body-hotspot:hover .hotspot-pin,
-.body-hotspot.active .hotspot-pin {
-  background: var(--green); color: var(--white); border-color: var(--green);
-  transform: scale(1.15);
-}
-
-.body-pills-row {
-  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; justify-content: center;
-}
-.body-pill-btn {
-  background: var(--white); border: 1px solid var(--gray-200);
-  padding: 6px 14px; border-radius: 980px; font-size: 12px; font-weight: 500;
-  cursor: pointer; transition: all 0.15s; color: var(--gray-600);
-}
-.body-pill-btn:hover,
-.body-pill-btn.active {
-  background: var(--green); color: var(--white); border-color: var(--green);
-}
-
-.pain-insight-card {
-  background: var(--white); border-radius: 16px; padding: 32px;
-  border: 1px solid var(--gray-200);
-}
-.pain-insight-header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
-.pain-icon-large {
-  width: 48px; height: 48px; border-radius: 12px;
-  background: var(--green-pale); color: var(--green);
-  display: flex; align-items: center; justify-content: center; font-size: 20px;
-}
-.pain-insight-header h3 { font-size: 20px; font-weight: 600; }
-
-.recovery-meter-block {
-  background: var(--gray-100); border-radius: 10px; padding: 16px; margin-bottom: 20px;
-}
-.recovery-meter-label {
-  display: flex; justify-content: space-between; font-size: 13px; font-weight: 500;
-  margin-bottom: 8px; color: var(--gray-600);
-}
-.recovery-meter-label strong { color: var(--black); }
-.progress-bar-wrap {
-  width: 100%; height: 6px; background: var(--gray-200); border-radius: 3px; overflow: hidden;
-}
-.progress-bar-fill {
-  height: 100%; background: var(--green); border-radius: 3px;
-  transition: width 0.5s ease;
-}
-#recovery-percent-label { color: var(--green); font-weight: 600; }
-#relief-speed-text { font-size: 13px; color: var(--gray-600); margin-top: 8px; }
-
-.treatment-tags-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
-.treatment-tag {
-  background: var(--gray-100); color: var(--gray-600);
-  font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 6px;
-}
-.specialist-row {
-  font-size: 14px; color: var(--gray-600); margin-bottom: 20px;
-}
-.specialist-row strong { color: var(--green); }
-.btn-book-region {
-  width: 100%; padding: 14px; border: none; border-radius: 12px;
-  background: var(--green); color: var(--white); font-size: 15px; font-weight: 500;
-  cursor: pointer; transition: background 0.2s;
-}
-.btn-book-region:hover { background: var(--green-dark); }
 
 /* ---- Quiz ---- */
 .quiz-wrapper {
@@ -613,14 +515,14 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   <!-- Nav -->
   <header class="nav" role="banner">
     <div class="nav-inner">
-      <a href="/" class="nav-brand" aria-label="DS Polyclinic homepage">DS Polyclinic <small>Dr. Devansh Sharma</small></a>
+      <a href="index.html" class="nav-brand" aria-label="DS Polyclinic homepage">DS Polyclinic <small>Dr. Devansh Sharma</small></a>
       <nav aria-label="Primary navigation">
         <ul class="nav-links">
-          <li><a href="/" class="active" aria-current="page">Home</a></li>
-          <li><a href="/treatments">Treatments</a></li>
-          <li><a href="/about">The Doctor</a></li>
-          <li><a href="/book">Book</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="treatments.html">Treatments</a></li>
+          <li><a href="about.html">The Doctor</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-right">
@@ -641,12 +543,11 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
         <button class="mobile-nav-close" id="mobile-drawer-close" aria-label="Close navigation">&times;</button>
       </div>
       <ul class="mobile-nav-list">
-        <li><a href="/" aria-current="page">Home</a></li>
-        <li><a href="/treatments">Treatments</a></li>
-        <li><a href="/about">The Doctor</a></li>
-        <li><a href="/book">Book a Visit</a></li>
-        <li><a href="/contact">Contact & Location</a></li>
-        <li><a href="#body-navigator">Where Does It Hurt?</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="about.html">The Doctor</a></li>
+        <li><a href="book.html">Book a Visit</a></li>
+        <li><a href="contact.html">Contact & Location</a></li>
       </ul>
       <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
         <button class="btn-quiz" style="width:100%; min-height:44px;" onclick="openBookingModal(); document.getElementById('mobile-drawer').classList.remove('open');">Book Appointment</button>
@@ -700,7 +601,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
             <p class="section-text">
               Manual therapy, structured rehabilitation, cupping therapy, and home visits across Noida Extension, Gaur City, and Greater Noida.
             </p>
-            <a href="/about" class="doctor-cta">More about Dr. Sharma →</a>
+            <a href="about.html" class="doctor-cta">More about Dr. Sharma →</a>
           </div>
         </div>
       </div>
@@ -747,80 +648,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
             <div class="treat-desc">Full treatment at your home in Noida Extension & nearby areas</div>
           </div>
         </div>
-        <a href="/treatments" class="treat-more">View all treatments & conditions →</a>
-      </div>
-    </section>
-
-    <!-- Body Navigator -->
-    <section class="section section-gray" id="body-navigator">
-      <div class="wrap-lg">
-        <p class="section-label">Where does it hurt?</p>
-        <h2 class="section-heading" style="margin-bottom: 40px;">Tap your pain area.</h2>
-
-        <div class="body-navigator-layout">
-          <div class="body-diagram-card">
-            <div class="body-map-interactive">
-              <svg class="body-silhouette-svg" viewBox="0 0 300 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="150" cy="50" r="32" fill="#ddd" stroke="#ccc" stroke-width="1.5"/>
-                <rect x="142" y="82" width="16" height="20" rx="4" fill="#ccc"/>
-                <path d="M 85 110 C 95 102, 135 102, 150 102 C 165 102, 205 102, 215 110 L 225 180 C 220 230, 210 240, 205 260 L 95 260 C 90 240, 80 230, 75 180 Z" fill="#ddd" stroke="#ccc" stroke-width="1.5"/>
-                <path d="M 75 120 L 50 200 L 45 270" stroke="#ccc" stroke-width="18" stroke-linecap="round"/>
-                <path d="M 225 120 L 250 200 L 255 270" stroke="#ccc" stroke-width="18" stroke-linecap="round"/>
-                <path d="M 95 260 L 205 260 L 195 300 L 105 300 Z" fill="#ccc"/>
-                <path d="M 120 300 L 115 375 L 112 450" stroke="#ccc" stroke-width="22" stroke-linecap="round"/>
-                <path d="M 180 300 L 185 375 L 188 450" stroke="#ccc" stroke-width="22" stroke-linecap="round"/>
-              </svg>
-              <div class="body-hotspot" style="top:19%;left:50%;" data-region="neck"><div class="hotspot-pin">N</div><div class="hotspot-label">Neck & Spine</div></div>
-              <div class="body-hotspot" style="top:27%;left:26%;" data-region="shoulder"><div class="hotspot-pin">S</div><div class="hotspot-label">Shoulder</div></div>
-              <div class="body-hotspot active" style="top:48%;left:50%;" data-region="lumbar"><div class="hotspot-pin">L</div><div class="hotspot-label">Lower Back</div></div>
-              <div class="body-hotspot" style="top:58%;left:36%;" data-region="hip"><div class="hotspot-pin">H</div><div class="hotspot-label">Hip</div></div>
-              <div class="body-hotspot" style="top:77%;left:63%;" data-region="knee"><div class="hotspot-pin">K</div><div class="hotspot-label">Knee</div></div>
-              <div class="body-hotspot" style="top:93%;left:37%;" data-region="ankle"><div class="hotspot-pin">A</div><div class="hotspot-label">Ankle</div></div>
-            </div>
-            <div class="body-pills-row">
-              <button class="body-pill-btn" data-region="neck">Neck</button>
-              <button class="body-pill-btn" data-region="shoulder">Shoulder</button>
-              <button class="body-pill-btn active" data-region="lumbar">Lower Back</button>
-              <button class="body-pill-btn" data-region="hip">Hip</button>
-              <button class="body-pill-btn" data-region="knee">Knee</button>
-              <button class="body-pill-btn" data-region="ankle">Ankle</button>
-            </div>
-          </div>
-
-          <div class="pain-insight-card">
-            <div class="pain-insight-header">
-              <div class="pain-icon-large" id="pain-region-icon">L</div>
-              <div>
-                <h3 id="pain-region-title">Lower Back & Sciatica (Lumbar)</h3>
-              </div>
-            </div>
-
-            <p style="font-size:14px; color:var(--gray-600); margin-bottom:6px; font-weight:500;">Common conditions</p>
-            <p id="pain-conditions" style="font-size:15px; margin-bottom:20px;">Sciatica Nerve Compression, Herniated Disc, Chronic Spasms, Facet Joint Arthritis</p>
-
-            <div class="recovery-meter-block">
-              <div class="recovery-meter-label">
-                <span>Recovery: <strong id="recovery-time-val">3 - 5 Weeks</strong></span>
-                <span id="recovery-percent-label">97% Success</span>
-              </div>
-              <div class="progress-bar-wrap"><div class="progress-bar-fill" id="recovery-progress-bar" style="width:97%;"></div></div>
-              <p id="relief-speed-text">Most patients avoid surgical intervention</p>
-            </div>
-
-            <p style="font-size:14px; color:var(--gray-600); margin-bottom:8px; font-weight:500;">Recommended treatments</p>
-            <div class="treatment-tags-list" id="pain-treatment-tags">
-              <span class="treatment-tag">Spinal Decompression</span>
-              <span class="treatment-tag">Neural Flossing</span>
-              <span class="treatment-tag">Core Stabilization</span>
-            </div>
-
-            <div class="specialist-row">
-              Treated by <strong id="assigned-specialist">Dr. Devansh Sharma (Consultant Physiotherapist)</strong>
-            </div>
-
-            <button class="btn-book-region" id="pain-book-cta">Book for Lower Back & Sciatica</button>
-          </div>
-        </div>
+        <a href="treatments.html" class="treat-more">View all treatments & conditions →</a>
       </div>
     </section>
 
@@ -994,10 +822,10 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
         <div class="footer-col">
           <h4>Pages</h4>
           <ul class="footer-links">
-            <li><a href="/treatments">Treatments</a></li>
-            <li><a href="/about">The Doctor</a></li>
-            <li><a href="/book">Book a Visit</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="about.html">The Doctor</a></li>
+            <li><a href="book.html">Book a Visit</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -1099,7 +927,6 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
 // Interactive Frontend Controller
 
 document.addEventListener('DOMContentLoaded', () => {
-  initBodyNavigator();
   initQuiz();
   initBookingModal();
   initFaqAccordion();
@@ -1108,110 +935,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================
-// 1. INTERACTIVE VISUAL BODY NAVIGATOR
-// ==========================================
-const PAIN_REGIONS_DATA = {
-  neck: {
-    title: "Neck & Cervical Spine",
-    icon: "N",
-    commonConditions: "Cervical Spondylosis, Text Neck, Whiplash, Occipital Headaches",
-    recoveryWeeks: "2 - 4 Weeks",
-    recoveryPercent: 96,
-    recommendedTreatments: ["Dry Needling", "Joint Mobilization", "Postural Realignment", "Ergonomic Setup"],
-    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
-    reliefSpeed: "Most patients feel significant relief within 48 hours"
-  },
-  shoulder: {
-    title: "Shoulder & Rotator Cuff",
-    icon: "S",
-    commonConditions: "Rotator Cuff Tendinitis, Frozen Shoulder, Subacromial Impingement, Bursitis",
-    recoveryWeeks: "4 - 6 Weeks",
-    recoveryPercent: 94,
-    recommendedTreatments: ["Manual Therapy", "Scapular Stabilisation", "Strengthening", "Shockwave Therapy"],
-    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
-    reliefSpeed: "Restores overhead mobility without cortisone injections"
-  },
-  lumbar: {
-    title: "Lower Back & Sciatica (Lumbar)",
-    icon: "L",
-    commonConditions: "Sciatica Nerve Compression, Herniated Disc, Chronic Spasms, Facet Joint Arthritis",
-    recoveryWeeks: "3 - 5 Weeks",
-    recoveryPercent: 97,
-    recommendedTreatments: ["Spinal Decompression", "Neural Flossing", "Core Stabilization", "Myofascial Release"],
-    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
-    reliefSpeed: "Most patients avoid surgical intervention"
-  },
-  knee: {
-    title: "Knee & Meniscus Joint",
-    icon: "K",
-    commonConditions: "ACL / MCL Sprains, Meniscal Tears, Runner's Knee, Patellar Tendinitis",
-    recoveryWeeks: "4 - 8 Weeks",
-    recoveryPercent: 98,
-    recommendedTreatments: ["Gait Analysis", "Quad/Hamstring Loading", "Knee Taping", "Laser Therapy"],
-    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
-    reliefSpeed: "Restores full weight-bearing comfort"
-  },
-  ankle: {
-    title: "Ankle & Foot (Plantar Fascia)",
-    icon: "A",
-    commonConditions: "Plantar Fasciitis, Ankle Sprains, Achilles Tendonitis, Heel Spurs",
-    recoveryWeeks: "3 - 5 Weeks",
-    recoveryPercent: 95,
-    recommendedTreatments: ["Deep Friction Massage", "Orthotic Assessment", "Eccentric Loading", "Ultrasound"],
-    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
-    reliefSpeed: "Walk without morning heel pain within 10 days"
-  },
-  hip: {
-    title: "Hip & Pelvic Alignment",
-    icon: "H",
-    commonConditions: "Hip Impingement, Piriformis Syndrome, Trochanteric Bursitis, Labral Tears",
-    recoveryWeeks: "4 - 6 Weeks",
-    recoveryPercent: 93,
-    recommendedTreatments: ["Pelvic Realignment", "Gluteal Mobilization", "Hip Flexor Release", "Pilates Rehab"],
-    specialist: "Dr. Devansh Sharma (Consultant Physiotherapist)",
-    reliefSpeed: "Relief from deep groin and buttock discomfort"
-  }
-};
-
-function initBodyNavigator() {
-  const hotspots = document.querySelectorAll('.body-hotspot');
-  const pillBtns = document.querySelectorAll('.body-pill-btn');
-
-  function updateRegion(regionKey) {
-    const data = PAIN_REGIONS_DATA[regionKey] || PAIN_REGIONS_DATA.lumbar;
-    hotspots.forEach(hs => hs.classList.toggle('active', hs.dataset.region === regionKey));
-    pillBtns.forEach(p => p.classList.toggle('active', p.dataset.region === regionKey));
-
-    document.getElementById('pain-region-title').textContent = data.title;
-    document.getElementById('pain-region-icon').textContent = data.icon;
-    document.getElementById('pain-conditions').textContent = data.commonConditions;
-    document.getElementById('recovery-time-val').textContent = data.recoveryWeeks;
-    document.getElementById('recovery-progress-bar').style.width = `${data.recoveryPercent}%`;
-    document.getElementById('recovery-percent-label').textContent = `${data.recoveryPercent}% Success`;
-    document.getElementById('relief-speed-text').textContent = data.reliefSpeed;
-    document.getElementById('assigned-specialist').textContent = data.specialist;
-
-    const tagsContainer = document.getElementById('pain-treatment-tags');
-    tagsContainer.innerHTML = '';
-    data.recommendedTreatments.forEach(t => {
-      const span = document.createElement('span');
-      span.className = 'treatment-tag';
-      span.textContent = t;
-      tagsContainer.appendChild(span);
-    });
-
-    const bookCta = document.getElementById('pain-book-cta');
-    bookCta.textContent = `Book for ${data.title}`;
-    bookCta.onclick = () => openBookingModal(data.title);
-  }
-
-  hotspots.forEach(hs => { hs.addEventListener('click', () => updateRegion(hs.dataset.region)); });
-  pillBtns.forEach(pill => { pill.addEventListener('click', () => updateRegion(pill.dataset.region)); });
-  updateRegion('lumbar');
-}
-
-// ==========================================
-// 2. QUIZ
+// 1. QUIZ
 // ==========================================
 function initQuiz() {
   let currentStep = 1;

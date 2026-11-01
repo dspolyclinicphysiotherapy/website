@@ -76,10 +76,9 @@ function sanitizeObject(obj) {
 
 // Honeypot bot protection middleware
 function verifyHoneypot(req, res, next) {
-  // If the honeypot field is filled, it's an automated bot
-  if (req.body && req.body.hp_clinic_token) {
-    console.warn(`[Security] Honeypot triggered from IP: ${req.ip}`);
-    // Return dummy success so the bot stops trying without alerting the attacker
+  // Honeypot: if an invisible decoy field (hp_field) is filled by a script crawler, reject quietly
+  if (req.body && req.body.hp_field && typeof req.body.hp_field === 'string' && req.body.hp_field.trim() !== '') {
+    console.warn(`[Security] Bot honeypot triggered from IP: ${req.ip}`);
     return res.status(200).json({
       success: true,
       message: "Request received successfully."

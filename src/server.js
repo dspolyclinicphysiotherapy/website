@@ -24,8 +24,11 @@ app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 app.use(cookieParser());
 
-// Static file hosting with caching
+// Static file hosting with caching (supports both public/ and repository root)
 app.use(express.static(path.join(__dirname, '..', 'public'), {
+  maxAge: process.env.NODE_ENV === 'production' ? '1d' : 0
+}));
+app.use(express.static(path.join(__dirname, '..'), {
   maxAge: process.env.NODE_ENV === 'production' ? '1d' : 0
 }));
 

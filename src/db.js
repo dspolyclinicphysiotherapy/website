@@ -1,10 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 
-const DATA_DIR = path.join(__dirname, '..', 'data');
+const DATA_DIR = process.env.VERCEL
+  ? path.join('/tmp', 'data')
+  : path.join(__dirname, '..', 'data');
 
 if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
+  try {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+    const seedDir = path.join(__dirname, '..', 'data');
+    if (fs.existsSync(seedDir)) {
+      const files = fs.readdirSync(seedDir);
+      for (const file of files) {
+        fs.copyFileSync(path.join(seedDir, file), path.join(DATA_DIR, file));
+      }
+    }
+  } catch (err) {
+    console.error('[DB] Error initializing DATA_DIR:', err);
+  }
 }
 
 // Initial seed data

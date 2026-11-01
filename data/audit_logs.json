@@ -1,5 +1,26 @@
 [
   {
+    "id": "LOG-1793530999584",
+    "timestamp": "2026-11-01T11:03:19.584Z",
+    "action": "APPOINTMENT_CREATED",
+    "actor": "PATIENT",
+    "details": "New appointment for Test Real Patient (Lower Back)"
+  },
+  {
+    "id": "LOG-1793530974157",
+    "timestamp": "2026-11-01T11:02:54.157Z",
+    "action": "LEAD_CAPTURED",
+    "actor": "PATIENT",
+    "details": "New lead: Audit Bot (Lower Back) via Automated Test"
+  },
+  {
+    "id": "LOG-1793530692957",
+    "timestamp": "2026-11-01T10:58:12.957Z",
+    "action": "LEAD_CAPTURED",
+    "actor": "PATIENT",
+    "details": "New lead: Playwright Contact Lead (General Inquiry) via Contact Page Inquiry"
+  },
+  {
     "id": "LOG-1793522877208",
     "timestamp": "2026-11-01T08:47:57.208Z",
     "action": "LEAD_CAPTURED",
